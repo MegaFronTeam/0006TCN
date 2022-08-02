@@ -1,0 +1,15 @@
+mixin sAdv(data)
+	// start sAdv
+	+b.sAdv.section#sAdv&attributes(attributes)
+		.container
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-3.col-6
+						+e.item
+							+img(`img/svg/adv-${i}.svg`)
+							p!= t
+				+item(1,`Доставка от&nbsp;2&nbsp;до&nbsp;5&nbsp;дней по&nbsp;всей&nbsp;России`)
+				+item(`2`,`Транспортные компании CDEK&nbsp;и&nbsp;BoxBerry`)
+				+item(`3`,`Большой выбор б/у и&nbsp;новых автозапчастей, шин и&nbsp;дисков`)
+				+item(`4`,`Большой склад в&nbsp;Московской области г.&nbsp;Люберцы`)
+	// end sAdv

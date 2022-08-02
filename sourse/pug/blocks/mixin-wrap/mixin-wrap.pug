@@ -11,11 +11,11 @@ include components/btn.pug
 
 include components/ddgroup.pug
 
-mixin arrow()
+mixin arrow(icon='chevron')
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon(`${icon}-left`)
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon(`${icon}-right`)
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -28,3 +28,10 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+mixin search()
+	+b.search-block
+		form
+			input(type="text" placeholder="Поиск по номеру или названию запчасти")
+			button 
+				+icon("search")

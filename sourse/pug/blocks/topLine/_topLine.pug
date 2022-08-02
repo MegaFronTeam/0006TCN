@@ -1,9 +1,20 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col
+					+search
+				.col-auto г. Люберцы, ул. Котельническая, д. 23
+
+				.col-auto.text-secondary Ежедневно с 9:00 до 18:00
+				.col-auto
+					+b.tel-block
+						+e.toggle +7 (900) 123-45-67
+						+e.dropdown
+				
+				.col-auto
+					a.text-secondary(href="#") Обратный звонок
+				.col-auto
+					+soc()
 	// end topLine

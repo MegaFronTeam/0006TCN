@@ -1,19 +1,25 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
-	}
-
+	border-bottom: 1px solid #E8E8ED;
 	@include media-breakpoint-up(lg) {
-		background-color: red;
-
+		padding: 0;
 	}
-	p{
-		@include ell();
+	padding-top: 10px;
+	padding-bottom: 10px;
+  .row{
+		align-items: center;
+	}
+	&__tel{
+		@extend .text-body;
+		.icon{
+			font-size: 20px;
+		}
 	}
 
+	@include media-breakpoint-up(xxl) {
+		&__logo{
+			margin-right: rem(20);
+		}
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}
@@ -37,9 +43,15 @@
 	// 
 	@include media-breakpoint-down(xl) {}
 
-	@include media-breakpoint-down(lg) {}
 
-	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(lg) {
+		&__logo{
+			img{
+				height: 40px;
+			}
+		}
+	}
 
 	@include media-breakpoint-down(sm) {}
 
@@ -47,3 +59,75 @@
 }
 
 
+.head-btns{
+	display: flex;
+	align-items: center;
+	@include media-breakpoint-down(lg){
+		justify-content: space-between;
+		margin-left: auto;
+		
+	}
+	@include media-breakpoint-up(lg) {
+		@include roww(16px);
+
+	}
+	@include media-breakpoint-up(xl) {
+
+		--bs-gutter-x: 30px;
+	}
+	padding: 0;
+	&__btn{
+		display: inline-flex;
+		align-items: center;
+		color: $body-color;
+		background: none !important;
+		box-shadow: none !important;
+		border: none !important; 
+		outline: none !important;
+		cursor: pointer;
+		@include media-breakpoint-down(lg){
+			padding: 16px;
+		}
+		@include mt;
+		&:hover{
+			color: $primary;
+		}
+		.icon{
+			font-size: rem(20);
+		}
+	}
+	&__icon-wrap{
+		position: relative;
+	}
+	&__counter{
+		position: absolute;
+		right: rem(-5);
+		top: rem(-5);
+		background-color: $primary;
+		font-size: rem(10px);
+		padding-top: em(1);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #fff;
+		width: rem(14);
+		height: rem(14);
+		font-weight: bold;
+	}
+	&__text{
+		margin-left: rem(15);
+	}
+}
+
+.head-btns-wrap{
+	@include media-breakpoint-down(lg) {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #fff;
+		border-top: 1px solid #E8E8ED;
+	}
+}

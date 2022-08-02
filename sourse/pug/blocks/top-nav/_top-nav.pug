@@ -22,12 +22,30 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col.order-lg-0.order-last
+				.col-auto.d-lg-none
+					+menu-toggle()
+				+e.logo.col-lg-auto.col.text-center
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
+				+b.head-btns-wrap.col-auto
+					+b.head-btns.container
+						+e.btn(href="/").d-lg-none
+							+icon("home")
+						+e.btn(href="#")
+							+icon("login")
+						+e.btn(type="button")
+							+icon("favorites")
+						+e.btn
+							+e.icon-wrap
+								+icon("basket")
+								+e.counter 99
+							+e.text.d-none.d-xl-block Корзина
 				.col-auto.d-lg-none
-					+menu-toggle()
+					+e.tel(href="#")
+						+icon("tel")
 	// end top-nav

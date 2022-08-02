@@ -1,33 +1,31 @@
 
 :root {
 	--animate-delay: 1.2s;
-	--bs-body-font-size: #{$em-base};
-
-	@include media-breakpoint-up(md) {
-
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
-	}
-
-	--sPT: #{rem(80 * .5)};
-	--sPB: #{rem(90 * .5)};
-	--sTPB: #{rem(40 * .5)};
-
-
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
 	
-		--swiperBorderColorDefHover: var(--bs-primary);
+	--bs-body-font-size: 14px;
+	@include media-breakpoint-up(md) {
+		--bs-body-font-size: #{$em-base};
+
+	}
+	--sPT: 40px;
+	--sPB: 40px;
+	--sTPB: #{rem(40)};
+
+		--swiperArrowSize: #{rem(50)};
+		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		// --swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: #fff;
+		--swiperBgDef: #{rgba(#000000, .5)};
+	
+		// --swiperBorderColorDefHover: var(--bs-primary);
 		--swiperColorDefHover: var(--bs-primary);
 		--swiperBgDefHover: #ffffff;
 
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
+	
 
+	--chevron-down: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.86208 7.93103L10 12.069L14.1379 7.93103' stroke='%23E02C2B' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
 
 	  //  --carousel-button-width: 48px;
@@ -38,6 +36,11 @@
 
 	  //  --carousel-button-svg-stroke-width: 2.5;
 	  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+
+		@include media-breakpoint-up(lg) {
+			--header-height: #{rem(130)};
+		}
+		--header-height: 60px;
 }
 
 @include media-breakpoint-up(xl) {}

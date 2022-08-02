@@ -1,6 +1,17 @@
 
 	// start .topLine
 	.topLine {
+		font-size: rem(14);
+		border-bottom: 1px solid #E8E8ED;
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+		.row{
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: 30px;
+			}
+			align-items: center;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -27,3 +38,19 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.topLine
+
+.tel-block{
+	&__toggle{
+		cursor: pointer;
+		font-weight: bold;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 1rem;
+		&::after{
+			margin-top: em(5);
+			content:  var(--chevron-down);
+			margin-left: rem(5);
+		}
+	}
+}

@@ -7,21 +7,57 @@
 	fill: currentColor;
 }
 
+.icon-arrow-left {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(21,16)*1em;
+}
+.icon-arrow-right {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(21,16)*1em;
+}
 .icon-basket {
-	font-size:math.div(24,10)*1rem;
-	width: math.div(22,24)*1em;
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
 }
 .icon-check {
 	font-size:math.div(27,10)*1rem;
 	width: math.div(27,27)*1em;
 }
+.icon-favorites {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-favorites2 {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(18,16)*1em;
+}
 .icon-fb {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-home {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
 .icon-instagram {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
+}
+.icon-login {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-play {
+	font-size:math.div(14,10)*1rem;
+	width: math.div(14,14)*1em;
+}
+.icon-search {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-tel {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
 }
 .icon-telegram {
 	font-size:math.div(16,10)*1rem;

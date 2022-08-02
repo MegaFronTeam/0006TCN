@@ -1,0 +1,77 @@
+mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like)
+	+b.prod-item
+		+e.favorite(class= like)
+			+icon("favorites2")
+		+e.img-wrap(href="#")
+			+img(`img/prod-${i}.jpg`)
+			+e.play
+				+icon("play")
+		+e.caption
+			+e.price= pr
+				+e.label(style=`background: ${bg}; color:${color}`)= l
+			+e.title(href="#")= t
+			p
+				span.text-secondary.d-none.d-sm-inline Номер и производитель
+				| 4B5827302F VAG
+				
+			p
+				span.text-secondary Склад
+				| Люберцы
+
+			+e.btn(href="#")
+
+
+mixin catalogSearch()
+	+b.sCatalogSearch
+		.container
+			+b.form-wrap
+				.row
+					.col-lg-3
+						+input("Выберите марку",'select')
+					.col-lg-3
+						+input("Выберите модель",'select')(disabled)
+					.col-lg-3
+						+input("Выберите поколение",'select')(disabled)
+					.col-lg-3
+						+e.btn.btn.btn-primary.w-100(type="submit") Показать запчасти
+			+e.body.d-none.d-lg-block
+				+e.logo-wrap
+					.row
+						- for (var x = 1; x < 11; x++)
+							.col-auto
+								a(href="#")
+									+img(`img/logo-${x}.png`)
+				+e.list
+					- let list = ['Acura','Audi','BMW','Cadillac', 'Acura' ,'Fiat' ,'Jaguar' ,'Mitsubishi' ,'Suzuki' ,'Audi' ,'Ford' ,'Jeep' ,'Nissan' ,'Toyota' ,'BMW' ,'Geely' ,'Kia' ,'Opel' ,'Volkswagen' ,'Cadillac' ,'Genesis' ,'Land Rover' ,'Peugeot' ,'Volvo' ,'Chery' ,'Great Wall' ,'Lexus' ,'Porsche' ,'Лада' ,'Chevrolet' ,'Haval' ,'Lifan' ,'Renault' ,'УАЗ' ,'Citroen' ,'Honda' ,'Mazda' ,'Skoda' ,'Daewoo' ,'Hyundai' ,'Mercedes-Benz' ,'Ssang Yong' ,'Datsun' ,'Infiniti' ,'Mini' ,'Subaru','Toyota','Volkswagen','Volvo','Лада','УАЗ']
+					each item in list
+						+e.item= item
+mixin sCatalogBody(h2)
+	// start sCatalog
+	+b.sCatalog.section&attributes(attributes)
+		if h2
+			+b.section-title.container
+				h2= h2
+		block
+	// end sCatalog
+mixin sCatalog(h2)
+	+sCatalogBody(h2)
+		+catalogSearch()
+	// end sCatalog
+mixin sCatalog2(h2)
+	+sCatalogBody(h2)
+		+e.container.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide
+							+prod-item(1,"Дверь правая задняя Дверь правая задняя",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active')
+						+e.slide.swiper-slide 
+							+prod-item(2,"Крыло правое переднее",'12 000 ₽')
+						+e.slide.swiper-slide
+							+prod-item(3,"Накладка крышки багажника",'2 500 ₽')
+						+e.slide.swiper-slide
+							+prod-item(4,"Решетка радиатора",'4 000 ₽')
+
+			+arrow("arrow")
+			.swiper-pagination
+	// end sCatalog

@@ -1,9 +1,12 @@
 .menu{
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: 30px;
+	}
 	@include media-breakpoint-up(lg) {
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(18px);
 		flex-wrap: wrap;
 	}
 
@@ -18,17 +21,23 @@
 		padding: 0;
 	}
 	a{
+		font-weight: 600;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(28) rem(15);
+		}
+		padding: rem(28) rem(9);
+		--bs-link-color: #{$body-color};
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: 2px;
+	--color: #{$body-color};
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: transparent;
 	}
@@ -40,7 +49,7 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: 20px;
 	width: 1em;
 	cursor: pointer;
 	span:after,

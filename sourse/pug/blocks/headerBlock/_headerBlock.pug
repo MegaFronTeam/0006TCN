@@ -1,10 +1,22 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+		+e.container.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.new-slide.swiper-slide.bg-wrap
+							+e.caption--2
+								//- +pic('head-img-2.jpg', 'bg', '992px').picture-bg.slider-bg
+								picture.picture-bg.slider-bg
+									source(srcset='img/head-img.jpg' media='(min-width: 992px)')
+									img(src='img/head-img-sm.jpg' alt='' loading="lazy").object-fit-js
+								+e.text-wrap
+									.h1 Открытие нашего интернет-магазина TCN AUTO!
+									p Приглашаем вас к покупкам!
+									+e.btn(href="#") Подробнее
+			.d-none.d-lg-block
+				+arrow("arrow")
+			.swiper-pagination
+	
 	// end headerBlock

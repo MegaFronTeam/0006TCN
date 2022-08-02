@@ -307,12 +307,16 @@ function eventHandler() {
 	}
 
 
+	
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
+		let topNav = document.querySelector('#header  ');
 		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		console.log(scrollTop);
+
+		scrollTop > 160 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
+		scrollTop > 250 ? topNav.classList.add('fixed-animate') : topNav.classList.remove('fixed-animate');
+		scrollTop > 400 ? topNav.classList.add('fixed-show') : topNav.classList.remove('fixed-show');
 	}
 
 	function whenResize() {
@@ -321,11 +325,14 @@ function eventHandler() {
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
-
-	}, { passive: true })
+	}, {
+		passive: true
+	});
 	window.addEventListener('resize', () => {
 		whenResize();
-	}, { passive: true });
+	}, {
+		passive: true
+	});
 
 	whenResize();
 
@@ -364,6 +371,56 @@ function eventHandler() {
 
 	});
 	// modal window
+
+	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {  
+		loop: true,
+		pagination: {
+			el: '.headerBlock .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+		navigation: {
+			nextEl: '.headerBlock .swiper-button-next',
+			prevEl: '.headerBlock .swiper-button-prev',
+		},
+	});
+	const sCatalogSlider = new Swiper('.sCatalog__slider--js', {  
+		// loop: true,
+		
+		spaceBetween: 20,
+		grid: {
+			rows: 4,
+		},
+		pagination: {
+			el: '.sCatalog .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+		navigation: {
+			nextEl: '.sCatalog .swiper-button-next',
+			prevEl: '.sCatalog .swiper-button-prev',
+		},
+		breakpoints: { 
+			576: {
+				slidesPerView: 2,
+				grid: {
+					rows: 1,
+				}
+			},
+			992: {
+				slidesPerView: 3,
+				grid: {
+					rows: 1,
+				}
+			},
+			1200: {
+				slidesPerView: 4,
+				grid: {
+					rows: 1,
+				}
+			}
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

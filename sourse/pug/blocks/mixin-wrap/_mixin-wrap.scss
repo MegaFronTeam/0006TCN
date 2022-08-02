@@ -1,7 +1,7 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(5px, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 
@@ -75,5 +75,33 @@
 		&--plus::after{
 			transform: rotate(90deg);
 		}
+	}
+}
+
+.search-block{
+	position: relative;
+	input{
+		font-size: 14px;
+		width: 100%;
+		border: none !important;
+		outline: none !important;
+		padding-left: rem(30);
+		padding-top: rem(14);
+		padding-bottom: rem(14);
+	}
+	.icon{
+		font-size: rem(20);
+		border: none !important;
+	}
+	button{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: none !important;
+		border: none !important;
 	}
 }
