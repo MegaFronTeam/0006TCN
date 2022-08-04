@@ -2,8 +2,25 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.wrap
+				+e.row.row
+					.col-md
+						+e.content
+							h2 Контакты
+							+e.item
+								+icon('pin')
+								p Московская область, г. Люберцы, ул. Котельническая, д. 23
+							+e.item
+								+icon('call')
+								a(href="tel:+79001234567") 
+									strong +7 (900) 123-45-67
+								+soc()
+							+e.item
+								+icon('mail')
+								a(href="mailto:info@tcnauto.ru") info@tcnauto.ru
+							+e.time Ежедневно с 9:00 до 18:00
+							+e.btn(href="#").btn.btn-outline-primary Обратный звонок
+					.col-md
+						+e.map
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad890f0d00167629156c7b7433025c5d3923420d445a6108848532dceb80277d9&amp;source=constructor" frameborder="0"></iframe>
 	// end sContact

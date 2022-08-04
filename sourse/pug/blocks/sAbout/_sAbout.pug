@@ -2,8 +2,14 @@ mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAbout
-				
-			.row
+			+e.row.row
+				.col-lg-6.order-2.order-md-1
+					h2 TCN AUTO&nbsp;&mdash; Продажа б/у контрактных и&nbsp;новых автомобильных запчастей
+					p Команда DonAvto приветствует Вас на&nbsp;нашем сайте. Наши сотрудники оперативно обработают ваш заказа по&nbsp;подбору запчастей и&nbsp;при необходимости отправят их&nbsp;фотографию или видеосъемку. Менеджер при необходимости организует удобную доставку вашего заказа по&nbsp;указанному адресу в&nbsp;любом городе&nbsp;РФ и&nbsp;странах ближнего зарубежья.
+					p На&nbsp;складе компании постоянно в&nbsp;наличии более 30&nbsp;тыс. комплектующих для ремонта авто. Наши предложения можно найти в&nbsp;авито-магазинах, а&nbsp;так&nbsp;же на&nbsp;сайте Drom.ru, Auto.ru, Zzap.ru. Avito.ru.
+					a(href="#") Читать далее
+				.col-lg-6.order-1.order-md-2
+					+e.wrap
+						+img('img/svg/logo-gray.svg').logo
+						+img('img/car-1.png').car
 	// end sAbout
