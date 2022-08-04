@@ -42,7 +42,7 @@ mixin catalogSearch()
 								a(href="#")
 									+img(`img/logo-${x}.png`)
 				+e.list
-					- let list = ['Acura','Audi','BMW','Cadillac', 'Acura' ,'Fiat' ,'Jaguar' ,'Mitsubishi' ,'Suzuki' ,'Audi' ,'Ford' ,'Jeep' ,'Nissan' ,'Toyota' ,'BMW' ,'Geely' ,'Kia' ,'Opel' ,'Volkswagen' ,'Cadillac' ,'Genesis' ,'Land Rover' ,'Peugeot' ,'Volvo' ,'Chery' ,'Great Wall' ,'Lexus' ,'Porsche' ,'Лада' ,'Chevrolet' ,'Haval' ,'Lifan' ,'Renault' ,'УАЗ' ,'Citroen' ,'Honda' ,'Mazda' ,'Skoda' ,'Daewoo' ,'Hyundai' ,'Mercedes-Benz' ,'Ssang Yong' ,'Datsun' ,'Infiniti' ,'Mini' ,'Subaru','Toyota','Volkswagen','Volvo','Лада','УАЗ']
+					- let list = ['Acura','Audi','BMW','Cadillac','Chery' ,'Chevrolet','Citroen','Daewoo','Datsun','Fiat','Ford','Geely','Genesis','Great Wall','Haval','Honda','Hyundai','Infiniti','Jaguar','Jeep','Kia','Land Rover','Lexus','Lifan','Mazda','Mercedes-Benz','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','Renault','Skoda','Ssang Yong','Subaru','Suzuki','Toyota','Volkswagen','Volvo','Лада','УАЗ']
 					each item in list
 						+e.item= item
 mixin sCatalogBody(h2)
@@ -56,7 +56,6 @@ mixin sCatalogBody(h2)
 mixin sCatalog(h2)
 	+sCatalogBody(h2)
 		+catalogSearch()
-	// end sCatalog
 mixin sCatalog2(h2)
 	+sCatalogBody(h2)
 		+e.container.container
@@ -64,7 +63,7 @@ mixin sCatalog2(h2)
 				.swiper-wrapper
 					- for (var x = 0; x < 3; x++)
 						+e.slide.swiper-slide
-							+prod-item(1,"Дверь правая задняя Дверь правая задняя",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active')
+							+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active')
 						+e.slide.swiper-slide 
 							+prod-item(2,"Крыло правое переднее",'12 000 ₽')
 						+e.slide.swiper-slide
@@ -74,4 +73,3 @@ mixin sCatalog2(h2)
 
 			+arrow("arrow")
 			.swiper-pagination
-	// end sCatalog
