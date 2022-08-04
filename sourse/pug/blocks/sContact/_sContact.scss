@@ -8,13 +8,20 @@
 		--sPT: #{rem(40)};
 		--sPB: #{rem(80)};
 	}
+	&__container {
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 0;
+		}
+	}
 	&__row {
 		--bs-gutter-x: 0;
 	}
 	&__wrap {
 		background-color: #F5F5F8;
-		border-radius: 15px;
 		overflow: hidden;
+		@include media-breakpoint-up(sm) {
+			border-radius: 15px;
+		}
 	}
 	&__content {
 		padding: rem(40) rem(20);
