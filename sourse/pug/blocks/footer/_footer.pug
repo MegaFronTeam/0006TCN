@@ -2,21 +2,21 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.row.row
-				.col-md-6.col-lg-3
+				.col-sm-6.col-lg-3
 					a(href="/")
 						+img('img/svg/logo.svg').logo
 					+e.privacy &copy;&nbsp;TCN AUTO 2022. Все права защищены.
 					+e.politics(href="#") Политика конфиденциальности
-				.col-md-6.col-lg-3
+				.col-sm-6.col-lg-3
 					+mnu()
-				.col-md-6.col-lg-3
+				.col-sm-6.col-lg-3
 					+e.phone-link
 						a(href="tel:+79001234567") +7 (900) 123-45-67
 						+soc()
 					+e.call-back(href="#") Обратный звонок
 					+e.adress г. Люберцы, ул. Котельническая, д. 23
 					+e.time Ежедневно с 9:00 до 18:00
-				.col-md-6.col-lg-3
+				.col-sm-6.col-lg-3
 					+e.wrap
 						+e.cards-logo
 							+img('img/svg/card-1.svg')
