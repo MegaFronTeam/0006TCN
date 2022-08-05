@@ -105,3 +105,32 @@
 		border: none !important;
 	}
 }
+
+.page-head {
+	padding-top: rem(15);
+	padding-bottom: rem(15);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+	}
+	.breadcrumb {
+		margin-bottom: rem(9);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(10.800);
+		}
+		a {
+			color: $secondary;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+	&--pb-40 {
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(40);
+		}
+	}
+}

@@ -1,0 +1,40 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug  
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdv/_sAdv.pug
+include ../blocks/sContactBlock/_sContactBlock.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '04-desktop.jpg'
+
+block title
+	- let  title= "Контакты"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine 
+		+top-nav()
+	+page-head(title, 'Главная', title).--pb-40
+	//- +headerBlock
+	//- .reverse-mobile
+	//- 	+sCatalog('Поиск запчастей по авто')
+	//- 	+sAdv
+	//- +sCatalog2('Новые поступления')
+	//- +sAbout
+	+sContactBlock()
+	
+	+footer()
+      
+
+
+

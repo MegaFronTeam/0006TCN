@@ -1,0 +1,31 @@
+mixin sContactBlock(data)
+	// start sContactBlock
+	+b.sContactBlock.section#sContactBlock&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					p Направьте свой запрос, наш специалист перезвонит в ближайшее время.
+				+e.col.col-lg-auto
+					+e.item
+						+icon('mail')
+						a(href="mailto:info@tcnauto.ru") info@tcnauto.ru
+					+e.item
+						+icon('call')
+						a(href="tel:+79001234567") 
+							strong +7 (900) 123-45-67
+						+soc()
+			+e.wrap
+				+form-wrap()
+					+e.row.row
+						.col-lg
+							+input('Ваше имя', 'text')
+						.col-lg
+							+input('Ваш телефон', 'tel')
+						.col-lg.order-last.order-lg-0
+							+policy
+						.col-lg
+							+e.btn.BUTTON(type="submit").btn.btn-primary Отправить запрос
+				+e.body
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A066bd6633417efa8367b338b0b89cc4a156ceeb6d69787e9e7b7f187a109ff6a&amp;source=constructor" frameborder="0"></iframe>
+			+e.adress Московская область, г. Люберцы, ул. Котельническая, д. 23
+	// end sContactBlock

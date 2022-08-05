@@ -39,7 +39,7 @@
 			text-align: left;
 		}
 		@include media-breakpoint-up(xl) {
-			margin-left: rem(71);
+			margin-left: rem(55);
 		}
 		li {
 			&:not(:last-child) {
@@ -64,7 +64,7 @@
 	}
 	&__phone-link {
 		display: flex;
-		margin-bottom: rem(10);
+		margin-bottom: rem(5.200);
 		flex-direction: column;
 		@include media-breakpoint-down(lg) {
 			align-items: center;
@@ -86,6 +86,11 @@
 			}
 			&:not(:hover) {
 				color: #000;
+			}
+		}
+		.soc {
+			&__item {
+				margin-right: rem(4);
 			}
 		}
 	}

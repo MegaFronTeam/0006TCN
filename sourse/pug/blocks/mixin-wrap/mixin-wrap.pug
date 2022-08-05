@@ -35,3 +35,9 @@ mixin search()
 			input(type="text" placeholder="Поиск по номеру или названию запчасти")
 			button 
 				+icon("search")
+
+mixin page-head(h1, ...items)
+	+b.page-head&attributes(attributes)
+		.container
+			+breadcrumb(...items)
+			h1!= h1

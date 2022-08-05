@@ -1,0 +1,143 @@
+// start .sContactBlock
+.sContactBlock {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(80)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(36.800);
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	p {
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(30.400);
+				margin-bottom: 0;
+			}
+		}
+		.icon {
+			font-size: rem(20);
+			color: $danger;
+			flex: 0 0 auto;
+			margin-right: rem(10);
+		}
+		& > a {
+			margin-right: rem(10);
+			&:not(:hover) {
+				color: #000;
+			}
+		}
+	}
+	&__wrap {
+		border-radius: 15px;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(20);
+			overflow: hidden;
+			border: 1px solid #E8E8ED;
+		}
+	}
+	.form-wrap {
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(10);
+		}
+		@include media-breakpoint-up(md) {
+			padding: rem(17.920);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		&__row {
+			--bs-gutter-y: #{rem(10)};
+			align-items: center;
+		}
+		.custom-input {
+			display: flex;
+			align-items: center;
+			&__input {
+				flex: 0 0 auto;
+				margin-right: rem(10);
+				border-radius: 6px;
+				width: 20px;
+				height: 20px;
+				&:checked[type=checkbox] {
+					background-image: url('../img/svg/checkmark.svg');
+					background-size: 12px 12px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: #0C78ED;
+					border-color: #0C78ED;
+				}
+			}
+			&__text {
+				font-size: rem(14);
+				color: #191C1F;
+				margin-bottom: 0;
+			}
+		}
+		&__btn {
+			width: 100%;
+			margin: rem(5) 0 rem(10);
+			@include media-breakpoint-up(lg) {
+				margin: 0;
+			}
+		}
+	}
+	&__body {
+		border-top: 1px solid #E8E8ED;
+		min-height: rem(360);
+		position: relative;
+		@include media-breakpoint-down(sm) {
+			width: calc(100vw - var(--bs-gutter-x));
+			margin-left: calc(var(--bs-gutter-x) * -0.5 + 1px);
+			border-top: none;
+		}
+		@include media-breakpoint-up(lg) {
+			min-height: rem(434);
+		}
+		& > * {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__adress {
+		font-size: rem(14);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sContactBlock
