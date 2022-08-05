@@ -1,0 +1,30 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			.row
+				.col-lg-8
+					+e.head
+						.row
+							.col
+								+e.clear(href="#") Очистить корзину
+							.col-auto
+								+e.head-link(href="#") 
+									+img('img/svg/print.svg')
+									| Распечатать
+								+e.head-link(href="#") 
+									+img('img/svg/pdf-icon.svg')
+									| Скачать PDF
+					+e.body
+						+e.item
+							.row
+								.col-auto
+									+e.img-wrap
+										.img-wrap-center
+											+img('img/prod-1.jpg')
+								.col 
+								.col-auto
+					+e.footer
+
+				.col-lg-4
+	// end sCart
