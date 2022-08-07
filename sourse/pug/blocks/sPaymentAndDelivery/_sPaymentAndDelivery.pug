@@ -1,0 +1,19 @@
+mixin sPaymentAndDelivery(data)
+	// start sPaymentAndDelivery
+	+b.SECTION.sPaymentAndDelivery.section#sPaymentAndDelivery&attributes(attributes)
+		.container
+			+e.row.row 
+				.col-lg-5
+					p Оплата осуществляется наличными либо онлайн переводом на&nbsp;карту, оплата по&nbsp;безналичному расчёту. Доставка в&nbsp;регионы осуществляется транспортными компаниями:
+					+e.img-row.row
+						+e.col.col-auto
+							+e.img-wrap
+								+img('img/svg/sPaymentAndDelivery-logo-1.svg')
+						+e.col.col-auto
+							+e.img-wrap
+								+img('img/svg/sPaymentAndDelivery-logo-2.svg')
+					p Отправка осуществляется на&nbsp;следующий рабочий день после оплаты, для отправки требуются следующие данные: ФИО, город, серия номер паспорта и&nbsp;номер телефона, вид упаковки&nbsp;&mdash; жесткая упаковка, палетный борт или без упаковки, от&nbsp;себя упаковываем в&nbsp;пленку и&nbsp;по&nbsp;возможности в&nbsp;картон. Доставка до&nbsp;ТК&nbsp;500&nbsp;руб.
+				.col-lg-7
+					+e.img
+						+img('img/sPaymentAndDelivery-img-1.png')
+	// end sPaymentAndDelivery

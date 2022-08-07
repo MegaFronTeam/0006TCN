@@ -96,6 +96,9 @@
 					background-color: #0C78ED;
 					border-color: #0C78ED;
 				}
+				&:focus {
+					box-shadow: none;
+				}
 			}
 			&__text {
 				font-size: rem(14);
