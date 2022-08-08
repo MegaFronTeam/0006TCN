@@ -1,0 +1,13 @@
+mixin sSearchResult(data)
+	// start sSearchResult
+	+b.SECTION.sSearchResult.section#sSearchResult&attributes(attributes)
+		+b.search-block
+			form
+				input(type="text" placeholder="Поиск товаров")
+				button
+					+icon("search")
+		+e.youSearch
+			| Вы искали: 
+			span Дверь
+		+e.count Найдено 16 324 товаров
+	// end sSearchResult

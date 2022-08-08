@@ -3,7 +3,7 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sCart/_sCart.pug 
+include ../blocks/sSearchResult/_sSearchResult.pug 
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -11,7 +11,7 @@ block variables
 	- let  bg= '07-basket-1.jpg'
 
 block title
-	- let  title= "Корзина"
+	- let  title= "Результаты поиска"
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -20,9 +20,13 @@ block pagecontent
 	+header()
 		+topLine 
 		+top-nav()
-	+page-head(title, 'Главная', title)
-	
-	+sCart()
+	.container
+		.row
+			.col-lg-9
+				+page-head(title, 'Главная', title)
+				+sSearchResult()
+			.col-lg-3
+				+needHelp
 	
 	+footer()
       

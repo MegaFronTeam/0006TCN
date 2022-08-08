@@ -1,8 +1,8 @@
-mixin sCart(data)
+mixin sCart(inncorect, sale)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
-			.row
+			+e.row.row
 				.col-lg-8
 					+e.head
 						.row
@@ -16,15 +16,71 @@ mixin sCart(data)
 									+img('img/svg/pdf-icon.svg')
 									| Скачать PDF
 					+e.body
-						+e.item
-							.row
-								.col-auto
-									+e.img-wrap
-										.img-wrap-center
-											+img('img/prod-1.jpg')
-								.col 
-								.col-auto
+						mixin item(img, price, title, status=true)
+							+e.item
+								+e.inner-row.row
+									.col-auto
+										+e.img-wrap(href="#")
+											.img-wrap-center
+												+img(`img/sCart-img-${img}.jpg`)
+									.col 
+										+e.content
+											a(href="#") 
+												+e.price.h6!= price
+												+e.title.h6!= title
+											+e.storage 
+												+e.storage-key Склад
+												+e.storage-val Люберцы
+											if status
+												+e.label(style="--bgColor: #36B555; color: #fff;") Новая
+											else
+												+e.label(style="--bgColor: #FEE794; color: #000000;") Б/У
+									.col-auto
+										+e.delete(href="#")
+											+icon('delete')
+						+item(1, '14 000 ₽', 'Дверь правая задняя')
+						+item(2, '12 000 ₽', 'Крыло правое переднее', false)
+						+item(3, '4 000 ₽', 'Решетка радиатора')
 					+e.footer
-
+						+e.btn(href="#").btn.btn-primary
+							+icon('chevron-left')
+							| Вернуться к покупкам
 				.col-lg-4
+					+e.total
+						h4 Итого
+						mixin resultItem(product, price)
+							+e.price-row.row&attributes(attributes)
+								.col 
+									+e.product!= product
+								.col-auto
+									+e.price!= price
+						+e.wrap
+							+resultItem('3 товара', '48 000 ₽')
+							if sale
+								+resultItem('Скидка', '- 1 390 ₽').sCart__price-row--last
+						if sale
+							+e.full-price--correct-promocode.h4 46 610 ₽
+						else
+							+e.full-price.h4 48 000 ₽
+						+e.make-order(href="#").btn.btn-primary Оформить заказ
+						if !sale
+							+b.form-wrap
+								+e.row.row
+									.col-xxl-auto
+										+input('Введите промокод', 'text')
+									.col-xxl
+										+e.BUTTON.btn(type="submit").btn.btn-outline-primary Применить
+								if inncorect
+									+e.inncorect Промомкод введен неверно
+	// end sCart
+
+mixin sCartEmpty()
+	// start sCart
+	+b.SECTION.sCart--empty.section&attributes(attributes)
+		.container
+			+e.wrap
+				+img('img/svg/cart.svg')
+				h3 Корзина пуста
+				p Выберите нужный товар из каталога и добавьте его в корзину.
+				+e.btnEmpty(href="#").btn.btn-primary Вернуться к покупкам
 	// end sCart

@@ -41,3 +41,17 @@ mixin page-head(h1, ...items)
 		.container
 			+breadcrumb(...items)
 			h1!= h1
+
+mixin needHelp()
+	+b.need-help
+		+img('img/svg/question.svg')
+		h4 Нужна помощь?
+		p Не&nbsp;можете найти необходимую информацию или товар?
+		p Вы&nbsp;всегда можете обратиться к&nbsp;нам по&nbsp;контактам указанным ниже. Мы&nbsp;будем рады помочь!
+		+e.contact
+			p Всегда готовы помочь
+			+e.tel(href="tel:+79001234567") +7 (900) 123-45-67
+		+e.contact
+			p По всем вопросам
+			a(href="mailto:info@tcnauto.ru") info@tcnauto.ru
+		+e.btn(href="#").btn.btn-primary Оставить заявку

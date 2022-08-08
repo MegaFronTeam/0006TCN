@@ -1,0 +1,63 @@
+// start .sSearchResult
+.sSearchResult {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(80)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.search-block {
+		border: 1px solid #E8E8ED;
+		border-radius: 10px;
+		position: relative;
+		margin-bottom: rem(20);
+		input {
+			background-color: transparent;
+			padding-left: rem(20);
+		}
+		button {
+			@include mt;
+			position: absolute;
+			top: 50%;
+			right: 8px;
+			left: unset;
+			transform: translateY(-50%);
+			color: $primary;
+			.icon {
+				font-size: rem(20);
+			}
+			&:hover {
+				transform: translateY(-50%) scale(1.1);
+			}
+		}
+	}
+	&__youSearch {
+		font-size: rem(16);
+		font-weight: 800;
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
+		}
+		span {
+			color: $primary;
+		}
+	}
+	&__count {
+		font-size: rem(12);
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSearchResult

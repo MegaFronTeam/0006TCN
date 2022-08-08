@@ -315,7 +315,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $red;;
+$primary:       $red;
 $secondary:    #808187;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -599,7 +599,7 @@ $h2-font-size:  rem(40) ;
 $h3-font-size:  rem(30) ;
 $h4-font-size:  rem(20);
 $h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h6-font-size:                rem(16) !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
