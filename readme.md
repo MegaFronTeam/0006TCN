@@ -3,6 +3,8 @@
 2. <https://megafronteam.github.io/0006TCN/public/03-contacts.html>
 2. <https://megafronteam.github.io/0006TCN/public/04-payment-and-delivery.html>
 2. <https://megafronteam.github.io/0006TCN/public/05-guarantee.html>
+2. <https://megafronteam.github.io/0006TCN/public/07-search-result.html>
+2. <https://megafronteam.github.io/0006TCN/public/404.html>
 
 #### Корзина
 1. <https://megafronteam.github.io/0006TCN/public/06-cart.html>

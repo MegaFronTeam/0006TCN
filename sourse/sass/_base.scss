@@ -515,3 +515,9 @@ iframe {
 		max-height: 100%;
 	}
 }
+
+.error-page {
+	.main-wrapper {
+		--header-height: 0;
+	}
+}

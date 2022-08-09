@@ -1,0 +1,10 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		+img('img/svg/logo.svg').logo
+		+e.container.container.text-center(style="--content: '404'")
+			+img('img/car-2.png')
+			h1 Страница не найдена
+			p Неправильно набран адрес, или такой страницы не существует.
+			+e.btn(href="#").btn.btn-primary Вернуться на главную
+	// end s404
