@@ -115,6 +115,7 @@
 	}
 	.breadcrumb {
 		margin-bottom: rem(9);
+		flex-wrap: nowrap;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(10.800);
 		}
@@ -132,8 +133,11 @@
 
 .need-help {
 	background-color: #F5F5F8;
-	border-radius: 15px;
 	padding: rem(20);
+	@include media-breakpoint-up(sm) {
+		border-radius: 15px;
+		margin-bottom: rem(20);
+	}
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(40);
 	}
@@ -141,20 +145,20 @@
 		padding: rem(40);
 	}
 	img {
-		margin-bottom: rem(15);
+		margin-bottom: rem(18.200);
 	}
 	h4 {
 		margin-bottom: rem(15);
 	}
 	p {
-		margin-bottom: rem(15);
+		margin-bottom: rem(19.800);
 		font-size: rem(14);
 		&:last-child {
 			margin-bottom: rem(15);
 		}
 	}
 	&__contact {
-		margin-bottom: rem(15);
+		margin-bottom: rem(8.600);
 		&:last-of-type {
 			margin-bottom: rem(20);
 			@include media-breakpoint-up(lg) {
@@ -184,4 +188,9 @@
 			--bs-btn-font-size: #{rem(14)};
 		}
 	}
+}
+
+.breadcrumb-item{
+	width: auto;
+	// margin-right: rem(32);
 }

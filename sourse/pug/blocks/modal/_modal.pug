@@ -2,6 +2,48 @@
 mixin modal() 
 	//  start restore-pass
 	//- a(href="modal-call").link-modal-js modal-call 
+	div(id="modal-login"  style="display: none" )
+		+b.modal-win--login
+			+form-wrap
+				+e.title.text-center Войти в личный кабинет
+				+input('Введите эл. почту', 'email', 'Электронная почта')
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title
+							| Пароль
+							+e.forget(href="#") Забыли пароль?
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+e.BUTTON.btn(type="submit").btn.btn-primary Войти
+				+e.create-account
+					| У вас еще нет аккаунта? 
+					a(href="#") Создать аккаунт
+	div(id="modal-reg"  style="display: none" )
+		+b.modal-win--reg
+			+form-wrap
+				+e.title.text-center Регистрация
+				+input('Введите эл. почту', 'email', 'Электронная почта')
+				+input('Введите телефон', 'tel', 'Телефон')
+				+input('Введите имя', 'text', 'Имя')
+				+input('Введите фамилию', 'text', 'Фамилия')
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title Пароль
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title Повторите пароль
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+policy()
+				+e.BUTTON.btn(type="submit").btn.btn-primary Зарегистрироваться
+				+e.create-account
+					| Уже есть аккаунт? 
+					a(href="#") Войти
 	div(id="modal-restore-pass"  style="display: none" )
 		+b.modal-win--restore-pass
 			+form-wrap
@@ -13,6 +55,11 @@ mixin modal()
 				+e.BUTTON.btn.btn.btn-primary(type="submit") Восстановить пароль
 				+e.link(href="#") Вернуться к авторизации
 	// #modal-call
+	div(id="modal-success"  style="display: none" )
+		+b.modal-win--success.text-center
+			+e.title Успешно
+			p.after-headline Мы отправили информацию о том, как сбросить пароль на ваш адрес электронной почты
+			+e.btn(href="#").btn.btn-primary Закрыть
 	div(id="modal-add-to-cart"  style="display: none" )
 		+b.modal-win--add-to-cart
 			.text-center

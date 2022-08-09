@@ -1,10 +1,11 @@
 // start .sSearchResult
 .sSearchResult {
 	--sPT: #{rem(0)};
-	--sPB: #{rem(40)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(80)};
+		margin-right: rem(20);
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -37,20 +38,96 @@
 		}
 	}
 	&__youSearch {
-		font-size: rem(16);
 		font-weight: 800;
 		margin-bottom: rem(15);
+		font-size: rem(20);
 		@include media-breakpoint-up(md) {
-			font-size: rem(20);
 		}
 		span {
 			color: $primary;
 		}
 	}
 	&__count {
-		font-size: rem(12);
+		margin-bottom: rem(18.400);
+		font-size: rem(14);
 		@include media-breakpoint-up(md) {
-			font-size: rem(14);
+		}
+	}
+	.tabs {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 40px;
+			width: 40px;
+			right: 0;
+			top: 0;
+			background-image: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			z-index: 2;
+		}
+		&__btn {
+			@include mt;
+			max-width: max-content;
+			padding: rem(10) rem(15);
+			font-size: 14px;
+			border: 1px solid transparent;
+			background-color: transparent;
+			border-radius: 8px;
+			&.active, &:hover {
+				border-color: #0C78ED;
+				background-color: rgba($color: #0C78ED, $alpha: .1);
+			}
+			span {
+				color: $secondary;
+				margin-left: rem(5);
+			}
+		}
+		&__caption {
+			margin-bottom: rem(16.800);
+		}
+		&__wrap {
+			margin-bottom: rem(26.800);
+		}
+		&__link {
+			display: flex;
+			justify-content: space-between;
+			font-weight: 600;
+			padding: rem(17.600) 0;
+			border-top: 1px dashed #E8E8ED;
+			&:not(:hover) {
+				color: #000;
+			}
+			&:last-child {
+				border-bottom: 1px dashed #E8E8ED;
+			}
+			.icon {
+				color: $primary;
+				flex: 0 0 auto;
+				font-size: rem(20);
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 2;
+				margin-left: rem(15);
+			}
+		}
+		&__show-more {
+			text-align: center;
+			width: 100%;
+			--bs-btn-color: #{$primary};
+			--bs-btn-bg: #F5F5F8;
+			--bs-btn-border-width: 0;
+			--bs-btn-border-radius: 6px;
+			--bs-btn-padding-y: #{rem(8)};
+			--bs-btn-hover-color: #{$primary};
+			--bs-btn-hover-bg: #cccccd;
+			--bs-btn-active-color: #{$primary};
+			--bs-btn-active-bg: #cccccd;
+			.icon{
+				font-size: rem(20);
+				vertical-align: sub;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

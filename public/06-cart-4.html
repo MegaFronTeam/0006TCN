@@ -128,11 +128,11 @@
 			<!-- end header-->
 			<div class="page-head">
 				<div class="container">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
@@ -202,6 +202,98 @@
 			</footer>
 		</div>
 		<!--  start restore-pass-->
+		<div id="modal-login" style="display: none">
+			<div class="modal-win modal-win--login">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title text-center">Войти в личный кабинет
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите эл. почту"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
+							<label>
+								<div class="form-wrap__input-title">Пароль
+									<a class="form-wrap__forget" href="#">Забыли пароль?
+									</a>
+								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							</label>
+							<div class="input-btn--password-toggle">
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>
+							</div>
+						</div>
+						<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+						</button>
+						<div class="form-wrap__create-account">У вас еще нет аккаунта? <a href="#">Создать аккаунт</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-reg" style="display: none">
+			<div class="modal-win modal-win--reg">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title text-center">Регистрация
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите эл. почту"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите телефон"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите фамилию"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
+							<label>
+								<div class="form-wrap__input-title">Пароль
+								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							</label>
+							<div class="input-btn--password-toggle">
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
+							<label>
+								<div class="form-wrap__input-title">Повторите пароль
+								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							</label>
+							<div class="input-btn--password-toggle">
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Я ознакомился и согласен с условиями обработки персональных данных</small>
+							</label>
+						</div>
+						<button class="form-wrap__btn btn btn-primary" type="submit">Зарегистрироваться
+						</button>
+						<div class="form-wrap__create-account">Уже есть аккаунт? <a href="#">Войти</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 		<div id="modal-restore-pass" style="display: none">
 			<div class="modal-win modal-win--restore-pass">
 				<div class="form-wrap">
@@ -225,6 +317,15 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-success" style="display: none">
+			<div class="modal-win modal-win--success text-center">
+				<div class="modal-win__title">Успешно
+				</div>
+				<p class="after-headline">Мы отправили информацию о том, как сбросить пароль на ваш адрес электронной почты</p>
+				<a class="modal-win__btn btn btn-primary" href="#">Закрыть
+				</a>
+			</div>
+		</div>
 		<div id="modal-add-to-cart" style="display: none">
 			<div class="modal-win modal-win--add-to-cart">
 				<div class="text-center"><img src="img/svg/check.svg" alt="" loading="lazy"/>

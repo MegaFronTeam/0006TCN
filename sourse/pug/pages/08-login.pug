@@ -3,15 +3,15 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sSearchResult/_sSearchResult.pug 
+include ../blocks/slogIn/_slogIn.pug 
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'search-page' 
-	- let  bg= '06-search-results.jpg'
+	- let  mainPage= 'main-page' 
+	- let  bg= '08-login.jpg'
 
 block title
-	- let  title= "Результаты поиска"
+	- let  title= "Мой кабинет"
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -20,13 +20,8 @@ block pagecontent
 	+header()
 		+topLine 
 		+top-nav()
-	.container
-		.row.row--search
-			.col-lg-9
-				+page-head(title, 'Главная', title)
-				+sSearchResult()
-			.col-search.col-lg-3
-				+needHelp
+	+page-head(title, 'Главная', title)
+	+slogIn()
 	
 	+footer()
       

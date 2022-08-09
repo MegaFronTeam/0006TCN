@@ -1,0 +1,222 @@
+// start .sMainCatalog
+.sMainCatalog {
+	--sPT: #{rem(15)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(20)};
+		--sPB: #{rem(80)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.page-head {
+		padding-top: 0;
+		padding-bottom: rem(15);
+		.container {
+			--bs-gutter-x: 0;
+		}
+		.breadcrumb-slider--js {
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__button {
+		width: 100%;
+		font-size: 12px;
+		padding: 10px;
+		background-color: #F5F5F8;
+		border-radius: 6px;
+		margin-bottom: 15px;
+		text-align: center;
+		cursor: pointer;
+		.icon {
+			color: $primary;
+			font-size: rem(16);
+			margin-right: rem(10);
+		}
+	}
+	&__side-bar {
+		@include mt;
+		width: 100%;
+		max-width: rem(290);
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 275px;
+			height: 100%;
+			background-color: #fff;
+			z-index: 1000;
+			transform: translateX(-100%);
+		}
+		&.active {
+			@include media-breakpoint-down(lg) {
+				transform: translateX(0);
+			}
+		}
+	}
+	&__title {
+		font-size: 16px;
+		padding: rem(17.5) rem(50) rem(17.5) rem(20);
+		border-bottom: 1px solid #E8E8ED;
+		font-weight: 600;
+	}
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		&::after, &::before {
+			@include a-cent();
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			border-radius: 3px;
+			background-color: #BFC1C7;
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+	}
+	.search-block {
+		border: 1px solid #E8E8ED;
+		border-radius: 8px;
+		margin-bottom: rem(20);
+		@include media-breakpoint-down(lg) {
+			margin: 20px;
+		}
+		input {
+			padding: rem(14.5) rem(40) rem(14.5) rem(15);
+			background-color: transparent;
+		}
+		button {
+			left: unset;
+			right: 3px;
+			color: $secondary;
+		}
+	}
+	&__wrap {
+		@include media-breakpoint-down(lg) {
+			padding: 0 20px 20px 20px;
+		}
+	}
+	&__link {
+		padding: rem(10) rem(15);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: rem(14);
+		color: #000;
+		border-radius: 6px;
+		&:not(:last-child) {
+			margin-bottom: rem(5);
+		}
+		.icon {
+			font-size: rem(16);
+			color: $primary;
+			margin-right: rem(10);
+		}
+		span {
+			color: $secondary;
+			margin-left: auto;
+		}
+		&:hover {
+			background-color: #F5F5F8;
+			color: $primary;
+			span {
+				@include mt;
+				color: $secondary;
+			}
+		}
+		&.active {
+			background-color: $primary;
+			color: #fff;
+			span {
+				color: #fff;
+			}
+		}
+	}
+	&__catalog-row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__show-more {
+		text-align: center;
+		width: 100%;
+		--bs-btn-color: #{$primary};
+		--bs-btn-bg: #F5F5F8;
+		--bs-btn-border-width: 0;
+		--bs-btn-border-radius: 6px;
+		--bs-btn-padding-y: #{rem(8)};
+		--bs-btn-hover-color: #{$primary};
+		--bs-btn-hover-bg: #cccccd;
+		--bs-btn-active-color: #{$primary};
+		--bs-btn-active-bg: #cccccd;
+		.icon{
+			font-size: rem(20);
+			vertical-align: sub;
+		}
+	}
+	&__type {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(30);
+		a {
+			padding: rem(10) rem(24);
+			color: #000;
+			background-color: #F5F5F8;
+			border-radius: 60px;
+			border: 1px solid transparent;
+			&:not(:last-child) {
+				margin-right: rem(5);
+			}
+			&:hover, &.active {
+				background-color: #fff;
+				border-color: #0C78ED;
+				color: #0C78ED;
+			}
+		}
+	}
+	&__input {
+		font-size: rem(14);
+		padding: rem(8.5) rem(50) rem(8.5) rem(15);
+	}
+	&__sort-row {
+		p {
+			margin-bottom: rem(20);
+			font-size: rem(14);
+		}
+	}
+	&__sort {
+		font-size: 12px;
+		color: $secondary;
+		cursor: pointer;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMainCatalog

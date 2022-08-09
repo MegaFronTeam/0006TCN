@@ -1,0 +1,66 @@
+mixin sideBarSearchresult(name, count, icon)
+	+e.link(href="#")&attributes(attributes)
+		if icon 
+			+icon('menu')
+		!= name
+		span!= count
+mixin sideBarSearch()
+	+e.button.d-block.d-lg-none
+		+icon('menu')
+		| Выбрать категорию
+	+e.side-bar
+		+e.close
+		+e.title.d-block.d-lg-none Категории запчастей
+		+b.search-block
+			form
+				input(type="text" placeholder="Поиск товаров")
+				button
+					+icon("search")
+		+e.wrap
+			+sideBarSearchresult('Все запчасти', '324', 'true').d-flex.d-lg-none
+			+sideBarSearchresult('Бампер', '16')
+			+sideBarSearchresult('Бачок гидроусилителя', '3')
+			+sideBarSearchresult('Вентилятор радиатора', '1')
+			+sideBarSearchresult('Глушитель', '3')
+			+sideBarSearchresult('Накладка бампера', '22')
+			+sideBarSearchresult('Накладка бампера', '22')
+			+sideBarSearchresult('Подрамник', '6').active
+			+sideBarSearchresult('Радиатор кондиционера', '4')
+			+sideBarSearchresult('Спойлер', '1')
+			+sideBarSearchresult('Стабилизатор', '3')
+			+sideBarSearchresult('Стекло двери', '6')
+			+sideBarSearchresult('Юбка бампера', '1')
+
+mixin sMainCatalog(data)
+	// start sMainCatalog
+	+b.SECTION.sMainCatalog.section#sMainCatalog&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+sideBarSearch
+				.col-lg-9
+					+page-head('Запчасти для BMW 3-Series 7&nbsp;поколение, 2018&nbsp;&mdash; н.в., B57D30 3.0&nbsp;л дизель', 'Автозапчасти', 'Запчасти BMW', 'Запчасти BMW 3-Series', '7 поколение, 2018 - н.в.')
+					+e.sort-row.row
+						.col
+							p Найдено 16 товаров
+						.col-auto.d-block.d-lg-none
+							+e.sort Сортировка
+					.row
+						.col
+							+e.type
+								a(href="#").active Передний
+								a(href="#") Задний
+						.col-auto.d-none.d-lg-block
+							+input('Сначала дешевле', 'select')
+					+e.catalog-row.row
+						-for (var x = 0; x < 3; x++)
+							.col-sm-6.col-md-4
+								+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active') 
+							.col-sm-6.col-md-4
+								+prod-item(2,"Крыло правое переднее",'12 000 ₽')
+							.col-sm-6.col-md-4
+								+prod-item(4,"Решетка радиатора",'4 000 ₽')
+						.col-12
+							+e.show-more(href="#").btn.btn-secondary
+								+icon('repeat')
+	// end sMainCatalog

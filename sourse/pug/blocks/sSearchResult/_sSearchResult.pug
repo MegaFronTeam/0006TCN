@@ -1,3 +1,22 @@
+mixin sSearchResultContent()
+	+e.wrap
+		mixin link(text)
+			+e.link(href="#")!= text
+				+icon('chevron-right')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB ')
+		+link('Дверь левая передняя BMW 3-Series 7 поколение, B57D30')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('Дверь левая передняя BMW 3-Series 7 поколение, B57D30')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('Дверь левая передняя BMW 3-Series 7 поколение, B57D30')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+		+link('Дверь левая передняя BMW 3-Series 7 поколение, B57D30')
+		+link('4B5827302F VAG, дверь правая задняя KIA RIO 3 QB')
+	+e.show-more(href="#").btn.btn-secondary
+		+icon('repeat')
 mixin sSearchResult(data)
 	// start sSearchResult
 	+b.SECTION.sSearchResult.section#sSearchResult&attributes(attributes)
@@ -10,4 +29,22 @@ mixin sSearchResult(data)
 			| Вы искали: 
 			span Дверь
 		+e.count Найдено 16 324 товаров
+		+b.tabs--slider.swiper
+			+e.caption.swiper-wrapper
+				+e.btn.swiper-slide.active Все
+				+e.btn.swiper-slide Бачок гидроусилителя
+					span 3
+				+e.btn.swiper-slide Вентилятор радиатора
+					span 1
+				+e.btn.swiper-slide Бампер
+					span 16
+				+e.btn.swiper-slide Бачок гидроусилителя
+					span 3
+				+e.btn.swiper-slide Бачок гидроусилителя
+					span 3
+			+e.content.active
+				+sSearchResultContent
+			-for(i=0; i<5; i++)
+				+e.content
+					+sSearchResultContent()
 	// end sSearchResult

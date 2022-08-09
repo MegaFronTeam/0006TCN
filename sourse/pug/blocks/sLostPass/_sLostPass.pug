@@ -1,0 +1,27 @@
+mixin sLostPass(form)
+	// start sLostPass
+	+b.sLostPass.section#sLostPass&attributes(attributes)
+		+img('img/svg/logo.svg').logo
+		if form
+			+form-wrap
+				+e.title.text-center Сменить пароль
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title Пароль
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title Повторите пароль
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+e.BUTTON.btn(type="submit").btn.btn-primary Подтвердить
+		else
+			+e.wrap.text-center
+				+img('img/svg/check.svg')
+				+e.title Пароль успешно изменен
+				p Теперь вы можете войти в ваш аккаунт, используя новый пароль.
+				+e.btn(href="#").btn.btn-primary Авторизоваться
+	// end sLostPass

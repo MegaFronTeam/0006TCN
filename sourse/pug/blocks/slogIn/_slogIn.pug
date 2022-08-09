@@ -1,0 +1,19 @@
+mixin slogIn(data)
+	// start slogIn
+	+b.SECTION.slogIn.section#slogIn&attributes(attributes)
+		.container
+			+form-wrap
+				+input('Введите эл. почту', 'email', 'Электронная почта')
+				+e.input-wrap--pass.form-group
+					label
+						+e.input-title
+							| Пароль
+							+e.forget(href="#") Забыли пароль?
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
+					.input-btn--password-toggle
+						+icon('eye')
+				+e.BUTTON.btn(type="submit").btn.btn-primary Войти
+				+e.create-account
+					| У вас еще нет аккаунта? 
+					a(href="#") Создать аккаунт
+	// end slogIn

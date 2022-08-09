@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Корзина</title>
+		<title>Мой кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="07-basket-2.jpg">
+	<body class="main-page" data-bg="08-login.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -132,181 +132,45 @@
 						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мой кабинет</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
-					<h1>Корзина</h1>
+					<h1>Мой кабинет</h1>
 				</div>
 			</div>
-			<!-- start sCart-->
-			<section class="sCart section" id="sCart">
+			<!-- start slogIn-->
+			<section class="slogIn section" id="slogIn">
 				<div class="container">
-					<div class="sCart__row row">
-						<div class="col-lg-8">
-							<div class="sCart__head">
-								<div class="row">
-									<div class="col">
-										<a class="sCart__clear" href="#">Очистить корзину
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите эл. почту"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
+								<label>
+									<div class="form-wrap__input-title">Пароль
+										<a class="form-wrap__forget" href="#">Забыли пароль?
 										</a>
-									</div>
-									<div class="col-auto">
-										<a class="sCart__head-link" href="#"> <img src="img/svg/print.svg" alt="" loading="lazy"/>Распечатать
-										</a>
-										<a class="sCart__head-link" href="#"> <img src="img/svg/pdf-icon.svg" alt="" loading="lazy"/>Скачать PDF
-										</a>
-									</div>
+									</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+								</label>
+								<div class="input-btn--password-toggle">
+									<svg class="icon icon-eye ">
+										<use xlink:href="img/svg/sprite.svg#eye"></use>
+									</svg>
 								</div>
 							</div>
-							<div class="sCart__body">
-								<div class="sCart__item">
-									<div class="sCart__inner-row row">
-										<div class="col-auto">
-											<a class="sCart__img-wrap" href="#">
-												<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="col"> 
-											<div class="sCart__content"><a href="#"> 
-													<div class="sCart__price h6">14 000 ₽
-													</div>
-													<div class="sCart__title h6">Дверь правая задняя
-													</div></a>
-												<div class="sCart__storage"> 
-													<div class="sCart__storage-key">Склад
-													</div>
-													<div class="sCart__storage-val">Люберцы
-													</div>
-												</div>
-												<div class="sCart__label" style="--bgColor: #36B555; color: #fff;">Новая
-												</div>
-											</div>
-										</div>
-										<div class="col-auto">
-											<a class="sCart__delete" href="#">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="sCart__item">
-									<div class="sCart__inner-row row">
-										<div class="col-auto">
-											<a class="sCart__img-wrap" href="#">
-												<div class="img-wrap-center"><img src="img/sCart-img-2.jpg" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="col"> 
-											<div class="sCart__content"><a href="#"> 
-													<div class="sCart__price h6">12 000 ₽
-													</div>
-													<div class="sCart__title h6">Крыло правое переднее
-													</div></a>
-												<div class="sCart__storage"> 
-													<div class="sCart__storage-key">Склад
-													</div>
-													<div class="sCart__storage-val">Люберцы
-													</div>
-												</div>
-												<div class="sCart__label" style="--bgColor: #FEE794; color: #000000;">Б/У
-												</div>
-											</div>
-										</div>
-										<div class="col-auto">
-											<a class="sCart__delete" href="#">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="sCart__item">
-									<div class="sCart__inner-row row">
-										<div class="col-auto">
-											<a class="sCart__img-wrap" href="#">
-												<div class="img-wrap-center"><img src="img/sCart-img-3.jpg" alt="" loading="lazy"/>
-												</div>
-											</a>
-										</div>
-										<div class="col"> 
-											<div class="sCart__content"><a href="#"> 
-													<div class="sCart__price h6">4 000 ₽
-													</div>
-													<div class="sCart__title h6">Решетка радиатора
-													</div></a>
-												<div class="sCart__storage"> 
-													<div class="sCart__storage-key">Склад
-													</div>
-													<div class="sCart__storage-val">Люберцы
-													</div>
-												</div>
-												<div class="sCart__label" style="--bgColor: #36B555; color: #fff;">Новая
-												</div>
-											</div>
-										</div>
-										<div class="col-auto">
-											<a class="sCart__delete" href="#">
-												<svg class="icon icon-delete ">
-													<use xlink:href="img/svg/sprite.svg#delete"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+							</button>
+							<div class="form-wrap__create-account">У вас еще нет аккаунта? <a href="#">Создать аккаунт</a>
 							</div>
-							<div class="sCart__footer">
-								<a class="sCart__btn btn btn-primary" href="#">
-									<svg class="icon icon-chevron-left ">
-										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-									</svg>Вернуться к покупкам
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="sCart__total">
-								<h4>Итого</h4>
-								<div class="sCart__wrap">
-									<div class="sCart__price-row row">
-										<div class="col"> 
-											<div class="sCart__product">3 товара
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="sCart__price">48 000 ₽
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sCart__full-price h4">48 000 ₽
-								</div>
-								<a class="sCart__make-order btn btn-primary" href="#">Оформить заказ
-								</a>
-								<div class="form-wrap">
-									<div class="form-wrap__row row">
-										<div class="col-xxl-auto">
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите промокод"/>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-										<div class="col-xxl">
-											<button class="form-wrap__btn btn btn-outline-primary" type="submit">Применить
-											</button>
-										</div>
-									</div>
-									<div class="form-wrap__inncorect">Промомкод введен неверно
-									</div>
-								</div>
-							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</section>
-			<!-- end sCart-->
+			<!-- end slogIn-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">
