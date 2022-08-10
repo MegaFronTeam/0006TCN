@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sOrder/_sOrder.pug 
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '10-order.jpg'
+
+block title
+	- let  title= "Оформление заказа"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	+header()
+		+topLine 
+		+top-nav()
+	+page-head2(title, 'true')
+
+	+sOrder('true')
+  
+	+footer()
+
+
+

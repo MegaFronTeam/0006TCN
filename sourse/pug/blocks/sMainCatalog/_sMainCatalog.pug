@@ -43,14 +43,22 @@ mixin sMainCatalog(data)
 					+e.sort-row.row
 						.col
 							p Найдено 16 товаров
-						.col-auto.d-block.d-lg-none
+						.col-auto.d-block.d-md-none
 							+e.sort Сортировка
+							+e.mob-sort
+								+e.close
+								+e.title Категории запчастей
+								+b.form-wrap
+									+e.title Цена
+									+in-c('radio', 'Сначала дешевле', 'price')
+									+in-c('radio', 'Сначала дороже', 'price')
+								+e.sort-btn(href="#").btn.btn-primary Применить
 					.row
 						.col
 							+e.type
 								a(href="#").active Передний
 								a(href="#") Задний
-						.col-auto.d-none.d-lg-block
+						.col-auto.d-none.d-md-block
 							+input('Сначала дешевле', 'select')
 					+e.catalog-row.row
 						-for (var x = 0; x < 3; x++)

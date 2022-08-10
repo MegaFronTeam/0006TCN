@@ -1,0 +1,9 @@
+mixin sProfileNothing(title, text)
+	// start sProfileNothing
+	+b.sProfileNothing.section#sProfileNothing&attributes(attributes)
+		+e.wrap
+			+img('img/svg/remove-cart.svg')
+			h3!= title
+			p!= text
+			+e.btn(href="#").btn.btn-primary Вернуться к покупкам
+	// end sProfileNothing

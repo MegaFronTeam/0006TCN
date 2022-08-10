@@ -1,0 +1,82 @@
+// start .sMyProfile
+.sMyProfile {
+	--sPT: #{rem(115)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(80)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.page-head {
+		padding-top: 0;
+		padding-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-bottom: rem(36.400);
+		}
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			top: 15px;
+			left: calc(100vw - 100%) / 2;
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__sidebar {
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(20);
+		}
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 40px;
+		}
+	}
+	&__link-wrap {
+		padding-bottom: 19px;
+		margin-bottom: 19px;
+		border-bottom: 1px solid #E8E8ED;
+	}
+	&__link {
+		display: block;
+		font-size: 14px;
+		color: #000;
+		border-radius: 6px;
+		background-color: transparent;
+		padding: 10px 15px;
+		&:not(:last-child) {
+			margin-bottom: 2px;
+		}
+		.icon {
+			@include mt;
+			color: #000;
+			font-size: rem(20);
+			margin-right: rem(10);
+		}
+		&:hover, &.active {
+			background-color: #F5F5F8;
+			color: #000;
+			.icon {
+				color: $primary;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMyProfile

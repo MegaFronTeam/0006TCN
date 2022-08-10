@@ -1,0 +1,13 @@
+mixin sProfileFavorite(data)
+	// start sProfileFavorite
+	+b.sProfileFavorite.section#sProfileFavorite&attributes(attributes)
+		+e.row.row
+			+e.col.col-sm-6.col-md-4
+				+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active') 
+			+e.col.col-sm-6.col-md-4
+				+prod-item(2,"Крыло правое переднее",'12 000 ₽', '#FEE794', '#000', 'Б/У')
+			+e.col.col-sm-6.col-md-4
+				+prod-item(4,"Решетка радиатора",'4 000 ₽', '#FEE794', '#000', 'Б/У').disabled
+			+e.col.col-sm-6.col-md-4
+				+prod-item(4,"Решетка радиатора",'4 000 ₽', '#FEE794', '#000', 'Б/У')
+	// end sProfileFavorite

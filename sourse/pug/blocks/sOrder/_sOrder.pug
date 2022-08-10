@@ -1,0 +1,132 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+e.main-row.row
+				.col-lg-8.order-2.order-lg-1
+					+b.form-wrap
+						+e.wrap
+							h4 Ваши данные
+							+e.link Уже есть аккаунт?
+								a(href="#") Войти
+							+e.input-row.row
+								.col-md-6
+									+input('Введите имя', 'text', 'Имя')
+								.col-md-6
+									+input('Введите фамилию', 'text', 'Фамиля')
+								.col-md-6
+									+input('Введите телефон', 'tel', 'Телефон')
+								.col-md-6
+									+input('Введите email', 'email', 'Email')
+						+e.wrap
+							h4 Выберите способ получения
+							+e.inc-wrap
+								+in-c('radio', 'Доставка', 'delivery')
+								+in-c('radio', 'Самовывоз', 'delivery')
+						+e.wrap
+							h4 Ваши данные
+							+e.input-row.row 
+								.col-lg-6 
+									+input('Введите адрес доставки', 'text', 'Адрес')
+									+e.house-row.row
+										.col-3
+											+input('', 'text', 'Кв/офис')
+										.col-3
+											+input('', 'text', 'Подъезд')
+										.col-3
+											+input('', 'text', 'Домофон')
+										.col-3
+											+input('', 'text', 'Этаж')
+								.col-lg-6 
+									+input('Введите комментарий к заказу', 'textarea', 'Комментарий к заказу').--textarea
+						+e.wrap
+							h4 Выберите способ оплаты
+							+e.inc-wrap
+								+in-c('radio', 'Онлайн-оплата', 'pay')
+								+in-c('radio', 'При получении', 'pay')
+						+e.wrap
+							h4 Подтвердите ваш заказ
+							+e.footer
+								+e.price.row
+									.col Стоимость товаров без скидки
+									.col-auto 48 000 ₽
+								+e.price.row
+									.col Скидка
+									.col-auto - 1 390 ₽
+							+e.final.row
+								.col 
+									p Итого
+								.col-auto
+									.h4 46 610 ₽
+						+e.wrap
+							.row.align-items-center
+								.col-md-auto
+									+e.BUTTON.btn.btn.btn-primary Оформить заказ
+								.col-md
+									+e.confrim Нажимая кнопку «Оформить заказ», вы принимаете условия 
+										a(href="#") Публичной оферты
+				.col-lg-4.order-1.order-lg-2
+					+e.side-bar
+						.row
+							.col
+								.h4 Товары (3)
+							.col-auto
+								.h4 46 610 ₽
+						.row
+							.col
+								p Скидка
+							.col-auto
+								p - 1 390 ₽
+						+e.product(href="#")
+							.row
+								.col-auto
+									+e.img-wrap
+										.img-wrap-center
+											+img('img/sCart-img-1.jpg')
+								.col
+									+e.head
+										+e.sum 14 000 ₽
+										+e.label(style=`--bg: #36B555;--color: #fff;`) Новая
+									+e.title Дверь правая задняя
+									+e.place
+										span Склад
+										| Люберцы
+						+e.product(href="#")
+							.row
+								.col-auto
+									+e.img-wrap
+										.img-wrap-center
+											+img('img/sCart-img-1.jpg')
+								.col
+									+e.head
+										+e.sum 14 000 ₽
+										+e.label(style=`--bg: #FEE794;--color: #000;`) Б/У
+									+e.title Дверь правая задняя
+									+e.place
+										span Склад
+										| Люберцы
+						+e.product(href="#")
+							.row
+								.col-auto
+									+e.img-wrap
+										.img-wrap-center
+											+img('img/sCart-img-1.jpg')
+								.col
+									+e.head
+										+e.sum 14 000 ₽
+										+e.label(style=`--bg: #36B555;--color: #fff;`) Новая
+									+e.title Дверь правая задняя
+									+e.place
+										span Склад
+										| Люберцы
+	// end sOrder
+
+mixin sOrder2(data)
+	// start sOrder
+	+b.SECTION.sOrder--2.section#sOrder&attributes(attributes)
+		.container
+			+e.order-complete
+				+img('img/svg/remove-cart.svg')
+				h1 Спасибо за заказ!
+				p Ваш заказ успешно оформлен. Номер вашего заказа #123456. Отслеживать статус заказа вы&nbsp;можете в&nbsp;личном кабинете.
+				+e.done(href="#").btn.btn-primary Вернуться к покупкам

@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-account {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
 .icon-arrow-left {
 	font-size:math.div(16,10)*1rem;
 	width: math.div(21,16)*1em;
@@ -43,6 +47,10 @@
 	font-size:math.div(20,10)*1rem;
 	width: math.div(20,20)*1em;
 }
+.icon-favorite {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
 .icon-favorites {
 	font-size:math.div(20,10)*1rem;
 	width: math.div(20,20)*1em;
@@ -63,7 +71,15 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-list {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
 .icon-login {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-logout {
 	font-size:math.div(20,10)*1rem;
 	width: math.div(20,20)*1em;
 }

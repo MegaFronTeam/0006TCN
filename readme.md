@@ -17,3 +17,14 @@
 
 #### Каталог
 4. <https://megafronteam.github.io/0006TCN/public/02-catalog.html>
+
+#### Оформление заказа
+4. <https://megafronteam.github.io/0006TCN/public/10-order.html>
+4. <https://megafronteam.github.io/0006TCN/public/10-order-2.html>
+
+#### Личный кабинет
+4. <https://megafronteam.github.io/0006TCN/public/11-my-profile.html>
+4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-2.html>
+4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-3.html>
+4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-4.html>
+4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-5.html>

@@ -42,6 +42,15 @@ mixin page-head(h1, ...items)
 			+breadcrumb(...items)
 			h1!= h1
 
+mixin page-head2(h1, back)
+	+b.page-head&attributes(attributes)
+		.container
+			if back
+				+e.back(href="#")
+					+icon('chevron-left')
+					| В корзину
+			h1!= h1
+
 mixin needHelp()
 	+b.need-help
 		+img('img/svg/question.svg')

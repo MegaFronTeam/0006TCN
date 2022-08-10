@@ -1,0 +1,44 @@
+mixin sProfileOrder()
+	// start sProfileOrder
+	+b.sProfileOrder.section#sProfileOrder&attributes(attributes)
+		mixin sProfileOrderItem(way, bg, color, status)
+			+e.wrap
+				+e.head
+					.row
+						.col
+							+e.date 10 декабря 2021 16:30
+						.col-auto
+							+e.status(style=`--bg: ${bg};--color: ${color};`)!= status
+					.row
+						.col
+							+e.order Заказ #123456
+					.row
+						.col
+							+e.way!= way
+						.col-auto.d-none.d-sm-block
+							+e.price Цена: 2 000 ₽
+
+				+e.body
+					-for(i=0; i<3; i++)
+						+e.item(href="#")
+							+e.item-row.row
+								.col-auto
+									+e.img-wrap
+										.img-wrap-center
+											+img('img/sCart-img-1.jpg')
+								.col
+									+e.content
+										+e.title Дверь правая задняя
+										+e.label(style=`--bg: #36B555;--color: #fff;`) Новая
+										+e.sum 1 х 14 000 ₽
+				+e.footer.d-block.d-sm-none
+					.row
+						.col
+							+e.sum Сумма заказа:
+						.col-auto
+							+e.price Цена: 2 000 ₽
+		+sProfileOrderItem('Доставка, Онлайн-оплата', '#FEE794', '#000', 'Формируется')
+		+sProfileOrderItem('Самовывоз, Оплата при получении', '#0C78ED', '#fff', 'В пути')
+		+sProfileOrderItem('Самовывоз, Оплата при получении', '#36B555', '#fff', 'Доставлен')
+		+sProfileOrderItem('Самовывоз, Оплата при получении', '#F5F5F8', '#808187', 'Отменен')
+	// end sProfileOrder

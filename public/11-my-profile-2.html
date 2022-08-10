@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Каталог</title>
+		<title>Мои заказы</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -13,7 +13,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="05-guarantee.jpg">
+	<body class="profile-page" data-bg="11-my-profile-2.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -126,62 +126,39 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start sMainCatalog-->
-			<section class="sMainCatalog section" id="sMainCatalog">
+			<!-- start sMyProfile-->
+			<section class="sMyProfile section" id="sMyProfile">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3">
-							<div class="sMainCatalog__button d-block d-lg-none">
-								<svg class="icon icon-menu ">
-									<use xlink:href="img/svg/sprite.svg#menu"></use>
-								</svg>Выбрать категорию
-							</div>
-							<div class="sMainCatalog__side-bar">
-								<div class="sMainCatalog__close">
-								</div>
-								<div class="sMainCatalog__title d-block d-lg-none">Категории запчастей
-								</div>
-								<div class="search-block">
-									<form>
-										<input type="text" placeholder="Поиск товаров"/>
-										<button>
-											<svg class="icon icon-search ">
-												<use xlink:href="img/svg/sprite.svg#search"></use>
-											</svg>
-										</button>
-									</form>
-								</div>
-								<div class="sMainCatalog__wrap">
-									<a class="sMainCatalog__link d-flex d-lg-none" href="#">
-										<svg class="icon icon-menu ">
-											<use xlink:href="img/svg/sprite.svg#menu"></use>
-										</svg>Все запчасти<span>324</span>
+							<div class="sMyProfile__sidebar">
+								<div class="sMyProfile__link-wrap">
+									<a class="sMyProfile__link active" href="#">
+										<svg class="icon icon-account ">
+											<use xlink:href="img/svg/sprite.svg#account"></use>
+										</svg>Мой профиль
 									</a>
-									<a class="sMainCatalog__link" href="#">Бампер<span>16</span>
+									<a class="sMyProfile__link" href="#">
+										<svg class="icon icon-list ">
+											<use xlink:href="img/svg/sprite.svg#list"></use>
+										</svg>Мои заказы
 									</a>
-									<a class="sMainCatalog__link" href="#">Бачок гидроусилителя<span>3</span>
+									<a class="sMyProfile__link" href="#">
+										<svg class="icon icon-favorite ">
+											<use xlink:href="img/svg/sprite.svg#favorite"></use>
+										</svg>Избранное
 									</a>
-									<a class="sMainCatalog__link" href="#">Вентилятор радиатора<span>1</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Глушитель<span>3</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Накладка бампера<span>22</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Накладка бампера<span>22</span>
-									</a>
-									<a class="sMainCatalog__link active" href="#">Подрамник<span>6</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Радиатор кондиционера<span>4</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Спойлер<span>1</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Стабилизатор<span>3</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Стекло двери<span>6</span>
-									</a>
-									<a class="sMainCatalog__link" href="#">Юбка бампера<span>1</span>
+									<a class="sMyProfile__link" href="#">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg>Корзина
 									</a>
 								</div>
+								<a class="sMyProfile__link" href="#">
+									<svg class="icon icon-logout ">
+										<use xlink:href="img/svg/sprite.svg#logout"></use>
+									</svg>Выйти из аккаунта
+								</a>
 							</div>
 						</div>
 						<div class="col-lg-9">
@@ -189,328 +166,440 @@
 								<div class="container">
 									<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
 										<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-											<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Автозапчасти</span>
+											<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 													<meta itemprop="position" content="1"/></a></li>
-											<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Запчасти BMW</span>
+											<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мои заказы</span>
 													<meta itemprop="position" content="2"/></a></li>
-											<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Запчасти BMW 3-Series</span>
-													<meta itemprop="position" content="3"/></a></li>
-											<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">7 поколение, 2018 - н.в.</span>
-													<meta itemprop="position" content="4"/></a></li>
 										</ol>
 									</nav>
-									<h1>Запчасти для BMW 3-Series 7&nbsp;поколение, 2018&nbsp;&mdash; н.в., B57D30 3.0&nbsp;л дизель</h1>
+									<h1>Мои заказы</h1>
 								</div>
 							</div>
-							<div class="sMainCatalog__sort-row row">
-								<div class="col">
-									<p>Найдено 16 товаров</p>
-								</div>
-								<div class="col-auto d-block d-md-none">
-									<div class="sMainCatalog__sort">Сортировка
-									</div>
-									<div class="sMainCatalog__mob-sort">
-										<div class="sMainCatalog__close">
-										</div>
-										<div class="sMainCatalog__title">Категории запчастей
-										</div>
-										<div class="form-wrap">
-											<div class="form-wrap__title">Цена
+							<!-- start sProfileOrder-->
+							<div class="sProfileOrder section" id="sProfileOrder">
+								<div class="sProfileOrder__wrap">
+									<div class="sProfileOrder__head">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__date">10 декабря 2021 16:30
+												</div>
 											</div>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="price" type="radio"/><span class="custom-input__text form-check-label">Сначала дешевле</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="price" type="radio"/><span class="custom-input__text form-check-label">Сначала дороже</span>
-											</label>
+											<div class="col-auto">
+												<div class="sProfileOrder__status" style="--bg: #FEE794;--color: #000;">Формируется
+												</div>
+											</div>
 										</div>
-										<a class="sMainCatalog__sort-btn btn btn-primary" href="#">Применить
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__order">Заказ #123456
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__way">Доставка, Онлайн-оплата
+												</div>
+											</div>
+											<div class="col-auto d-none d-sm-block">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sProfileOrder__body">
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
 										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="sProfileOrder__footer d-block d-sm-none">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__sum">Сумма заказа:
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sProfileOrder__wrap">
+									<div class="sProfileOrder__head">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__date">10 декабря 2021 16:30
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__status" style="--bg: #0C78ED;--color: #fff;">В пути
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__order">Заказ #123456
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__way">Самовывоз, Оплата при получении
+												</div>
+											</div>
+											<div class="col-auto d-none d-sm-block">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sProfileOrder__body">
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="sProfileOrder__footer d-block d-sm-none">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__sum">Сумма заказа:
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sProfileOrder__wrap">
+									<div class="sProfileOrder__head">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__date">10 декабря 2021 16:30
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__status" style="--bg: #36B555;--color: #fff;">Доставлен
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__order">Заказ #123456
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__way">Самовывоз, Оплата при получении
+												</div>
+											</div>
+											<div class="col-auto d-none d-sm-block">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sProfileOrder__body">
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="sProfileOrder__footer d-block d-sm-none">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__sum">Сумма заказа:
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sProfileOrder__wrap">
+									<div class="sProfileOrder__head">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__date">10 декабря 2021 16:30
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__status" style="--bg: #F5F5F8;--color: #808187;">Отменен
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__order">Заказ #123456
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__way">Самовывоз, Оплата при получении
+												</div>
+											</div>
+											<div class="col-auto d-none d-sm-block">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sProfileOrder__body">
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+										<a class="sProfileOrder__item" href="#">
+											<div class="sProfileOrder__item-row row">
+												<div class="col-auto">
+													<div class="sProfileOrder__img-wrap">
+														<div class="img-wrap-center"><img src="img/sCart-img-1.jpg" alt="" loading="lazy"/>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="sProfileOrder__content">
+														<div class="sProfileOrder__title">Дверь правая задняя
+														</div>
+														<div class="sProfileOrder__label" style="--bg: #36B555;--color: #fff;">Новая
+														</div>
+														<div class="sProfileOrder__sum">1 х 14 000 ₽
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="sProfileOrder__footer d-block d-sm-none">
+										<div class="row">
+											<div class="col">
+												<div class="sProfileOrder__sum">Сумма заказа:
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="sProfileOrder__price">Цена: 2 000 ₽
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col">
-									<div class="sMainCatalog__type"><a class="active" href="#">Передний</a><a href="#">Задний</a>
-									</div>
-								</div>
-								<div class="col-auto d-none d-md-block">
-									<div class="sMainCatalog__input-wrap form-group">
-										<select class="sMainCatalog__input form-select" name="select">
-											<option value="Сначала дешевле">Сначала дешевле</option>
-											<option value=" placeholder 1">placeholder 1</option>
-											<option value=" placeholder 2">placeholder 2</option>
-											<option value=" placeholder 3">placeholder 3</option>
-											<option value=" placeholder 4">placeholder 4</option>
-										</select>
-									</div>
-									<!-- +e.input-wrap-->
-								</div>
-							</div>
-							<div class="sMainCatalog__catalog-row row">
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite active">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">14 000 ₽
-												<div class="prod-item__label" style="background: #36B555; color:#fff">Новая
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Дверь правая задняя 
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">12 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Крыло правое переднее
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">4 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Решетка радиатора
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite active">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">14 000 ₽
-												<div class="prod-item__label" style="background: #36B555; color:#fff">Новая
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Дверь правая задняя 
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">12 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Крыло правое переднее
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">4 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Решетка радиатора
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite active">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">14 000 ₽
-												<div class="prod-item__label" style="background: #36B555; color:#fff">Новая
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Дверь правая задняя 
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">12 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Крыло правое переднее
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="prod-item">
-										<div class="prod-item__favorite">
-											<svg class="icon icon-favorites2 ">
-												<use xlink:href="img/svg/sprite.svg#favorites2"></use>
-											</svg>
-										</div>
-										<a class="prod-item__img-wrap" href="#"><img src="img/prod-4.jpg" alt="" loading="lazy"/>
-											<div class="prod-item__play">
-												<svg class="icon icon-play ">
-													<use xlink:href="img/svg/sprite.svg#play"></use>
-												</svg>
-											</div>
-										</a>
-										<div class="prod-item__caption">
-											<div class="prod-item__price">4 000 ₽
-												<div class="prod-item__label" style="background: #FEE794; color:#000000">Б/У
-												</div>
-											</div>
-											<a class="prod-item__title" href="#">Решетка радиатора
-											</a>
-											<p><span class="text-secondary d-none d-sm-inline">Номер и производитель</span>4B5827302F VAG</p>
-											<p><span class="text-secondary">Склад</span>Люберцы</p>
-											<a class="prod-item__btn" href="#">
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<a class="sMainCatalog__show-more btn btn-secondary" href="#">
-										<svg class="icon icon-repeat ">
-											<use xlink:href="img/svg/sprite.svg#repeat"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
+							<!-- end sProfileOrder-->
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sMainCatalog-->
+			<!-- end sMyProfile-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row">

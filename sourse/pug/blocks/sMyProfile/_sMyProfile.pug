@@ -1,0 +1,27 @@
+mixin sMyProfile(data)
+	// start sMyProfile
+	+b.SECTION.sMyProfile.section#sMyProfile&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+e.sidebar
+						+e.link-wrap
+							+e.link(href="#").active
+								+icon('account')
+								| Мой профиль
+							+e.link(href="#")
+								+icon('list')
+								| Мои заказы
+							+e.link(href="#")
+								+icon('favorite')
+								| Избранное
+							+e.link(href="#")
+								+icon('basket')
+								| Корзина
+						+e.link(href="#")
+								+icon('logout')
+								| Выйти из аккаунта
+				.col-lg-9
+					+page-head(title, 'Главная', title)
+					block
+	// end sMyProfile

@@ -113,6 +113,22 @@
 		padding-top: rem(40);
 		padding-bottom: rem(20);
 	}
+	&__back {
+		font-size: rem(14);
+		margin-bottom: rem(15);
+		display: block;
+		&:not(:hover) {
+			color: $secondary;
+		}
+		.icon {
+			fill: none;
+			stroke-width: 2px;
+			stroke: $primary;
+			font-size: rem(20);
+			vertical-align: sub;
+			margin-right: rem(5);
+		}
+	}
 	.breadcrumb {
 		margin-bottom: rem(9);
 		flex-wrap: nowrap;

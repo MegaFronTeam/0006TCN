@@ -212,6 +212,39 @@
 		color: $secondary;
 		cursor: pointer;
 	}
+	&__mob-sort {
+		@include mt;
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 275px;
+		height: 100%;
+		background-color: #fff;
+		z-index: 1000;
+		transform: translateX(-100%);
+		&.active {
+			transform: translateX(0);
+		}
+		.form-wrap {
+			padding: 20px 20px 0 20px;
+			&__title {
+				font-size: 14px;
+			}
+			.custom-input {
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+				}
+				&__input[type=radio] {
+					margin-top: 1px;
+				}
+			}
+		}
+	}
+	&__sort-btn {
+		margin: auto 20px 20px 20px;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

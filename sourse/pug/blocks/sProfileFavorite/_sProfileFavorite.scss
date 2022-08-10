@@ -1,0 +1,33 @@
+// start .sProfileFavorite
+.sProfileFavorite {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(20)};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+		&:not(:last-child) {
+			.prod-item {
+				@include media-breakpoint-down(sm) {
+					border-bottom: 1px solid #E8E8ED;
+				}
+			}
+		}
+	}
+	&__item{
+
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProfileFavorite

@@ -1,0 +1,57 @@
+mixin sProfileInfo(data)
+	// start sProfileInfo
+	+b.sProfileInfo.section#sProfileInfo&attributes(attributes)
+		+b.form-wrap
+			+e.wrap
+				h4 Личная информация
+				+e.input-row.row
+					.col-lg-6
+						+input('Введите имя', 'text', 'Имя')(value="Иван")
+					.col-lg-6
+						+input('Введите фамилию', 'text', 'Фамиля')(value="Иванов")
+					.col-lg-6
+						+input('Введите телефон', 'tel', 'Телефон')(value="+7 (996) 747-44-58")
+					.col-lg-6
+						+input('Введите email', 'email', 'Email')(value="Ivan_Ivanov@gmail.com")
+			+e.wrap
+				h4 Адрес получения
+				+e.input-row.row
+					.col-lg-6
+						+input('Введите адрес доставки', 'text', 'Адрес')
+					.col-lg-6
+						.row 
+							.col-3
+								+input('', 'text', 'Кв/офис')
+							.col-3
+								+input('', 'text', 'Подъезд')
+							.col-3
+								+input('', 'text', 'Домофон')
+							.col-3
+								+input('', 'text', 'Этаж')
+			+e.wrap
+				h4 Изменить пароль
+				+e.input-row.row
+					.col-lg-4
+						+e.input-wrap--pass.form-group
+							label
+								+e.input-title Текущий пароль
+								+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите текущий пароль")
+							.input-btn--password-toggle
+								+icon('eye')
+					.col-lg-4
+						+e.input-wrap--pass.form-group
+							label
+								+e.input-title Новый пароль
+								+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите новый пароль")
+							.input-btn--password-toggle
+								+icon('eye')
+					.col-lg-4
+						+e.input-wrap--pass.form-group
+							label
+								+e.input-title Повторите пароль
+								+e.INPUT.input.form-control(name="password" type="password" placeholder="Повторите новый пароль")
+							.input-btn--password-toggle
+								+icon('eye')
+					.col-lg-4
+						+e.BUTTON.btn.btn.btn-primary Сохранить изменения
+	// end sProfileInfo

@@ -537,3 +537,11 @@ iframe {
 		}
 	}
 }
+
+.profile-page {
+	.page-head {
+		.container {
+			--bs-gutter-x: 0;
+		}
+	}
+}

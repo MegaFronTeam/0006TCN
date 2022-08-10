@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+include ../blocks/sMyProfile/_sMyProfile.pug 
+include ../blocks/sProfileInfo/_sProfileInfo.pug 
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'profile-page' 
+	- let  bg= '11-my-profile.jpg'
+
+block title
+	- let  title= "Мой профиль"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	+header()
+		+topLine 
+		+top-nav()
+
+	+sMyProfile()
+		+sProfileInfo
+	+footer()
+
+
+
