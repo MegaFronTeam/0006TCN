@@ -486,9 +486,15 @@ function eventHandler() {
 	// const choices = new Choices($('select.form-wrap__input', {
 	// 	searchEnabled: false,
 	// }));
-	const choices2 = new Choices('select.form-wrap__input', {
-		searchEnabled: false,
-	});
+	let selects = [];
+	selects = $('select.form-wrap__input');
+	// console.log(selects);
+	for (let i = 0; i < selects.length; i ++) {
+		// console.log(selects[i]);
+		const choices2 = new Choices(selects[i], {
+			searchEnabled: false,
+		});
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
