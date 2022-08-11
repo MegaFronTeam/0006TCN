@@ -553,3 +553,9 @@ iframe {
 	--bs-btn-hover-bg: #EB3938;
 	--bs-btn-hover-border-color: #EB3938;
 }
+
+.breadcrumb {
+	.breadcrumb-item+.breadcrumb-item:before {
+		content: url('../img/svg/chevron-right.svg');
+	}
+}
