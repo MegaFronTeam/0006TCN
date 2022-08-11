@@ -82,24 +82,9 @@
 		// .custom-input {
 		// 	display: flex;
 		// 	align-items: center;
-		// 	&__input {
-		// 		flex: 0 0 auto;
-		// 		margin-right: rem(10);
-		// 		border-radius: 6px;
-		// 		width: 20px;
-		// 		height: 20px;
-		// 		&:checked[type=checkbox] {
-		// 			background-image: url('../img/svg/checkmark.svg');
-		// 			background-size: 12px 12px;
-		// 			background-repeat: no-repeat;
-		// 			background-position: center;
-		// 			background-color: #0C78ED;
-		// 			border-color: #0C78ED;
-		// 		}
-		// 		&:focus {
-		// 			box-shadow: none;
-		// 		}
-		// 	}
+			&__input-wrap {
+				margin-bottom: 0;
+			}
 		// 	&__text {
 		// 		font-size: rem(14);
 		// 		color: #191C1F;

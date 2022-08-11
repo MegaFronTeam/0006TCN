@@ -223,6 +223,7 @@
 			}
 			&__input-wrap {
 				width: 100%;
+				margin-bottom: 0;
 				@include media-breakpoint-up(xxl) {
 					max-width: rem(180);
 				}

@@ -483,9 +483,6 @@ function eventHandler() {
 		},
   });
 
-	// const choices = new Choices($('select.form-wrap__input', {
-	// 	searchEnabled: false,
-	// }));
 	let selects = [];
 	selects = $('select.form-wrap__input');
 	// console.log(selects);
