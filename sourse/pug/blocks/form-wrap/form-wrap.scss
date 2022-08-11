@@ -18,12 +18,20 @@
 	.custom-input {
 		display: flex;
 		align-items: center;
+		&__input {
+			&:focus {
+				border-color: #E8E8ED;
+				box-shadow: none;
+			}
+		}
 		&__input[type=checkbox] {
 			flex: 0 0 auto;
 			margin-right: rem(10);
 			border-radius: 6px;
 			width: 20px;
 			height: 20px;
+			border-color: #E8E8ED;
+			border-width: 2px;
 			&:checked {
 				background-image: url('../img/svg/checkmark.svg');
 				background-size: 12px 12px;

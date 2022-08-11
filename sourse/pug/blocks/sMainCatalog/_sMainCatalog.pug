@@ -4,7 +4,7 @@ mixin sideBarSearchresult(name, count, icon)
 			+icon('menu')
 		!= name
 		span!= count
-mixin sideBarSearch()
+mixin sideBarSearch(have)
 	+e.button.d-block.d-lg-none
 		+icon('menu')
 		| Выбрать категорию
@@ -17,19 +17,124 @@ mixin sideBarSearch()
 				button
 					+icon("search")
 		+e.wrap
-			+sideBarSearchresult('Все запчасти', '324', 'true').d-flex.d-lg-none
-			+sideBarSearchresult('Бампер', '16')
-			+sideBarSearchresult('Бачок гидроусилителя', '3')
-			+sideBarSearchresult('Вентилятор радиатора', '1')
-			+sideBarSearchresult('Глушитель', '3')
-			+sideBarSearchresult('Накладка бампера', '22')
-			+sideBarSearchresult('Накладка бампера', '22')
-			+sideBarSearchresult('Подрамник', '6').active
-			+sideBarSearchresult('Радиатор кондиционера', '4')
-			+sideBarSearchresult('Спойлер', '1')
-			+sideBarSearchresult('Стабилизатор', '3')
-			+sideBarSearchresult('Стекло двери', '6')
-			+sideBarSearchresult('Юбка бампера', '1')
+			if have
+				+sideBarSearchresult('Все запчасти', '324', 'true').d-flex.d-lg-none
+				+sideBarSearchresult('Бампер', '16')
+				+sideBarSearchresult('Бачок гидроусилителя', '3')
+				+sideBarSearchresult('Вентилятор радиатора', '1')
+				+sideBarSearchresult('Глушитель', '3')
+				+sideBarSearchresult('Накладка бампера', '22')
+				+sideBarSearchresult('Накладка бампера', '22')
+				+sideBarSearchresult('Подрамник', '6').active
+				+sideBarSearchresult('Радиатор кондиционера', '4')
+				+sideBarSearchresult('Спойлер', '1')
+				+sideBarSearchresult('Стабилизатор', '3')
+				+sideBarSearchresult('Стекло двери', '6')
+				+sideBarSearchresult('Юбка бампера', '1')
+			else
+				+e.nothing Ничего не найдено
+
+mixin sideBarFiltr()
+	+e.button.d-block.d-lg-none
+		+icon('menu')
+		| Выбрать категорию
+	+e.side-bar
+		+e.close
+		+e.title.d-block.d-lg-none Категории запчастей
+		.tabs
+			.tabs__caption
+				.tabs__btn.active Шины
+				.tabs__btn Диски
+			.tabs__content.active
+				+b.form-wrap
+					+ddGroup
+						+ddGroupItem('R15')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius1')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius1')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius1')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius1')
+						+ddGroupItem('R16')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius2')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius2')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius2')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius2')
+						+ddGroupItem('R17')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius3')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius3')
+						+ddGroupItem('R18')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius4')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius4')
+						+ddGroupItem('R19')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius3')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius3')
+						+ddGroupItem('R20')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius4')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius4')
+						+ddGroupItem('R21')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius5')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius5')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius5')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius5')
+						+ddGroupItem('R22')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius6')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius6')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius6')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius6')
+					+e.reset(href="#").btn.btn-secondary Сбросить фильтры
+					+e.set(href="#").btn.btn-outline-primary Применить фильтры
+			.tabs__content
+				+b.form-wrap
+					+ddGroup
+						+ddGroupItem('R15')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius1')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius1')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius1')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius1')
+						+ddGroupItem('R16')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius2')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius2')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius2')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius2')
+						+ddGroupItem('R17')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius3')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius3')
+						+ddGroupItem('R18')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius4')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius4')
+						+ddGroupItem('R19')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius3')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius3')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius3')
+						+ddGroupItem('R20')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius4')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius4')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius4')
+						+ddGroupItem('R21')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius5')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius5')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius5')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius5')
+						+ddGroupItem('R22')
+							+in-c('checkbox', 'R15 / 215 / 55', 'radius6')
+							+in-c('checkbox', 'R15 / 225 / 50', 'radius6')
+							+in-c('checkbox', 'R15 / 225 / 60', 'radius6')
+							+in-c('checkbox', 'R15 / 235 / 60', 'radius6')
+					+e.reset(href="#").btn.btn-secondary Сбросить фильтры
+					+e.set(href="#").btn.btn-outline-primary Применить фильтры
 
 mixin sMainCatalog(data)
 	// start sMainCatalog
@@ -37,7 +142,7 @@ mixin sMainCatalog(data)
 		.container
 			.row
 				.col-lg-3
-					+sideBarSearch
+					+sideBarSearch('ture')
 				.col-lg-9
 					+page-head('Запчасти для BMW 3-Series 7&nbsp;поколение, 2018&nbsp;&mdash; н.в., B57D30 3.0&nbsp;л дизель', 'Автозапчасти', 'Запчасти BMW', 'Запчасти BMW 3-Series', '7 поколение, 2018 - н.в.')
 					+e.sort-row.row
@@ -58,6 +163,91 @@ mixin sMainCatalog(data)
 							+e.type
 								a(href="#").active Передний
 								a(href="#") Задний
+						.col-auto.d-none.d-md-block
+							+input('Сначала дешевле', 'select')
+					+e.catalog-row.row
+						-for (var x = 0; x < 3; x++)
+							.col-sm-6.col-md-4
+								+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active') 
+							.col-sm-6.col-md-4
+								+prod-item(2,"Крыло правое переднее",'12 000 ₽')
+							.col-sm-6.col-md-4
+								+prod-item(4,"Решетка радиатора",'4 000 ₽')
+						.col-12
+							+e.show-more(href="#").btn.btn-secondary
+								+icon('repeat')
+	// end sMainCatalog
+
+mixin sMainCatalog2(data)
+	// start sMainCatalog
+	+b.SECTION.sMainCatalog.section#sMainCatalog&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+sideBarSearch()
+				.col-lg-9
+					+page-head('Автозапчасти', 'Автозапчасти')
+					+e.sort-row.row
+						.col
+							p Найдено 16 324 товаров
+						.col-auto.d-block.d-md-none
+							+e.sort Сортировка
+							+e.mob-sort
+								+e.close
+								+e.title Категории запчастей
+								+b.form-wrap
+									+e.title Цена
+									+in-c('radio', 'Сначала дешевле', 'price')
+									+in-c('radio', 'Сначала дороже', 'price')
+								+e.sort-btn(href="#").btn.btn-primary Применить
+					.row
+						.col
+							//- +e.type
+							//- 	a(href="#").active Передний
+							//- 	a(href="#") Задний
+						.col-auto.d-none.d-md-block
+							+input('Сначала дешевле', 'select')
+					+e.catalog-row.row
+						-for (var x = 0; x < 3; x++)
+							.col-sm-6.col-md-4
+								+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active') 
+							.col-sm-6.col-md-4
+								+prod-item(2,"Крыло правое переднее",'12 000 ₽')
+							.col-sm-6.col-md-4
+								+prod-item(4,"Решетка радиатора",'4 000 ₽')
+						.col-12
+							+e.show-more(href="#").btn.btn-secondary
+								+icon('repeat')
+	// end sMainCatalog
+
+
+mixin sMainCatalog3(data)
+	// start sMainCatalog
+	+b.SECTION.sMainCatalog.section#sMainCatalog&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+sideBarFiltr
+				.col-lg-9
+					+page-head('Шины', 'Шины')
+					+e.sort-row.row
+						.col
+							p Найдено 16 товаров
+						.col-auto.d-block.d-md-none
+							+e.sort Сортировка
+							+e.mob-sort
+								+e.close
+								+e.title Категории запчастей
+								+b.form-wrap
+									+e.title Цена
+									+in-c('radio', 'Сначала дешевле', 'price')
+									+in-c('radio', 'Сначала дороже', 'price')
+								+e.sort-btn(href="#").btn.btn-primary Применить
+					.row
+						.col
+							//- +e.type
+							//- 	a(href="#").active Передний
+							//- 	a(href="#") Задний
 						.col-auto.d-none.d-md-block
 							+input('Сначала дешевле', 'select')
 					+e.catalog-row.row

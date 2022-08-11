@@ -1,0 +1,32 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sMainCatalog/_sMainCatalog.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '05-guarantee.jpg'
+
+block title
+	- let  title= "Каталог"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine 
+		+top-nav()
+	//- +page-head(title, 'Автозапчасти', 'Запчасти BMW', 'Запчасти BMW 3-Series', '7 поколение, 2018 - н.в.')
+	
+	+sMainCatalog3()
+	
+	+footer()
+      
+
+
+

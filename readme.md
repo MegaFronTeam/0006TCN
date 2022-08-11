@@ -17,6 +17,8 @@
 
 #### Каталог
 4. <https://megafronteam.github.io/0006TCN/public/02-catalog.html>
+4. <https://megafronteam.github.io/0006TCN/public/02-catalog-2.html>
+4. <https://megafronteam.github.io/0006TCN/public/02-catalog-3.html>
 
 #### Оформление заказа
 4. <https://megafronteam.github.io/0006TCN/public/10-order.html>
