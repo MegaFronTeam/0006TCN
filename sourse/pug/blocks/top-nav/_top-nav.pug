@@ -52,13 +52,13 @@ mixin top-nav()
 							+icon("login")
 						+e.btn(type="button")
 							+icon("favorites")
-						+e.btn
+						+e.btn--cart
 							+e.icon-wrap
 								+icon("basket")
-								+e.counter 99
+								+e.counter 0
 							+e.text.d-none.d-xl-block Корзина
 				.col-auto.d-lg-none
-					+e.tel(href="#")
+					+e.tel
 						+icon("tel")
 					+b.tel-block
 						+e.dropdown

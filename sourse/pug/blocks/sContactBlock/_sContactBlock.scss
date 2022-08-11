@@ -27,7 +27,7 @@
 		}
 	}
 	p {
-		margin-bottom: rem(10);
+		margin-bottom: rem(15);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 		}
@@ -36,7 +36,7 @@
 		display: flex;
 		align-items: center;
 		&:not(:last-child) {
-			margin-bottom: rem(10);
+			margin-bottom: rem(15);
 			@include media-breakpoint-up(lg) {
 				margin-right: rem(30.400);
 				margin-bottom: 0;

@@ -25,8 +25,8 @@ mixin sCart(inncorect, sale)
 												+img(`img/sCart-img-${img}.jpg`)
 									.col 
 										+e.content
+											+e.price.h6!= price
 											a(href="#") 
-												+e.price.h6!= price
 												+e.title.h6!= title
 											+e.storage 
 												+e.storage-key Склад

@@ -10,6 +10,7 @@
 	}
 	&__tel{
 		@extend .text-body;
+		cursor: pointer;
 		.icon{
 			font-size: 20px;
 		}
@@ -146,6 +147,11 @@
 		.icon{
 			font-size: rem(20);
 		}
+		&--cart {
+			&:hover{
+				color: #000;
+			}
+		}
 	}
 	&__icon-wrap{
 		position: relative;
@@ -173,6 +179,11 @@
 }
 
 .head-btns-wrap{
+	.icon-favorites {
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2px;
+	}
 	@include media-breakpoint-down(lg) {
 		position: fixed;
 		left: 0;

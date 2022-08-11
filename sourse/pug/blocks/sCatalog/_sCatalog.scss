@@ -95,6 +95,14 @@
 	position: relative;
 	&:hover{
 		--op: 1;
+		.prod-item__title {
+			color: $primary;
+		}
+		.prod-item__img-wrap {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 	@include media-breakpoint-down(sm){
 		padding-bottom: 15px;
@@ -149,6 +157,7 @@
 		overflow: hidden;
 		width: 100%;
 		img{
+			@include mt;
 			@include a-cent;
 			object-fit: cover;
 			width: 100%;
@@ -163,6 +172,15 @@
 		--bs-link-color: #000;
 		display: block;
 		margin-bottom: rem(4);
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 	p{
 		font-size: rem(14px);
@@ -193,7 +211,7 @@
 		@include media-breakpoint-down(sm) {
 			display: none;
 		}
-			@include mt;
+			@include mt(.10s);
 			opacity: var(--op, 0);
 			@extend .btn, .btn-primary;
 			width: rem(50);
@@ -203,6 +221,7 @@
 			right: 0;
 			border-radius: 50%;
 			--bs-btn-bg: #{$body-color};
+			--bs-btn-hover-bg: #{$primary};
 			--bs-btn-border-color: #{$body-color};
 			&::before,
 			&::after{
@@ -256,6 +275,12 @@
 		.row{
 			--bs-gutter-y: var(--bs-gutter-x);
 		}
+		&__input {
+			cursor: pointer;
+			&[disabled="disabled"] {
+				cursor: not-allowed;
+			}
+		}
 	}
 	&__body{
 		@include media-breakpoint-up(xxl) {
@@ -282,6 +307,11 @@
 			}
 			--bs-gutter-x: 26px;
 		}
+		a {
+			&:hover {
+				opacity: .5;
+			}
+		}
 	}	
 	&__list{
 		columns: 5;
@@ -295,7 +325,7 @@
 		width: 100%;
 		cursor: pointer;
 		border-radius: 6px;
-		@include mt;
+		@include mt(.10s);
 		padding: (10px) (15px);
 		font-size: rem(14);
 		margin-bottom: rem(4);

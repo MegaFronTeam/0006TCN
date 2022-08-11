@@ -1,7 +1,7 @@
 mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like)
 	+b.prod-item&attributes(attributes)
 		+e.favorite(class= like)
-			+icon("favorites2")
+			+icon("favorites")
 		+e.img-wrap(href="#")
 			+img(`img/prod-${i}.jpg`)
 			+e.play
