@@ -483,6 +483,12 @@ function eventHandler() {
 		},
   });
 
+	// const choices = new Choices($('select.form-wrap__input', {
+	// 	searchEnabled: false,
+	// }));
+	const choices2 = new Choices('select.form-wrap__input', {
+		searchEnabled: false,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
