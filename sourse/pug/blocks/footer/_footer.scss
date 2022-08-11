@@ -167,8 +167,13 @@
 		}
 	}
 	&__up {
+		@include mt;
+		cursor: pointer;
 		font-size: rem(12);
 		color: $secondary;
+		&:hover {
+			color: $primary;
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: rem(14);
 		}

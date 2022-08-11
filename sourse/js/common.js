@@ -492,6 +492,10 @@ function eventHandler() {
 			searchEnabled: false,
 		});
 	}
+
+	$('.footer__up').on('click', function() {
+		window.scrollTo(0, 0);
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
