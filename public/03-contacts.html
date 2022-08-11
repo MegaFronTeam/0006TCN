@@ -536,14 +536,27 @@
 				zoom: 17
 			}),
 			myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
-				hintContent: ''
+					// Свойства.
+					hintContent: ''
 			}, {
-				iconImageHref: `img/svg/pin.svg`,
-				iconImageSize: [40, 40],
-				iconImageOffset: [-20, -20]
+					// Опции.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'img/pin.png',
+					// Размеры метки.
+					iconImageSize: [40, 40],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-20, -20]
 			});
 			myMap.geoObjects
 				.add(myPlacemark2)
+			myMap.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// ... отключаем перетаскивание карты
+				myMap.behaviors.disable('drag');
+			}
 		}
 	</script>
 </html>
