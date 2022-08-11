@@ -950,11 +950,11 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
-							<label>
-								<div class="form-wrap__input-title">Пароль
-									<a class="form-wrap__forget" href="#">Забыли пароль?
-									</a>
-								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							<div class="form-wrap__input-title">Пароль
+								<a class="form-wrap__forget" href="#">Забыли пароль?
+								</a>
+							</div>
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
 							</label>
 							<div class="input-btn--password-toggle">
 								<svg class="icon icon-eye ">
@@ -997,9 +997,9 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
-							<label>
-								<div class="form-wrap__input-title">Пароль
-								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							<div class="form-wrap__input-title">Пароль
+							</div>
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
 							</label>
 							<div class="input-btn--password-toggle">
 								<svg class="icon icon-eye ">
@@ -1008,9 +1008,9 @@
 							</div>
 						</div>
 						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
-							<label>
-								<div class="form-wrap__input-title">Повторите пароль
-								</div><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
+							<div class="form-wrap__input-title">Повторите пароль
+							</div>
+							<label><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите пароль"/>
 							</label>
 							<div class="input-btn--password-toggle">
 								<svg class="icon icon-eye ">
@@ -1130,38 +1130,38 @@
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="js/common.js"></script>
-	</body>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
-	<script>
-		ymaps.ready(init);
-		
-		function init () {
-			var myMap = new ymaps.Map("map", {
-				center: [55.66759406904799,37.88643799999995],
-				zoom: 17
-			}),
-			myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
-					// Свойства.
-					hintContent: ''
-			}, {
-					// Опции.
-					iconLayout: 'default#image',
-					// Своё изображение иконки метки.
-					iconImageHref: 'img/pin.png',
-					// Размеры метки.
-					iconImageSize: [40, 40],
-					// Смещение левого верхнего угла иконки относительно
-					// её "ножки" (точки привязки).
-					iconImageOffset: [-20, -20]
-			});
-			myMap.geoObjects
-				.add(myPlacemark2)
-			myMap.behaviors.disable('scrollZoom');
-			//на мобильных устройствах... (проверяем по userAgent браузера)
-			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				// ... отключаем перетаскивание карты
-				myMap.behaviors.disable('drag');
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			ymaps.ready(init);
+			
+			function init () {
+				var myMap = new ymaps.Map("map", {
+					center: [55.66759406904799,37.88643799999995],
+					zoom: 17
+				}),
+				myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
+						// Свойства.
+						hintContent: ''
+				}, {
+						// Опции.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/pin.png',
+						// Размеры метки.
+						iconImageSize: [40, 40],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-20, -20]
+				});
+				myMap.geoObjects
+					.add(myPlacemark2)
+				myMap.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap.behaviors.disable('drag');
+				}
 			}
-		}
-	</script>
+		</script>
+	</body>
 </html>

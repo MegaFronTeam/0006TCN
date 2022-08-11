@@ -1,14 +1,14 @@
 mixin slogIn(data)
 	// start slogIn
-	+b.SECTION.slogIn.section#slogIn&attributes(attributes)
+	+b.slogIn.section#slogIn&attributes(attributes)
 		.container
 			+form-wrap
 				+input('Введите эл. почту', 'email', 'Электронная почта')
 				+e.input-wrap--pass.form-group
+					+e.input-title
+						| Пароль
+						+e.forget(href="#") Забыли пароль?
 					label
-						+e.input-title
-							| Пароль
-							+e.forget(href="#") Забыли пароль?
 						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
 					.input-btn--password-toggle
 						+icon('eye')

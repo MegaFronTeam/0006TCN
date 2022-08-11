@@ -33,22 +33,22 @@ mixin sProfileInfo(data)
 				+e.input-row.row
 					.col-lg-4
 						+e.input-wrap--pass.form-group
+							+e.input-title Текущий пароль
 							label
-								+e.input-title Текущий пароль
 								+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите текущий пароль")
 							.input-btn--password-toggle
 								+icon('eye')
 					.col-lg-4
 						+e.input-wrap--pass.form-group
+							+e.input-title Новый пароль
 							label
-								+e.input-title Новый пароль
 								+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите новый пароль")
 							.input-btn--password-toggle
 								+icon('eye')
 					.col-lg-4
 						+e.input-wrap--pass.form-group
+							+e.input-title Повторите пароль
 							label
-								+e.input-title Повторите пароль
 								+e.INPUT.input.form-control(name="password" type="password" placeholder="Повторите новый пароль")
 							.input-btn--password-toggle
 								+icon('eye')
