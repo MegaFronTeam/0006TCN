@@ -275,7 +275,8 @@
 								</div>
 							</form>
 						</div>
-						<div class="sContactBlock__body"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A066bd6633417efa8367b338b0b89cc4a156ceeb6d69787e9e7b7f187a109ff6a&amp;source=constructor" frameborder="0"></iframe>
+						<div class="sContactBlock__body">
+							<div id="map"></div>
 						</div>
 					</div>
 					<div class="sContactBlock__adress">Московская область, г. Люберцы, ул. Котельническая, д. 23
@@ -525,4 +526,24 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+	<script>
+		ymaps.ready(init);
+		
+		function init () {
+			var myMap = new ymaps.Map("map", {
+				center: [55.66759406904799,37.88643799999995],
+				zoom: 17
+			}),
+			myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
+				hintContent: ''
+			}, {
+				iconImageHref: `img/svg/pin.svg`,
+				iconImageSize: [40, 40],
+				iconImageOffset: [-20, -20]
+			});
+			myMap.geoObjects
+				.add(myPlacemark2)
+		}
+	</script>
 </html>

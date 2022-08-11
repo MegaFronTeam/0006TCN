@@ -877,7 +877,8 @@
 								</div>
 							</div>
 							<div class="col-md">
-								<div class="sContact__map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad890f0d00167629156c7b7433025c5d3923420d445a6108848532dceb80277d9&amp;source=constructor" frameborder="0"></iframe>
+								<div class="sContact__map">
+									<div id="map"></div>
 								</div>
 							</div>
 						</div>
@@ -1127,4 +1128,24 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+	<script>
+		ymaps.ready(init);
+		
+		function init () {
+			var myMap = new ymaps.Map("map", {
+				center: [55.66759406904799,37.88643799999995],
+				zoom: 17
+			}),
+			myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
+				hintContent: ''
+			}, {
+				iconImageHref: `img/svg/pin.svg`,
+				iconImageSize: [40, 40],
+				iconImageOffset: [-20, -20]
+			});
+			myMap.geoObjects
+				.add(myPlacemark2)
+		}
+	</script>
 </html>

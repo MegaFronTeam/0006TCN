@@ -64,3 +64,24 @@ mixin needHelp()
 			p По всем вопросам
 			a(href="mailto:info@tcnauto.ru") info@tcnauto.ru
 		+e.btn(href="#").btn.btn-primary Оставить заявку
+
+mixin mapBlock()
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+	script.
+		ymaps.ready(init);
+
+		function init () {
+			var myMap = new ymaps.Map("map", {
+				center: [55.66759406904799,37.88643799999995],
+				zoom: 17
+			}),
+			myPlacemark2 = new ymaps.Placemark([55.66759406904799,37.88643799999995], {
+				hintContent: ''
+			}, {
+				iconImageHref: `img/svg/pin.svg`,
+				iconImageSize: [40, 40],
+				iconImageOffset: [-20, -20]
+			});
+			myMap.geoObjects
+				.add(myPlacemark2)
+		}
