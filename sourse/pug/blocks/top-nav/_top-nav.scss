@@ -20,6 +20,57 @@
 			margin-right: rem(20);
 		}
 	}
+	&__content {
+		margin-top: auto;
+		padding: 0 20px;
+
+	}
+	&__phone-link {
+		display: flex;
+		margin-bottom: 15px;
+		align-items: center;
+		margin-bottom: 15px;
+		a {
+			font-weight: 700;
+			margin-right: rem(10);
+			font-size: 16px;
+			&:not(:hover) {
+				color: #000;
+			}
+			.icon {
+				font-size: 20px;
+				color: $primary;
+				flex: 0 0 auto;
+				margin-right: 10px;
+			}
+		}
+		.soc {
+			&__item {
+				margin-right: rem(4);
+			}
+		}
+	}
+	&__mail {
+		display: block;
+		font-size: 16px;
+		margin-bottom: 15px;
+		&:not(:hover) {
+			color: #000;
+		}
+		.icon {
+			font-size: 20px;
+			margin-right: 10px;
+			color: $primary;
+		}
+	}
+	&__adress {
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	&__time {
+		font-size: 14px;
+		color: $secondary;
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}
@@ -129,5 +180,6 @@
 		width: 100%;
 		background-color: #fff;
 		border-top: 1px solid #E8E8ED;
+		z-index: 1;
 	}
 }

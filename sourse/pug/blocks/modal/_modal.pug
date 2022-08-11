@@ -72,5 +72,22 @@ mixin modal()
 					.col-lg-6
 						+e.btn--2(href="#").btn.btn-outline-secondary Продолжить покупки
 	// #modal-add-to-cart
+	div(id="modal-call"  style="display: none" )
+		+b.modal-win--call
+			+form-wrap
+				.text-center
+					+e.title.form-data Заказать звонок
+					p.after-headline Заполните форму, и наш менеджер свяжется с Вами в ближайшее время для уточнения деталей заказа
+					+input("Введите имя", 'text', 'Имя')(required) 
+					+input("Введите телефон", 'tel', 'Телефон')(required) 
+					+policy
+					+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить заявку
+	// #modal-add-to-cart
+	div(id="modal-thanks"  style="display: none" )
+		+b.modal-win--thanks.text-center
+			+e.title Спасибо за обращение!
+			p.after-headline В ближайшее время мы свяжемся с Вами
+			+e.btn(href="#").btn.btn-primary Закрыть
+	// #modal-add-to-cart
 	
 	// end modals

@@ -40,6 +40,35 @@
 									<div class="tel-block__toggle">+7 (900) 123-45-67
 									</div>
 									<div class="tel-block__dropdown">
+										<a class="tel-block__call" href="tel:+79001234567">
+											<svg class="icon icon-call ">
+												<use xlink:href="img/svg/sprite.svg#call"></use>
+											</svg>+7 (900) 123-45-67
+										</a>
+										<a class="tel-block__call" href="tel:+79001234567">
+											<svg class="icon icon-call ">
+												<use xlink:href="img/svg/sprite.svg#call"></use>
+											</svg>+7 (900) 123-45-67
+										</a>
+										<div class="tel-block__time">с 8.00 до 18.00 пн-пт
+										</div>
+										<a class="tel-block__link" href="#">Заказать звонок
+										</a>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegram.svg" alt=""/>
+											</a>
+											<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+											</a>
+											<a class="soc__item" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+											</a>
+										</div>
+										<div class="tel-block__adress">г. Люберцы, ул. Котельническая, д. 23
+										</div>
+										<a class="tel-block__mail" href="mailto:info@tcnauto.ru">
+											<svg class="icon icon-mail ">
+												<use xlink:href="img/svg/sprite.svg#mail"></use>
+											</svg>info@tcnauto.ru
+										</a>
 									</div>
 								</div>
 							</div>
@@ -71,7 +100,15 @@
 							<div class="col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+										<div class="search-block">
+											<form>
+												<input type="text" placeholder="Поиск по номеру или названию запчасти"/>
+												<button> 
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</form>
 										</div>
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Автозапчасти</a></li>
@@ -80,6 +117,30 @@
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Резерв и возврат</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 										</ul>
+										<div class="top-nav__content d-block d-lg-none">
+											<div class="top-nav__phone-link"><a href="tel:+79001234567"> 
+													<svg class="icon icon-call ">
+														<use xlink:href="img/svg/sprite.svg#call"></use>
+													</svg>+7 (900) 123-45-67</a>
+												<div class="soc">
+													<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegram.svg" alt=""/>
+													</a>
+													<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+													</a>
+													<a class="soc__item" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+													</a>
+												</div>
+											</div>
+											<a class="top-nav__mail" href="mailto:info@tcnauto.ru">
+												<svg class="icon icon-mail ">
+													<use xlink:href="img/svg/sprite.svg#mail"></use>
+												</svg>info@tcnauto.ru
+											</a>
+											<div class="top-nav__adress">г. Люберцы, ул. Котельническая, д. 23
+											</div>
+											<div class="top-nav__time">Ежедневно с 9:00 до 18:00
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -119,6 +180,23 @@
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg>
 								</a>
+								<div class="tel-block">
+									<div class="tel-block__dropdown">
+										<a class="tel-block__call" href="tel:+79001234567">
+											<svg class="icon icon-call ">
+												<use xlink:href="img/svg/sprite.svg#call"></use>
+											</svg>+7 (900) 123-45-67
+										</a>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank" style="--bg:#2FA6D9;"><img src="img/svg/telegram-sm.svg" alt="" loading="lazy"/>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--bg:#00C958;"><img src="img/svg/call.svg" alt="" loading="lazy"/>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--bg:#8852C1;"><img src="img/svg/vibe.svg" alt="" loading="lazy"/>
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -394,6 +472,46 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<!-- #modal-add-to-cart-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win modal-win--call">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data">Заказать звонок
+							</div>
+							<p class="after-headline">Заполните форму, и наш менеджер свяжется с Вами в ближайшее время для уточнения деталей заказа</p>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя" required="required"/> 
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите телефон" required="required"/> 
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__policy">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Я ознакомился и согласен с условиями обработки персональных данных</small>
+								</label>
+							</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-add-to-cart-->
+		<div id="modal-thanks" style="display: none">
+			<div class="modal-win modal-win--thanks text-center">
+				<div class="modal-win__title">Спасибо за обращение!
+				</div>
+				<p class="after-headline">В ближайшее время мы свяжемся с Вами</p>
+				<a class="modal-win__btn btn btn-primary" href="#">Закрыть
+				</a>
 			</div>
 		</div>
 		<!-- #modal-add-to-cart-->

@@ -104,6 +104,7 @@
 			}
 			&__btn {
 				margin-bottom: 0;
+				height: 100%;
 				@include media-breakpoint-up(md) {
 					font-size: rem(16);
 				}
@@ -143,6 +144,7 @@
 	&--login {
 		.form-wrap {
 			&__btn {
+				--bs-btn-font-size: #{rem(16)};
 				margin-bottom: rem(20);
 			}
 		}
@@ -154,6 +156,17 @@
 			}
 			&__btn {
 				margin-bottom: rem(20);
+			}
+		}
+	}
+	&--call {
+		.form-wrap {
+			&__policy {
+				text-align: left;
+				margin-bottom: rem(20);
+			}
+			&__btn {
+				--bs-btn-font-size: #{rem(16)};
 			}
 		}
 	}

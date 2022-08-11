@@ -79,6 +79,9 @@ body {
 
 	&.fixed {
 		overflow: hidden;
+	}
+	&.fixed2 {
+		overflow: hidden;
 		position: absolute;
 		width: 100%;
 		left: 0;
