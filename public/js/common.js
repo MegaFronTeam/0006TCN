@@ -471,6 +471,18 @@ function eventHandler() {
 		$(".hidden-block").slideDown();
 		$(".sAbout__link").hide();
 	});
+
+	$('.sOrder__side-bar').hcSticky({
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: $('.sOrder'),
+				top: 40,
+
+			},
+		},
+  });
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
