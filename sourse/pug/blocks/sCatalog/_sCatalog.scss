@@ -39,7 +39,7 @@
 	--img-h: 188px;
 
 	@include media-breakpoint-up(md) {}
-	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2 + 10px);
+	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2 + 20px);
 	&__slide {
 		height: auto;
 	}

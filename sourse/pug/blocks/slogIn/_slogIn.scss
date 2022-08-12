@@ -59,7 +59,7 @@
 		&__input {
 			border-radius: 8px;
 			padding: rem(8.5) rem(35) rem(8.5) rem(15);
-			font-size: rem(12);
+			font-size: 12px;
 			@include media-breakpoint-up(md) {
 				padding: rem(13.5) rem(40) rem(13.5) rem(15);
 				font-size: rem(14);
@@ -92,7 +92,7 @@
 			}
 		}
 		&__create-account {
-			font-size: rem(12);
+			font-size: 12px;
 			text-align: center;
 			@include media-breakpoint-up(md) {
 				font-size: rem(14);

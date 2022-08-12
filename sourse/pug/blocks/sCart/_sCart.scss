@@ -23,7 +23,7 @@
 		}
 	}
 	&__head-link {
-		font-size: rem(12);
+		font-size: 12px;
 		&:not(:last-child) {
 			margin-right: rem(20);
 		}
@@ -121,7 +121,7 @@
 		}
 	}
 	&__storage {
-		font-size: rem(12);
+		font-size: 12px;
 		margin-bottom: rem(5);
 		@include media-breakpoint-up(md) {
 			font-size: rem(14);
@@ -141,7 +141,7 @@
 	&__label {
 		color: #fff;
 		background-color: var(--bgColor, #36B555);
-		font-size: rem(12);
+		font-size: 12px;
 		padding: rem(2) rem(6);
 		border-radius: 3px;
 		font-weight: 600;
