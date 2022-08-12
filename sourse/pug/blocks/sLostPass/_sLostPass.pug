@@ -6,14 +6,14 @@ mixin sLostPass(form)
 			+form-wrap
 				+e.title.text-center Сменить пароль
 				+e.input-wrap--pass.form-group
-					+e.input-title Пароль
 					label
+						+e.SPAN.input-title Пароль
 						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
 					.input-btn--password-toggle
 						+icon('eye')
 				+e.input-wrap--pass.form-group
-					+e.input-title Повторите пароль
 					label
+						+e.SPAN.input-title Повторите пароль
 						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
 					.input-btn--password-toggle
 						+icon('eye')
