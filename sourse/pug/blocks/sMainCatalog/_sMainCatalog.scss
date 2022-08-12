@@ -362,6 +362,11 @@
 			}
 		}
 	}
+	&__headline {
+		font-size: rem(16);
+		font-weight: 600;
+		margin-bottom: rem(20);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

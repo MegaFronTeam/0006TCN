@@ -1,0 +1,27 @@
+mixin sContactInfo(data)
+	// start sContactInfo
+	+b.sContactInfo.section#sContactInfo&attributes(attributes)
+		+e.row.row
+			mixin item(i, t)
+				.col-sm-6.col-xl-3
+					+e.item
+						+e.img-wrap
+							img(src=`img/svg/contact-info-${i}.svg`, loading='lazy' alt="")
+						+e.caption
+							+e.title!=t
+							ul
+								block
+							//- ul
+							//- 	each item in items
+							//- 		li!= item
+			+item('1',`Телефоны для заказа`)
+				li #[a(href='tel:+79001234567') +7 (900) 123-45-67]
+				li 
+					+soc()
+			+item('2',`Электронная почта`)
+				li #[a(href='mailto:info@tcnauto.ru') info@tcnauto.ru]
+			+item('3',`Адрес склада`)
+				li Московская область, г. Люберцы, ул. Котельническая, д.&nbsp;23
+			+item('4',`Режим работы`)
+				li Ежедневно, с&nbsp;9:00 до&nbsp;20:00
+	// end sContactInfo

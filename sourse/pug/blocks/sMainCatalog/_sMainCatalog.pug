@@ -4,13 +4,15 @@ mixin sideBarSearchresult(name, count, icon)
 			+icon('menu')
 		!= name
 		span!= count
-mixin sideBarSearch(have)
+mixin sideBarSearch(have, headline)
 	+e.button.d-block.d-lg-none
 		+icon('menu')
 		| Выбрать категорию
 	+e.side-bar
 		+e.close
 		+e.title.d-block.d-lg-none Категории запчастей
+		if headline
+			+e.headline!= headline
 		+b.search-block
 			form
 				input(type="text" placeholder="Поиск товаров")
@@ -142,7 +144,7 @@ mixin sMainCatalog(data)
 		.container
 			.row
 				.col-lg-3
-					+sideBarSearch('ture')
+					+sideBarSearch('true')
 				.col-lg-9
 					+page-head('Запчасти для BMW 3-Series 7&nbsp;поколение, 2018&nbsp;&mdash; н.в., B57D30 3.0&nbsp;л дизель', 'Автозапчасти', 'Запчасти BMW', 'Запчасти BMW 3-Series', '7 поколение, 2018 - н.в.')
 					+e.sort-row.row
@@ -261,4 +263,16 @@ mixin sMainCatalog3(data)
 						.col-12
 							+e.show-more(href="#").btn.btn-secondary
 								+icon('repeat')
+	// end sMainCatalog
+
+mixin sMainCatalog3(data)
+	// start sMainCatalog
+	+b.sMainCatalog.section#sMainCatalog&attributes(attributes)
+		.container
+			.row
+				.col-lg-3
+					+sideBarSearch('true', 'Другие запчасти на этот авто')
+				.col-lg-9
+					+page-head('Фара левая Renault Dokker 1 260603007R', 'Главная', 'Фары', 'Фара Dokker')
+					block
 	// end sMainCatalog

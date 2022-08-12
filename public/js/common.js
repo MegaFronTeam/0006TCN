@@ -525,6 +525,67 @@ function eventHandler() {
 	$('.footer__up').on('click', function() {
 		window.scrollTo(0, 0);
 	});
+
+	try {
+		var sCardSliderThumbs = new Swiper(".sCard__slider-thumbs--js", {
+			spaceBetween: 5,
+			direction: "horizontal",
+			// slidesPerView: 'auto',
+			slidesPerView: 5,
+			watchOverflow: true,
+			// freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			lazy: {
+				loadPrevNext: true
+			},
+			breakpoints: {
+				768: {
+					direction: "horizontal",
+				}
+			}
+		});
+		var sCardSlider = new Swiper(".sCard__slider--js", {
+			spaceBetween: 10,
+			// watchOverflow: true,
+			lazy: {
+				loadPrevNext: true
+			},
+			thumbs: {
+				swiper: sCardSliderThumbs,
+				watchOverflow: true
+			},
+			on: {
+				slideChange: function (swiper) {
+					let curent = document.querySelector(".sCard__slider--js .swiper-slide:nth-child(".concat(swiper.realIndex + 1, ")"));
+					console.log(curent);
+					let video = curent.querySelector("video");
+					console.log(video);
+	
+					if (video) {
+						video.play();
+					} // console.log('swiper initialized');
+	
+				}
+			}
+		});
+		
+	} catch (error) {
+		
+	}
+	$(".sCard .btn-more").click(function () {
+		let th = $(this);
+
+		if (th.text() == "Показать еще") {
+			$(".sCard__row-item:hidden").slideDown().addClass("shown");
+			th.text("Свернуть");
+		} else {
+			$(".sCard__row-item.shown").slideUp().removeClass("shown");
+			th.text("Показать еще");
+		}
+
+		;
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

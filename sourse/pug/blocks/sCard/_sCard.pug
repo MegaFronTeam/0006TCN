@@ -1,0 +1,99 @@
+mixin sCard(data)
+	// start sCard
+	+b.sCard.section#sCard&attributes(attributes)
+		+e.main-row.row
+			+e.col.col-12.col-lg-6
+				+e.slider-wrap
+					+e.slider--js.swiper
+						.swiper-wrapper
+							mixin slide2(i)
+								+e.slide.swiper-slide
+									+e.img-wrap(href=`img/card-${i}.jpg` data-fancybox= "sCard-gallery")
+										img(src=`img/card-md-1.jpg` alt='')
+							+slide2(1)
+							+e.slide.swiper-slide
+									+e.video-wrap
+										video#bgvid.fillItUp.video(playsinline='playsinline'   muted='muted' loop='loop')
+											source(src='video/video.mp4' type='video/mp4' loading='lazy')
+											source(src='video/video.ogv' type='video/ogv' loading='lazy')
+											source(src='video/video.webm' type='video/webm' loading='lazy')
+										+e.video
+											| Видео
+											+img('img/svg/play2.svg')
+							+slide2(2)
+							+slide2(3)
+							+slide2(4)
+							+slide2(3)
+							+slide2(2)
+							+slide2(4)
+					+e.slider-thumbs--js.swiper
+						.swiper-wrapper
+							mixin slide(i, play)
+								+e.slide.swiper-slide
+									+e.img-wrap
+										img(src=`img/card-sm-${i}.jpg` alt='')
+										block
+							+slide(1)
+							+slide(2)
+								img.icon(src="img/svg/play.svg", alt="")
+							+slide(3)
+							+slide(4)
+							+slide(3)
+							+slide(2)
+							+slide(4)
+			.col-12.col-lg-6
+				+e.table
+					mixin row-item(t, v)
+						+e.row-item
+							.row
+								.col-6
+									span!= t
+								.col-6
+									span!= v
+					+row-item(`ID товара`, `106341`)
+					+row-item(`Марка:`, `Renault`)
+					+row-item(`Модель`, `Dokker`)
+					+row-item(`Кузов`, `1`)
+					+row-item(`Номер по производителю`, `260603007R`)
+					+row-item(`Производитель`, `Renault`)
+					+row-item(`ID товара`, `106341`)
+					+row-item(`Марка:`, `Renault`)
+					+row-item(`Модель`, `Dokker`)
+					+row-item(`Кузов`, `1`)
+					+row-item(`Номер по производителю`, `260603007R`)
+					+row-item(`Производитель`, `Renault`)
+				BUTTON.btn-more Показать еще
+				+e.price Цена: 2 000 ₽
+				+e.in-stock 
+					| В наличии на складе 
+					span Люберцы
+					+e.SPAN.label Б/У
+				+e.buttons
+					.row
+						.col-md-6.col-lg-12.col-xl-6
+							+e.btn.btn.btn-primary 
+								+icon('basket')
+								| В корзину
+						.col-md-6.col-lg-12.col-xl-6
+							+e.btn.btn.btn-outline-primary Оставить заявку
+		+e.spec
+			h4 Комментарий продавца
+			p Б.у Оригинал
+			p Дефект креплений (фото 2, 3, 4 и 5), небольшое загрязнение изнутри.
+			p Фара передняя левая Рено Доккер
+			p 260603007R
+			p 260607950R
+			p Год выпуска автомобиля: 2012 2013 2014 2015 2016 2017 2018 2019 2020
+		+e.apply
+			h4 Применимость
+			+e.apply-wrap 
+				+e.mark Renault Dokker 
+					| 
+					span / 
+				+e.info 4 поколение, 2012-2019 
+					| 
+					span (A40)
+				p 
+					span SR 
+					| Любая модель двигателя
+	// end sCard

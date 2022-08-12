@@ -8,6 +8,7 @@
 2. <https://megafronteam.github.io/0006TCN/public/08-login.html>
 2. <https://megafronteam.github.io/0006TCN/public/09-lost-pass.html>
 2. <https://megafronteam.github.io/0006TCN/public/09-lost-pass-2.html>
+2. <https://megafronteam.github.io/0006TCN/public/12-product-card.html>
 
 #### Корзина
 1. <https://megafronteam.github.io/0006TCN/public/06-cart.html>
