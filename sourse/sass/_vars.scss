@@ -889,28 +889,28 @@ $form-color-width:                      3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width:                  1em !default;
+$form-check-input-width:                  1.25em !default;
 $form-check-min-height:                   $font-size-base * $line-height-base !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
 $form-check-margin-bottom:                .125rem !default;
 $form-check-label-color:                  null !default;
-$form-check-label-cursor:                 null !default;
+$form-check-label-cursor:                 pointer !default;
 $form-check-transition:                   null !default;
 
 $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 1px solid rgba($black, .25) !default;
-$form-check-input-border-radius:          .25em !default;
+$form-check-input-border-radius:          rem(6) !default;
 $form-check-radio-border-radius:          50% !default;
-$form-check-input-focus-border:           $input-focus-border-color !default;
+$form-check-input-focus-border:           $blue !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color:          $component-active-color !default;
-$form-check-input-checked-bg-color:       $component-active-bg !default;
+$form-check-input-checked-bg-color:       $blue !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
-$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8188 2.56914L9.53213 1.5543C9.49229 1.52148 9.44307 1.49805 9.38682 1.49805C9.33057 1.49805 9.279 1.52148 9.23916 1.55664L4.55869 7.5707C4.55869 7.5707 2.71885 5.80117 2.66729 5.74961C2.61572 5.69805 2.54775 5.61133 2.44463 5.61133C2.3415 5.61133 2.29463 5.68398 2.24072 5.73789C2.20088 5.78008 1.54463 6.46914 1.22119 6.81133C1.20244 6.83242 1.19072 6.84414 1.17432 6.86055C1.14619 6.90039 1.12744 6.94492 1.12744 6.99414C1.12744 7.0457 1.14619 7.08789 1.17432 7.12773L1.23994 7.18867C1.23994 7.18867 4.50479 10.3246 4.55869 10.3785C4.6126 10.4324 4.67822 10.5004 4.77432 10.5004C4.86807 10.5004 4.94541 10.3996 4.98994 10.3551L10.8282 2.85508C10.8563 2.81523 10.8751 2.7707 10.8751 2.71914C10.8751 2.66055 10.8517 2.61133 10.8188 2.56914Z' fill='white'/%3E%3C/svg%3E%0A");
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.2' fill='#{$blue}'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $component-active-color !default;
 $form-check-input-indeterminate-bg-color:       $component-active-bg !default;

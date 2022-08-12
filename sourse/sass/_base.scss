@@ -105,8 +105,11 @@ body {
 // /	overflow: scroll;
 	// width: 100%; 
 	min-height: 100vh;
-	padding-top: var(--header-height);
+	padding-top: 60px;
 	// height: calc(var(--vh, 1vh) * 100);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(130);
+	}
 	.footer{
 		margin-top: auto;
 	}
@@ -519,7 +522,7 @@ iframe {
 	}
 }
 
-.error-page {
+.base-page {
 	.main-wrapper {
 		--header-height: 0;
 	}

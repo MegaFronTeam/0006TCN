@@ -104,8 +104,8 @@
 		min-height: rem(360);
 		position: relative;
 		@include media-breakpoint-down(sm) {
-			width: calc(100vw - var(--bs-gutter-x));
-			margin-left: calc(var(--bs-gutter-x) * -0.5 + 1px);
+			width: calc(100vw - var(--bs-gutter-x) / 2);
+			margin-left: calc(var(--bs-gutter-x) * -0.5 + 3px);
 			border-top: none;
 		}
 		@include media-breakpoint-up(lg) {

@@ -68,7 +68,7 @@
 		width: rem(96);
 		overflow: hidden;
 		border-radius: 10px;
-		z-index: 4;
+		z-index: 1;
 		&:hover {
 			img {
 				transform: scale(1.1);
@@ -151,7 +151,7 @@
 	}
 	&__delete {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		&:hover {
 			// color: #36B555;
 			opacity: .5;
@@ -238,7 +238,7 @@
 			}
 			&__btn {
 				width: 100%;
-				--bs-btn-padding-y: #{rem(10)};
+				--bs-btn-padding-y: 10px;
 				border-radius: 8px;
 				@include media-breakpoint-up(md) {
 					--bs-btn-padding-y: #{rem(12)};
@@ -288,7 +288,7 @@
 	&__make-order {
 		width: 100%;
 		// margin-bottom: rem(20);
-		--bs-btn-padding-y: #{rem(8.540)};
+		--bs-btn-padding-y: 8.5px;
 		@include media-breakpoint-up(md) {
 			--bs-btn-padding-y: #{rem(17)};
 			// margin-bottom: rem(30);

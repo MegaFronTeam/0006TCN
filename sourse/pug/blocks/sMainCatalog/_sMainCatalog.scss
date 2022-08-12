@@ -276,9 +276,11 @@
 			color: $secondary;
 			&:first-child {
 				border-radius: 8px 0 0 8px;
+				border-right-color: #0C78ED;
 			}
 			&:last-child {
 				border-radius: 0 8px 8px 0;
+				border-left: none;
 			}
 			&.active, &:hover {
 				background-color: rgba($color: #0C78ED, $alpha: .1);
