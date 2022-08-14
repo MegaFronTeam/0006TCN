@@ -107,9 +107,9 @@
 			&__btn {
 				margin-bottom: 0;
 				height: 100%;
-				@include media-breakpoint-up(md) {
-					font-size: rem(16);
-				}
+				// @include media-breakpoint-up(md) {
+				// 	font-size: rem(16);
+				// }
 				&--2 {
 					--bs-btn-color: #000;
 					--bs-btn-border-color: #E8E8ED;
@@ -148,7 +148,7 @@
 	&--login {
 		.form-wrap {
 			&__btn {
-				--bs-btn-font-size: #{rem(16)};
+				// --bs-btn-font-size: #{rem(16)};
 				margin-bottom: rem(20);
 			}
 		}
@@ -170,7 +170,7 @@
 				margin-bottom: rem(20);
 			}
 			&__btn {
-				--bs-btn-font-size: #{rem(16)};
+				// --bs-btn-font-size: #{rem(16)};
 			}
 		}
 	}

@@ -142,6 +142,9 @@
 			color: #808187;
 			font-size: 14px;
 		}
+		&:focus {
+			border-color: $primary;
+		}
 	}
 	&__input-title {
 		font-weight: 600;
@@ -156,6 +159,18 @@
 		--bs-btn-padding-y: #{rem(13.5)};
 		--bs-btn-font-size: #{rem(14)};
 		vertical-align: text-top;
+	}
+	&__create-account {
+		font-size: 12px;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
+		a {
+			&:not(:hover) {
+				color: $secondary;
+			}
+		}
 	}
 }
 

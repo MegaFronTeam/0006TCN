@@ -5,7 +5,7 @@
 		<title>Каталог</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -296,15 +296,10 @@
 															</a>
 														</div>
 													<div class="sCard__slide swiper-slide">
-														<div class="sCard__video-wrap">
-															<video class="fillItUp video" id="bgvid" playsinline="playsinline" muted="muted" loop="loop">
-																<source src="video/video.mp4" type="video/mp4" loading="lazy"/>
-																<source src="video/video.ogv" type="video/ogv" loading="lazy"/>
-																<source src="video/video.webm" type="video/webm" loading="lazy"/>
-															</video>
-															<div class="sCard__video">Видео<img src="img/svg/play2.svg" alt="" loading="lazy"/>
-															</div>
-														</div>
+														<a class="sCard__img-wrap" href="img/card-2.jpg" data-fancybox="sCard-gallery"><img src="img/card-md-1.jpg" alt=""/>
+															<a class="sCard__video" href="video/video.mp4" data-fancybox="sCard-video">Видео<img src="img/svg/play2.svg" alt="" loading="lazy"/>
+															</a>
+														</a>
 													</div>
 														<div class="sCard__slide swiper-slide">
 															<a class="sCard__img-wrap" href="img/card-2.jpg" data-fancybox="sCard-gallery"><img src="img/card-md-1.jpg" alt=""/>
@@ -330,6 +325,16 @@
 															<a class="sCard__img-wrap" href="img/card-4.jpg" data-fancybox="sCard-gallery"><img src="img/card-md-1.jpg" alt=""/>
 															</a>
 														</div>
+												</div>
+												<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg>
+												</div>
+												<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+													<svg class="icon icon-chevron-right ">
+														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+													</svg>
 												</div>
 											</div>
 											<div class="sCard__slider-thumbs sCard__slider-thumbs--js swiper">

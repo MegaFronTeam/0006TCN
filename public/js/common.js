@@ -374,6 +374,7 @@ function eventHandler() {
 
 	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {  
 		loop: true,
+		spaceBetween: 20,
 		pagination: {
 			el: '.headerBlock .swiper-pagination',
 			type: 'bullets',
@@ -493,6 +494,10 @@ function eventHandler() {
 	$('.top-nav__tel').on("click", function() {
 		$('.tel-block__dropdown').toggleClass('active');
 	});
+	$('.tel-block__toggle').on("click", function() {
+		$('.tel-block__dropdown').toggleClass('active');
+		$('.tel-block__toggle').toggleClass('active');
+	});
 
 	$(".sAbout__link").click(function () {
 		$(".hidden-block").slideDown();
@@ -554,6 +559,10 @@ function eventHandler() {
 			thumbs: {
 				swiper: sCardSliderThumbs,
 				watchOverflow: true
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
 			on: {
 				slideChange: function (swiper) {

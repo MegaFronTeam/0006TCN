@@ -13,13 +13,18 @@
 
 	}
 	.search-block {
-		border: 1px solid #E8E8ED;
+		// border: 1px solid #E8E8ED;
 		border-radius: 10px;
 		position: relative;
 		margin-bottom: rem(20);
 		input {
 			background-color: transparent;
 			padding-left: rem(20);
+			border-radius: 10px;
+			border: 1px solid #E8E8ED !important;
+			&:focus {
+				border: 1px solid $primary !important;
+			}
 		}
 		button {
 			@include mt;
@@ -121,9 +126,9 @@
 			--bs-btn-border-radius: 6px;
 			--bs-btn-padding-y: #{rem(8)};
 			--bs-btn-hover-color: #{$primary};
-			--bs-btn-hover-bg: #cccccd;
+			--bs-btn-hover-bg: #ececf2;
 			--bs-btn-active-color: #{$primary};
-			--bs-btn-active-bg: #cccccd;
+			--bs-btn-active-bg: #ececf2;
 			.icon{
 				font-size: rem(20);
 				vertical-align: sub;

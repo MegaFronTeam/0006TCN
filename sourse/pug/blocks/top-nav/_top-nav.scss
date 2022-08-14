@@ -11,6 +11,7 @@
 	&__tel{
 		@extend .text-body;
 		cursor: pointer;
+		display: flex;
 		.icon{
 			font-size: 20px;
 		}
@@ -145,11 +146,21 @@
 			color: $primary;
 		}
 		.icon{
+			@include mt;
 			font-size: rem(20);
+			&-favorites {
+				font-size: rem(22);
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: 22px;
+			}
 		}
 		&--cart {
 			&:hover{
 				color: #000;
+				.icon {
+					color: $primary;
+				}
 			}
 		}
 	}

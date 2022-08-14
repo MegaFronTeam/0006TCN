@@ -7,9 +7,12 @@
 	overflow-x: hidden;
 
 	.swiper-pagination-bullet{
-		&:not(.swiper-pagination-bullet-active), 
+		
+		background-color: #fff;
 		&:not(:hover){
-			background-color: #fff;
+		}
+		&-active, &:hover {
+			background-color: $primary ;
 		}
 	}
 	@include media-breakpoint-up(lg) {
@@ -134,6 +137,7 @@
 		margin-top: -34px;
 		// padding-bottom: 10px;
 		margin-bottom: 6px;
+		z-index: 1;
 		&-bullet{
 
 			position: relative;

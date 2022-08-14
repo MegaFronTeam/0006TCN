@@ -6,6 +6,7 @@ mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like)
 			+img(`img/prod-${i}.jpg`)
 			+e.play
 				+icon("play")
+				+e.play-wrap У товара есть видео
 		+e.caption
 			+e.price= pr
 				+e.label(style=`background: ${bg}; color:${color}`)= l
@@ -28,6 +29,8 @@ mixin catalogSearch()
 				.row
 					.col-lg-3
 						+input("Выберите марку",'select')
+							//- - for (var x = 1; x < 10; x++)
+								//- option(value=` placeholder ${x}`)= `placeholder ${x}`
 					.col-lg-3
 						+input("Выберите модель",'select')(disabled)
 					.col-lg-3

@@ -12,12 +12,9 @@ mixin sCard(data)
 										img(src=`img/card-md-1.jpg` alt='')
 							+slide2(1)
 							+e.slide.swiper-slide
-									+e.video-wrap
-										video#bgvid.fillItUp.video(playsinline='playsinline'   muted='muted' loop='loop')
-											source(src='video/video.mp4' type='video/mp4' loading='lazy')
-											source(src='video/video.ogv' type='video/ogv' loading='lazy')
-											source(src='video/video.webm' type='video/webm' loading='lazy')
-										+e.video
+									+e.img-wrap(href=`img/card-2.jpg` data-fancybox= "sCard-gallery")
+										img(src=`img/card-md-1.jpg` alt='')
+										+e.DIV.video(href=`video/video.mp4` data-fancybox= "sCard-video")
 											| Видео
 											+img('img/svg/play2.svg')
 							+slide2(2)
@@ -26,6 +23,7 @@ mixin sCard(data)
 							+slide2(3)
 							+slide2(2)
 							+slide2(4)
+						+arrow()
 					+e.slider-thumbs--js.swiper
 						.swiper-wrapper
 							mixin slide(i, play)
