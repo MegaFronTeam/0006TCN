@@ -1,4 +1,4 @@
-mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like)
+mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like, old)
 	+b.prod-item&attributes(attributes)
 		+e.favorite(class= like)
 			+icon("favorites")
@@ -11,14 +11,22 @@ mixin prod-item(i,t,pr, bg='#FEE794',color='#000000',  l='Б/У' , like)
 			+e.price= pr
 				+e.label(style=`background: ${bg}; color:${color}`)= l
 			+e.title(href="#")= t
-			p
-				span.text-secondary.d-none.d-sm-inline Номер и производитель
-				| 4B5827302F VAG
-				
-			p
-				span.text-secondary Склад
-				| Люберцы
-
+			if old
+				p
+					span.text-secondary.d-none.d-sm-inline Снято с автомобиля
+					!= old
+					
+				p
+					span.text-secondary Склад
+					| Люберцы
+			else
+				p
+					span.text-secondary.d-none.d-sm-inline Номер и производитель
+					| 4B5827302F VAG
+					
+				p
+					span.text-secondary Склад
+					| Люберцы
 			+e.btn(href="#")
 
 
@@ -68,11 +76,11 @@ mixin sCatalog2(h2)
 						+e.slide.swiper-slide
 							+prod-item(1,"Дверь правая задняя ",'14 000 ₽', '#36B555', '#fff', 'Новая', 'active')
 						+e.slide.swiper-slide 
-							+prod-item(2,"Крыло правое переднее",'12 000 ₽')
+							+prod-item(2,"Крыло правое переднее",'12 000 ₽', bg='#FEE794',color='#000000', 'Б/У', '', 'BMW X7 G07')
 						+e.slide.swiper-slide
-							+prod-item(3,"Накладка крышки багажника",'2 500 ₽')
+							+prod-item(3,"Накладка крышки багажника",'2 500 ₽', bg='#FEE794',color='#000000', 'Б/У', '', 'Kia Optima 4 JF')
 						+e.slide.swiper-slide
-							+prod-item(4,"Решетка радиатора",'4 000 ₽')
+							+prod-item(4,"Решетка радиатора",'4 000 ₽', bg='#FEE794',color='#000000', 'Б/У', '', 'Kia Rio 3 QB')
 
 			+arrow("arrow")
 			.swiper-pagination
