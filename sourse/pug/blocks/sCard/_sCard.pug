@@ -69,11 +69,11 @@ mixin sCard(data)
 				+e.buttons
 					.row
 						.col-md-6.col-lg-12.col-xl-6
-							+e.btn.btn.btn-primary 
+							+e.btn.btn.btn-primary(data-src='modal-add-to-cart' data-fancybox="modal")
 								+icon('basket')
 								| В корзину
 						.col-md-6.col-lg-12.col-xl-6
-							+e.btn.btn.btn-outline-primary Оставить заявку
+							+e.btn.btn.btn-outline-primary(data-src='modal-call' data-fancybox="modal") Оставить заявку
 		+e.spec
 			h4 Комментарий продавца
 			p Б.у Оригинал

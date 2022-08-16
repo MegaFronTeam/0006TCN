@@ -7,7 +7,7 @@ mixin slogIn(data)
 				+e.input-wrap--pass.form-group
 					+e.input-title
 						| Пароль
-						+e.forget(href="#") Забыли пароль?
+						+e.forget(href="#" data-src='modal-restore-pass' data-fancybox="modal") Забыли пароль?
 					label
 						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
 					.input-btn--password-toggle
@@ -15,5 +15,5 @@ mixin slogIn(data)
 				+e.BUTTON.btn(type="submit").btn.btn-primary Войти
 				+e.create-account
 					| У вас еще нет аккаунта? 
-					a(href="#") Создать аккаунт
+					a(href="#" data-src='modal-reg' data-fancybox="modal") Создать аккаунт
 	// end slogIn
