@@ -74,7 +74,7 @@
 								</div>
 							</div>
 							<div class="col-auto">
-								<a class="topLine__call-back" href="#" data-src="modal-call" data-fancybox="modal">Обратный звонок
+								<a class="topLine__call-back link-modal-js" href="#modal-call">Обратный звонок
 								</a>
 							</div>
 							<div class="col-auto">
@@ -319,40 +319,47 @@
 					</div>
 					<div class="pos">
 						<div class="sFilter__dropdown">
+							<div class="mob-head-dropdown d-lg-none">
+								<div class="row mb-3 align-items-center">
+									<div class="col fw-600">Ваш автомобиль</div>
+									<div class="col-auto sFilter__toggle">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="mobile-toggle"> 
+									<div class="mobile-toggle__item">
+										<div class="mobile-toggle__title">BMW
+										</div>
+										<button class="btn btn-edit btn-primary">Изменить</button>
+									</div>
+									<div class="mobile-toggle__item">
+										<div class="mobile-toggle__title">3-Series
+										</div>
+										<button class="btn btn-edit btn-primary">Изменить</button>
+									</div>
+									<div class="mobile-toggle__item"> 
+										<div class="mobile-toggle__title">7 поколение, 2018 - н.в.
+										</div>
+										<button class="btn btn-edit btn-primary">Изменить</button>
+									</div>
+									<div class="mobile-toggle__item">
+										<div class="mobile-toggle__title">2.0 л, бензин
+										</div>
+										<button class="btn btn-edit btn-primary">Изменить</button>
+									</div>
+									<div class="mobile-toggle__item"> <a href="#">Выберите двигатель</a>
+									</div>
+								</div>
+							</div>
 							<div class="sFilter__body">
 								<div class="row gx-0">
 									<div class="sFilter__col col-lg-3">
 										<div class="filter-search-block">
-											<div class="filter-search-block__input-wrap form-group"><input class="filter-search-block__input form-control" name="text" type="text" placeholder="Поиск марки"/> 
+											<div class="filter-search-block__input-wrap form-group"><input class="filter-search-block__input form-control" name="text" type="text" placeholder="Поиск марки"/>
 											</div>
 											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="sFilter__col col-lg-3">
-										<div class="filter-search-block">
-											<div class="filter-search-block__input-wrap form-group"><input class="filter-search-block__input form-control" name="text" type="text" placeholder="Поиск модели"/> 
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="sFilter__col col-lg-3">
-										<div class="filter-search-block">
-											<label class="filter-search-block__head form-check form-switch">
-												<div class="form-check-label">Точная модель кузова</div><input class="form-check-input" type="checkbox" role="switch"  > 
-											</label>
-										</div>
-									</div>
-									<div class="sFilter__col col-lg-3">
-										<div class="filter-search-block">
-											<label class="filter-search-block__head form-check form-switch">
-												<div class="form-check-label">Точная модель двигателя</div><input class="form-check-input" type="checkbox" role="switch"  > 
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="row gx-0">
-									<div class="sFilter__col-result col-lg-3 active">
-										<div class="filter-search-block"> 
 											<div class="filter-search-block__dropdown">
 												<div class="filter-search-block__dropdown-item active">Acura
 												</div>
@@ -441,8 +448,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="sFilter__col-result col-lg-3">
-										<div class="filter-search-block"> 
+									<div class="sFilter__col col-lg-3">
+										<div class="filter-search-block">
+											<div class="filter-search-block__input-wrap form-group"><input class="filter-search-block__input form-control" name="text" type="text" placeholder="Поиск модели"/>
+											</div>
+											<!-- +e.input-wrap-->
 											<div class="filter-search-block__dropdown">
 												<div class="filter-search-block__dropdown-item active">3-Series
 												</div>
@@ -531,8 +541,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="sFilter__col-result col-lg-3">
-										<div class="filter-search-block"> 
+									<div class="sFilter__col col-lg-3 active">
+										<div class="filter-search-block">
+											<label class="filter-search-block__head form-check form-switch">
+												<div class="form-check-label">Точная модель кузова</div><input class="form-check-input" type="checkbox" role="switch"  >
+											</label>
 											<div class="filter-search-block__dropdown"> 
 												<div class="filter-search-block__dropdown-item active">1 поколение, 2009 -2015
 													<div class="filter-search-block__sub-text">F
@@ -545,8 +558,11 @@
 											</div>
 										</div>
 									</div>
-									<div class="sFilter__col-result col-lg-3">
-										<div class="filter-search-block"> 
+									<div class="sFilter__col col-lg-3">
+										<div class="filter-search-block">
+											<label class="filter-search-block__head form-check form-switch">
+												<div class="form-check-label">Точная модель двигателя</div><input class="form-check-input" type="checkbox" role="switch"  >
+											</label>
 											<div class="filter-search-block__dropdown"> 
 												<div class="filter-search-block__dropdown-item d-flex active">1.5 л, бензин <img class="img-to-svg ms-auto" src="img/petrol-pump.svg" alt=""/>
 												</div>

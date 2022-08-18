@@ -64,43 +64,52 @@ mixin sFilter(data)
 
 			.pos
 				+e.dropdown
+					+b.mob-head-dropdown.d-lg-none
+						.row.mb-3.align-items-center
+							.col.fw-600 Ваш автомобиль
+							.col-auto.sFilter__toggle
+								+icon("close")
+								
+						+b.mobile-toggle 
+							+e.item
+								+e.title BMW
+								button.btn.btn-edit.btn-primary Изменить
+							+e.item
+								+e.title 3-Series
+								button.btn.btn-edit.btn-primary Изменить
+							+e.item 
+								+e.title 7 поколение, 2018 - н.в.
+								button.btn.btn-edit.btn-primary Изменить
+							+e.item
+								+e.title 2.0 л, бензин
+								button.btn.btn-edit.btn-primary Изменить
+							+e.item 
+								a(href="#") Выберите двигатель
+
 					+e.body
-					
 						.row.gx-0
 							+e.col.col-lg-3
 								+b.filter-search-block
-									+input("Поиск марки") 
-							+e.col.col-lg-3
-								+b.filter-search-block
-									+input("Поиск модели") 
-							+e.col.col-lg-3
-								+b.filter-search-block
-									+e.LABEL.head(class="form-check form-switch")
-										.form-check-label Точная модель кузова
-										<input class="form-check-input" type="checkbox" role="switch"  > 
-							+e.col.col-lg-3
-								+b.filter-search-block
-									+e.LABEL.head(class="form-check form-switch")
-										.form-check-label Точная модель двигателя
-										<input class="form-check-input" type="checkbox" role="switch"  > 
-						.row.gx-0
-							+e.col-result.col-lg-3.active
-								+b.filter-search-block 
+									+input("Поиск марки")
 									+e.dropdown
 										+e.dropdown-item.active Acura
 										- let list = [ 'Audi','BMW','Cadillac','Chery' ,'Chevrolet','Citroen','Daewoo','Datsun','Fiat','Ford','Geely','Genesis','Great Wall','Haval','Honda','Hyundai','Infiniti','Jaguar','Jeep','Kia','Land Rover','Lexus','Lifan','Mazda','Mercedes-Benz','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','Renault','Skoda','Ssang Yong','Subaru','Suzuki','Toyota','Volkswagen','Volvo','Лада','УАЗ']
 										each item in list
 											+e.dropdown-item= item
-							+e.col-result.col-lg-3
-								+b.filter-search-block 
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+input("Поиск модели")
 									+e.dropdown
 										+e.dropdown-item.active 3-Series
 										- let list = [ '3-Series','BMW','Cadillac','Chery' ,'Chevrolet','Citroen','Daewoo','Datsun','Fiat','Ford','Geely','Genesis','Great Wall','Haval','Honda','Hyundai','Infiniti','Jaguar','Jeep','Kia','Land Rover','Lexus','Lifan','Mazda','Mercedes-Benz','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','5-Series','Skoda','Ssang Yong','Subaru','Suzuki','Toyota','Volkswagen','Volvo','Лада','УАЗ']
 										each item in list
 											+e.dropdown-item= item
 									
-							+e.col-result.col-lg-3
-								+b.filter-search-block 
+							+e.col.col-lg-3.active
+								+b.filter-search-block
+									+e.LABEL.head(class="form-check form-switch")
+										.form-check-label Точная модель кузова
+										<input class="form-check-input" type="checkbox" role="switch"  >
 									+e.dropdown 
 										+e.dropdown-item.active 1 поколение, 2009 -2015
 												+e.sub-text F
@@ -108,9 +117,11 @@ mixin sFilter(data)
 										each item in list
 											+e.dropdown-item= item
 												+e.sub-text E 
-												
-							+e.col-result.col-lg-3
-								+b.filter-search-block 
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+e.LABEL.head(class="form-check form-switch")
+										.form-check-label Точная модель двигателя
+										<input class="form-check-input" type="checkbox" role="switch"  >
 									+e.dropdown 
 										+e.dropdown-item.d-flex.active 1.5 л, бензин 
 											img.img-to-svg.ms-auto(src="img/petrol-pump.svg", alt="")
