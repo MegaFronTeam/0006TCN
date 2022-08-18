@@ -19,14 +19,14 @@ mixin topLine()
 								+icon('call')
 								| +7 (900) 123-45-67
 							+e.time с 8.00 до 18.00 пн-пт
-							+e.link(href="#") Заказать звонок
+							+e.link(href="#" data-src='modal-call' data-fancybox="modal") Заказать звонок
 							+soc()
 							+e.adress г. Люберцы, ул. Котельническая, д. 23
 							+e.mail(href="mailto:info@tcnauto.ru")
 								+icon('mail')
 								| info@tcnauto.ru
 				.col-auto
-					+e.call-back(href="#") Обратный звонок
+					+e.call-back(href="#" data-src='modal-call' data-fancybox="modal") Обратный звонок
 				.col-auto
 					+soc()
 	// end topLine

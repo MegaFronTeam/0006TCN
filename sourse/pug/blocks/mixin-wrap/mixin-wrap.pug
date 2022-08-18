@@ -63,7 +63,7 @@ mixin needHelp()
 		+e.contact
 			p По всем вопросам
 			a(href="mailto:info@tcnauto.ru") info@tcnauto.ru
-		+e.btn(href="#").btn.btn-primary Оставить заявку
+		+e.btn(href="#" data-src='modal-call' data-fancybox="modal").btn.btn-primary Оставить заявку
 
 mixin mapBlock()
 	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')

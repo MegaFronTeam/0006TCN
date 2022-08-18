@@ -10,7 +10,7 @@ mixin modal()
 				+e.input-wrap--pass.form-group
 					+e.input-title
 						| Пароль
-						+e.forget(href="#") Забыли пароль?
+						+e.forget(href="#" data-src='modal-restore-pass' data-fancybox="modal") Забыли пароль?
 					label
 						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль")
 					.input-btn--password-toggle
@@ -18,7 +18,7 @@ mixin modal()
 				+e.BUTTON.btn(type="submit").btn.btn-primary Войти
 				+e.create-account
 					| У вас еще нет аккаунта? 
-					a(href="#") Создать аккаунт
+					a(href="#" data-src='modal-reg' data-fancybox="modal") Создать аккаунт
 	div(id="modal-reg"  style="display: none" )
 		+b.modal-win--reg
 			+form-wrap
@@ -43,7 +43,7 @@ mixin modal()
 				+e.BUTTON.btn(type="submit").btn.btn-primary Зарегистрироваться
 				+e.create-account
 					| Уже есть аккаунт? 
-					a(href="#") Войти
+					a(href="#" data-src='modal-login' data-fancybox="modal") Войти
 	div(id="modal-restore-pass"  style="display: none" )
 		+b.modal-win--restore-pass
 			+form-wrap
@@ -52,8 +52,8 @@ mixin modal()
 					p.after-headline Мы вышлем информацию о том, как сбросить пароль на ваш адрес электронной почты
 
 				+input("Введите эл. почту", 'text', 'Электронная почта')(required)  
-				+e.BUTTON.btn.btn.btn-primary(type="submit") Восстановить пароль
-				+e.link(href="#") Вернуться к авторизации
+				+e.BUTTON.btn.btn.btn-primary(type="submit" data-src='modal-success' data-fancybox="modal") Восстановить пароль
+				+e.link(href="#" data-src='modal-login' data-fancybox="modal") Вернуться к авторизации
 	// #modal-call
 	div(id="modal-success"  style="display: none" )
 		+b.modal-win--success.text-center
