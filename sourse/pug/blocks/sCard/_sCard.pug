@@ -14,9 +14,6 @@ mixin sCard(data)
 							+e.slide.swiper-slide
 									+e.img-wrap(href=`img/card-2.jpg` data-fancybox= "sCard-gallery")
 										img(src=`img/card-md-1.jpg` alt='')
-										+e.DIV.video(href=`video/video.mp4` data-fancybox= "sCard-video")
-											| Видео
-											+img('img/svg/play2.svg')
 							+slide2(2)
 							+slide2(3)
 							+slide2(4)
@@ -24,6 +21,9 @@ mixin sCard(data)
 							+slide2(2)
 							+slide2(4)
 						+arrow()
+						+e.DIV.video(href=`video/video.mp4` data-fancybox= "sCard-video")
+							| Видео
+							+img('img/svg/play2.svg')
 					+e.slider-thumbs--js.swiper
 						.swiper-wrapper
 							mixin slide(i, play)
@@ -33,47 +33,49 @@ mixin sCard(data)
 										block
 							+slide(1)
 							+slide(2)
-								img.icon(src="img/svg/play.svg", alt="")
+								//- img.icon(src="img/svg/play.svg", alt="")
 							+slide(3)
 							+slide(4)
 							+slide(3)
 							+slide(2)
 							+slide(4)
-			.col-12.col-lg-6
-				+e.table
-					mixin row-item(t, v)
-						+e.row-item
-							.row
-								.col-6
-									span!= t
-								.col-6
-									span!= v
-					+row-item(`ID товара`, `106341`)
-					+row-item(`Марка:`, `Renault`)
-					+row-item(`Модель`, `Dokker`)
-					+row-item(`Кузов`, `1`)
-					+row-item(`Номер по производителю`, `260603007R`)
-					+row-item(`Производитель`, `Renault`)
-					+row-item(`ID товара`, `106341`)
-					+row-item(`Марка:`, `Renault`)
-					+row-item(`Модель`, `Dokker`)
-					+row-item(`Кузов`, `1`)
-					+row-item(`Номер по производителю`, `260603007R`)
-					+row-item(`Производитель`, `Renault`)
-				BUTTON.btn-more Показать еще
-				+e.price Цена: 2 000 ₽
-				+e.in-stock 
-					| В наличии на складе 
-					span Люберцы
-					+e.SPAN.label Б/У
-				+e.buttons
-					.row
-						.col-md-6.col-lg-12.col-xl-6
-							+e.btn.btn.btn-primary(data-src='modal-add-to-cart' data-fancybox="modal")
-								+icon('basket')
-								| В корзину
-						.col-md-6.col-lg-12.col-xl-6
-							+e.btn.btn.btn-outline-primary(data-src='modal-call' data-fancybox="modal") Оставить заявку
+			+e.spec-col.col-12.col-lg-6
+				+e.spec-head
+					+e.table
+						mixin row-item(t, v)
+							+e.row-item
+								.row
+									.col-6
+										span!= t
+									.col-6
+										span!= v
+						+row-item(`ID товара`, `106341`)
+						+row-item(`Марка:`, `Renault`)
+						+row-item(`Модель`, `Dokker`)
+						+row-item(`Кузов`, `1`)
+						+row-item(`Номер по производителю`, `260603007R`)
+						+row-item(`Производитель`, `Renault`)
+						+row-item(`ID товара`, `106341`)
+						+row-item(`Марка:`, `Renault`)
+						+row-item(`Модель`, `Dokker`)
+						+row-item(`Кузов`, `1`)
+						+row-item(`Номер по производителю`, `260603007R`)
+						+row-item(`Производитель`, `Renault`)
+					BUTTON.btn-more Показать еще
+				+e.make-order
+					+e.price Цена: 2 000 ₽
+					+e.in-stock 
+						| В наличии на складе 
+						span Люберцы
+						+e.SPAN.label Б/У
+					+e.buttons
+						.row
+							.col-md-6.col-lg-12.col-xl-6
+								+e.btn.btn.btn-primary(data-src='modal-add-to-cart' data-fancybox="modal")
+									+icon('basket')
+									| В корзину
+							.col-md-6.col-lg-12.col-xl-6
+								+e.btn.btn.btn-outline-primary(data-src='modal-call' data-fancybox="modal") Оставить заявку
 		+e.spec
 			h4 Комментарий продавца
 			p Б.у Оригинал

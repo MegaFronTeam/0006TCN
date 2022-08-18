@@ -305,6 +305,23 @@
 			color: $secondary;
 		}
 	}
+	&__spec-col {
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__spec-head {
+		@include media-breakpoint-down(lg) {
+			order: 2;
+		}
+	}
+	&__make-order {
+		@include media-breakpoint-down(lg) {
+			order: 1;
+			margin-bottom: rem(20);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
