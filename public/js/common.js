@@ -497,6 +497,14 @@ function eventHandler() {
 	$('.tel-block__toggle').on("click", function() {
 		$('.tel-block__dropdown').toggleClass('active');
 		$('.tel-block__toggle').toggleClass('active');
+		document.addEventListener('click', (event) => {
+			let container = event.target.closest(".tel-block__dropdown.active"); // (1)
+			let toggle = event.target.closest('.tel-block__toggle'); // (1)
+			if (!toggle && !container) {
+				$('.tel-block__dropdown').removeClass('active');
+				$('.tel-block__toggle').removeClass('active');
+			};
+		}, { passive: true });
 	});
 
 	$(".sAbout__link").click(function () {

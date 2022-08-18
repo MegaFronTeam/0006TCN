@@ -200,9 +200,9 @@
 		--bs-btn-border-radius: 6px;
 		--bs-btn-padding-y: #{rem(8)};
 		--bs-btn-hover-color: #{$primary};
-		--bs-btn-hover-bg: #cccccd;
+		--bs-btn-hover-bg: #ececf2;
 		--bs-btn-active-color: #{$primary};
-		--bs-btn-active-bg: #cccccd;
+		--bs-btn-active-bg: #ececf2;
 		.icon{
 			font-size: rem(20);
 			vertical-align: sub;
@@ -324,16 +324,18 @@
 		.dd-group {
 			margin-bottom: rem(20);
 			&__item {
+				@include mt;
 				border: 1px solid #E8E8ED;
-				box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+				box-shadow: 0px 5px 25px transparent;
 				border-radius: 6px;
 				&:not(:last-child) {
 					margin-bottom: rem(5);
 				}
 				&.active {
+					box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
 					.dd-group__head {
 						&:before {
-							transform: translateY(-50%) rotate(0deg);
+							transform: translateY(-50%) rotate(180deg);
 						}
 					}
 					.dd-group__content {
@@ -356,7 +358,7 @@
 					height: 20px;
 					right: 10px;
 					top: 50%;
-					transform: translateY(-50%) rotate(180deg);
+					transform: translateY(-50%) rotate(0deg);
 
 					background-image: url('../img/svg/chevron-down.svg');
 					background-repeat: no-repeat;
@@ -367,6 +369,10 @@
 			}
 			&__content {
 				padding: rem(5) rem(15) rem(15);
+				display: none;
+				&.active {
+					display: block;
+				}
 			}
 			.custom-input {
 				&:not(:last-child) {
