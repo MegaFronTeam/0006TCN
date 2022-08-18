@@ -1,0 +1,127 @@
+mixin sFilter(data)
+	// start sFilter
+	+b.sFilter&attributes(attributes)
+		.container.container--filter
+			mixin sFIlterHead(cl)
+				+e.head
+					.row
+						+e.col-hidden.col-auto.d-lg-block(class= cl)
+							+img("img/car.svg")
+						block
+						.col.p-0
+						+e.col-hidden.col-lg-auto.d-lg-block(class= (cl ? '' : 'active'))
+							+e.toggle
+								button.btn.btn-primary.w-100 Выбрать автомобиль
+								+e.close
+									+icon("close")
+						+e.col-hidden.col-auto(class= cl).d-lg-none
+							+e.toggle
+								button.btn.btn-edit.btn-primary Изменить
+						+e.col-hidden.d-lg-none.small.text-center.mt-3(class= (cl ? '' : 'active')) Покажем запчасти только для вашего автомобиля
+			+sFIlterHead()
+				+e.col-hidden.col-auto.d-lg-block.d-none
+					.fw-600
+						a(href="#")  Выберите автомобиль
+					.small.text-secondary Процесс поиска автозапчастей станет быстрее если указать автомобиль 
+			br
+			+sFIlterHead('active')
+				.col-auto
+					+b.filter-breadcrumb
+						+e.item() BMW
+							+e.sm.d-none.d-lg-block Марка
+							
+						+e.item() X1
+							+e.sm.d-none.d-lg-block Модель
+						+e.item() 1 поколение, 2009 - 2015
+							+e.sm.d-none.d-lg-block Кузов
+								span.text-body E
+						+e.item().current Выберите двигатель 
+			+b.mobile-filter.d-lg-none
+				.row
+					+e.col.col-6
+						+e.title 6 пок., 2012-2019
+						select 
+							option  Уточнить кузов
+							option  Уточнить кузов
+							option  Уточнить кузов
+					+e.col.col-6
+						select 
+							option  Выбрать двигатель
+							option  Выбрать двигатель
+							option  Выбрать двигатель
+			+b.mobile-filter.d-lg-none
+				.row
+					+e.col.col-6
+						+e.title 6 пок., 2012-2019
+						div
+							span.text-secondary Кузов 
+							| F30
+					+e.col.col-6
+						select 
+							option  Выбрать двигатель
+							option  Выбрать двигатель
+							option  Выбрать двигатель
+
+			.pos
+				+e.dropdown
+					+e.body
+					
+						.row.gx-0
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+input("Поиск марки") 
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+input("Поиск модели") 
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+e.LABEL.head(class="form-check form-switch")
+										.form-check-label Точная модель кузова
+										<input class="form-check-input" type="checkbox" role="switch"  > 
+							+e.col.col-lg-3
+								+b.filter-search-block
+									+e.LABEL.head(class="form-check form-switch")
+										.form-check-label Точная модель двигателя
+										<input class="form-check-input" type="checkbox" role="switch"  > 
+						.row.gx-0
+							+e.col-result.col-lg-3.active
+								+b.filter-search-block 
+									+e.dropdown
+										+e.dropdown-item.active Acura
+										- let list = [ 'Audi','BMW','Cadillac','Chery' ,'Chevrolet','Citroen','Daewoo','Datsun','Fiat','Ford','Geely','Genesis','Great Wall','Haval','Honda','Hyundai','Infiniti','Jaguar','Jeep','Kia','Land Rover','Lexus','Lifan','Mazda','Mercedes-Benz','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','Renault','Skoda','Ssang Yong','Subaru','Suzuki','Toyota','Volkswagen','Volvo','Лада','УАЗ']
+										each item in list
+											+e.dropdown-item= item
+							+e.col-result.col-lg-3
+								+b.filter-search-block 
+									+e.dropdown
+										+e.dropdown-item.active 3-Series
+										- let list = [ '3-Series','BMW','Cadillac','Chery' ,'Chevrolet','Citroen','Daewoo','Datsun','Fiat','Ford','Geely','Genesis','Great Wall','Haval','Honda','Hyundai','Infiniti','Jaguar','Jeep','Kia','Land Rover','Lexus','Lifan','Mazda','Mercedes-Benz','Mini','Mitsubishi','Nissan','Opel','Peugeot','Porsche','5-Series','Skoda','Ssang Yong','Subaru','Suzuki','Toyota','Volkswagen','Volvo','Лада','УАЗ']
+										each item in list
+											+e.dropdown-item= item
+									
+							+e.col-result.col-lg-3
+								+b.filter-search-block 
+									+e.dropdown 
+										+e.dropdown-item.active 1 поколение, 2009 -2015
+												+e.sub-text F
+										- let list = [ '2 поколение, 2015 - н.в.']
+										each item in list
+											+e.dropdown-item= item
+												+e.sub-text E 
+												
+							+e.col-result.col-lg-3
+								+b.filter-search-block 
+									+e.dropdown 
+										+e.dropdown-item.d-flex.active 1.5 л, бензин 
+											img.img-to-svg.ms-auto(src="img/petrol-pump.svg", alt="")
+										+e.dropdown-item.d-flex 1.5 л, бензин 
+											img.img-to-svg.ms-auto(src="img/droplet.svg", alt="") 
+					+e.footer 
+						.row
+							.col.d-none.d-lg-block
+								a.text-secondary(href="#") Сбросить фильтры 
+							.col-auto.d-none.d-lg-block
+								button.btn.btn-outline-secondary Отменить
+							.col-lg-auto
+								button.btn.btn-outline-primary.w-100 Показать запчасти
+		// end sFilter

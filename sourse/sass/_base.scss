@@ -561,8 +561,33 @@ iframe {
 	--bs-btn-hover-border-color: #EB3938;
 }
 
+.btn-outline-secondary{
+	--bs-btn-color: #000000;
+    --bs-btn-border-color: #E8E8ED;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: var(--bs-btn-border-color);
+    --bs-btn-hover-border-color: var(--bs-btn-border-color); 
+    --bs-btn-active-bg: var(--bs-btn-border-color);
+    --bs-btn-active-border-color: var(--bs-btn-border-color); 
+    --bs-btn-disabled-color: var(--bs-btn-border-color); 
+    --bs-btn-disabled-border-color: var(--bs-btn-border-color);
+}
+
 .breadcrumb {
 	.breadcrumb-item+.breadcrumb-item:before {
 		content: url('../img/svg/chevron-right.svg');
 	}
 }
+
+.form-switch {
+	cursor: pointer;
+}
+.form-switch .form-check-input{
+	background-color: #BFC1C7;
+	&:checked{
+		background-color: $blue;
+	}
+	border: none;
+	box-shadow: none !important;
+}
+

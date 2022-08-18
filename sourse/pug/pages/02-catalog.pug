@@ -6,6 +6,7 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/sMainCatalog/_sMainCatalog.pug 
 include ../blocks/sCatalog/_sCatalog.pug 
 include ../blocks/footer/_footer.pug
+include ../blocks/sFilter/_sFilter.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -22,7 +23,7 @@ block pagecontent
 		+topLine 
 		+top-nav()
 	//- +page-head(title, 'Автозапчасти', 'Запчасти BMW', 'Запчасти BMW 3-Series', '7 поколение, 2018 - н.в.')
-	
+	+sFilter
 	+sMainCatalog()
 	
 	+footer()
