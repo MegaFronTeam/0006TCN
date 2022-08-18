@@ -36,13 +36,13 @@ mixin catalogSearch()
 			+b.form-wrap
 				.row
 					.col-lg-3
-						+input("Выберите марку",'select')
+						+input("Выберите марку",'select').custom-select-js
 							//- - for (var x = 1; x < 10; x++)
 								//- option(value=` placeholder ${x}`)= `placeholder ${x}`
 					.col-lg-3
-						+input("Выберите модель",'select')(disabled)
+						+input("Выберите модель",'select')(disabled class="custom-select-js")
 					.col-lg-3
-						+input("Выберите поколение",'select')(disabled)
+						+input("Выберите поколение",'select')(disabled class="custom-select-js" )
 					.col-lg-3
 						+e.btn.btn.btn-primary.w-100(type="submit") Показать запчасти
 			+e.body.d-none.d-lg-block

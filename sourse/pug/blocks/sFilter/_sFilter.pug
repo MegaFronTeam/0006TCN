@@ -2,7 +2,7 @@ mixin sFilter(data)
 	// start sFilter
 	+b.sFilter&attributes(attributes)
 		.container.container--filter
-			mixin sFIlterHead(cl)
+			mixin sFIlterHead(cl, check)
 				+e.head
 					.row
 						+e.col-hidden.col-auto.d-lg-block(class= cl)
@@ -11,7 +11,10 @@ mixin sFilter(data)
 						.col.p-0
 						+e.col-hidden.col-lg-auto.d-lg-block(class= (cl ? '' : 'active'))
 							+e.toggle
-								button.btn.btn-primary.w-100 Выбрать автомобиль
+								if cl
+									button.btn.btn-outline-secondary.w-100 Изменить автомобиль
+								else
+									button.btn.btn-primary.w-100 Выбрать автомобиль
 								+e.close
 									+icon("close")
 						+e.col-hidden.col-auto(class= cl).d-lg-none
@@ -24,7 +27,7 @@ mixin sFilter(data)
 						a(href="#")  Выберите автомобиль
 					.small.text-secondary Процесс поиска автозапчастей станет быстрее если указать автомобиль 
 			br
-			+sFIlterHead('active')
+			+sFIlterHead('active','check')
 				.col-auto
 					+b.filter-breadcrumb
 						+e.item() BMW
@@ -109,8 +112,17 @@ mixin sFilter(data)
 								+b.filter-search-block
 									+e.LABEL.head(class="form-check form-switch")
 										.form-check-label Точная модель кузова
-										<input class="form-check-input" type="checkbox" role="switch"  >
-									+e.dropdown 
+										<input class="form-check-input"  name="model" type="checkbox" role="switch"  >
+									+e.dropdown(data-tab="model" data-accurate="true").active
+										+e.dropdown-item.active 1 поколение, 2009 -2015
+												+e.sub-text F
+										- let list = [ '2 поколение, 2015 - н.в.']
+										each item in list
+											+e.dropdown-item= item
+												+e.sub-text E 
+									+e.dropdown(data-tab="model" data-accurate="false")
+										+e.dropdown-item.active 1 поколение, 2009 -2015
+												+e.sub-text F
 										+e.dropdown-item.active 1 поколение, 2009 -2015
 												+e.sub-text F
 										- let list = [ '2 поколение, 2015 - н.в.']
@@ -121,8 +133,16 @@ mixin sFilter(data)
 								+b.filter-search-block
 									+e.LABEL.head(class="form-check form-switch")
 										.form-check-label Точная модель двигателя
-										<input class="form-check-input" type="checkbox" role="switch"  >
-									+e.dropdown 
+										<input class="form-check-input" type="checkbox" name="engine" role="switch"  >
+									+e.dropdown(data-tab="engine" data-accurate="true").active
+										+e.dropdown-item.d-flex.active 1.5 л, бензин 
+											img.img-to-svg.ms-auto(src="img/petrol-pump.svg", alt="")
+										+e.dropdown-item.d-flex 1.5 л, бензин 
+											img.img-to-svg.ms-auto(src="img/droplet.svg", alt="") 
+
+									+e.dropdown(data-tab="engine" data-accurate="false")
+										+e.dropdown-item.d-flex.active 2.5 л, бензин 
+											img.img-to-svg.ms-auto(src="img/petrol-pump.svg", alt="")
 										+e.dropdown-item.d-flex.active 1.5 л, бензин 
 											img.img-to-svg.ms-auto(src="img/petrol-pump.svg", alt="")
 										+e.dropdown-item.d-flex 1.5 л, бензин 

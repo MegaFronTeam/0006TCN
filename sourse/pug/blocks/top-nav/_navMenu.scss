@@ -88,8 +88,12 @@
 	} 
 }
 .menu-mobile {
+	@include media-breakpoint-up(lg) {
+	.container{
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.search-block {
-		@include media-breakpoint-up(lg) {
 			display: none;
 		}
 	}
@@ -166,16 +170,19 @@
 			a {
 				// font-size: 16px;
 
-				padding: 10px 20px;
+				padding: 10px 0;
 				display: block;
 
 			}
 		}
-		.search-block {
+		.top-nav__head{
+
 			border-bottom: 1px solid #E8E8ED;
 			margin-bottom: 30px;
+		}
+		.search-block {
 			input {
-				padding: 20px 50px 20px 21px;
+				padding: 20px 50px 20px 0;
 			}
 			button {
 				left: unset;

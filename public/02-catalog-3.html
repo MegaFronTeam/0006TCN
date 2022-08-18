@@ -22,7 +22,7 @@
 				<div class="topLine" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col">
+							<div class="col d-block">
 								<div class="search-block">
 									<form>
 										<input type="text" placeholder="Поиск по номеру или названию запчасти"/>
@@ -104,45 +104,51 @@
 							<div class="col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
-										<div class="search-block">
-											<form>
-												<input type="text" placeholder="Поиск по номеру или названию запчасти"/>
-												<button> 
-													<svg class="icon icon-search ">
-														<use xlink:href="img/svg/sprite.svg#search"></use>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Автозапчасти</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Шины и диски</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата и доставка</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Резерв и возврат</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-										</ul>
-										<div class="top-nav__content d-block d-lg-none">
-											<div class="top-nav__phone-link"><a href="tel:+79001234567"> 
-													<svg class="icon icon-call ">
-														<use xlink:href="img/svg/sprite.svg#call"></use>
-													</svg>+7 (900) 123-45-67</a>
-												<div class="soc">
-													<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegram.svg" alt=""/>
-													</a>
-													<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
-													</a>
-													<a class="soc__item" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
-													</a>
+										<div class="top-nav__head d-lg-none">
+											<div class="container">
+												<div class="search-block">
+													<form>
+														<input type="text" placeholder="Поиск по номеру или названию запчасти"/>
+														<button> 
+															<svg class="icon icon-search ">
+																<use xlink:href="img/svg/sprite.svg#search"></use>
+															</svg>
+														</button>
+													</form>
 												</div>
 											</div>
-											<a class="top-nav__mail" href="mailto:info@tcnauto.ru">
-												<svg class="icon icon-mail ">
-													<use xlink:href="img/svg/sprite.svg#mail"></use>
-												</svg>info@tcnauto.ru
-											</a>
-											<div class="top-nav__adress">г. Люберцы, ул. Котельническая, д. 23
-											</div>
-											<div class="top-nav__time">Ежедневно с 9:00 до 18:00
+										</div>
+										<div class="container">
+											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Автозапчасти</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Шины и диски</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата и доставка</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Резерв и возврат</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+											</ul>
+											<div class="top-nav__content d-block d-lg-none">
+												<div class="top-nav__phone-link"><a href="tel:+79001234567"> 
+														<svg class="icon icon-call ">
+															<use xlink:href="img/svg/sprite.svg#call"></use>
+														</svg>+7 (900) 123-45-67</a>
+													<div class="soc">
+														<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegram.svg" alt=""/>
+														</a>
+														<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+														</a>
+														<a class="soc__item" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+														</a>
+													</div>
+												</div>
+												<a class="top-nav__mail" href="mailto:info@tcnauto.ru">
+													<svg class="icon icon-mail ">
+														<use xlink:href="img/svg/sprite.svg#mail"></use>
+													</svg>info@tcnauto.ru
+												</a>
+												<div class="top-nav__adress">г. Люберцы, ул. Котельническая, д. 23
+												</div>
+												<div class="top-nav__time">Ежедневно с 9:00 до 18:00
+												</div>
 											</div>
 										</div>
 									</div>
@@ -516,7 +522,7 @@
 								<div class="col"></div>
 								<div class="col-auto d-none d-md-block">
 									<div class="sMainCatalog__input-wrap form-group">
-										<select class="sMainCatalog__input form-select" name="select">
+										<select class="sMainCatalog__input form-select custom-select-js" name="select">
 											<option value="Сначала дешевле">Сначала дешевле</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>

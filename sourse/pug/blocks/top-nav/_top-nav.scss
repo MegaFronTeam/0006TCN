@@ -1,3 +1,6 @@
+body:not(.fixed).header {
+	z-index: 200;
+}
 .top-nav {
 	border-bottom: 1px solid #E8E8ED;
 	@include media-breakpoint-up(lg) {
@@ -24,7 +27,7 @@
 	}
 	&__content {
 		margin-top: auto;
-		padding: 0 20px;
+		// padding: 0 20px;
 
 	}
 	&__phone-link {

@@ -518,12 +518,15 @@ function eventHandler() {
   });
 
 	let selects = [];
-	selects = $('select.form-wrap__input');
+	selects = $('.custom-select-js');
 	// console.log(selects);
 	for (let i = 0; i < selects.length; i ++) {
 		// console.log(selects[i]);
 		const choices2 = new Choices(selects[i], {
 			searchEnabled: false,
+			noResultsText: '',
+    noChoicesText: '',
+    itemSelectText: '',
 		});
 	}
 
@@ -626,6 +629,26 @@ function eventHandler() {
 		$('.sFilter__dropdown').toggleClass("active");
 
 	})
+
+	let switches = document.querySelectorAll(".filter-search-block .form-check-input");
+	for (const input of switches) {
+		
+		input.addEventListener("click", function(){ 
+			let name = input.name;
+			
+			let tabTrue = document.querySelector(`[data-tab="${name}"][data-accurate="true"]`);
+			let tabFalse = document.querySelector(`[data-tab="${name}"][data-accurate="false"]`);
+			
+			if (input.checked) {
+				tabTrue.classList.remove('active');
+				tabFalse.classList.add('active');
+			}
+			else { 
+				tabTrue.classList.add('active');
+				tabFalse.classList.remove('active');
+			}
+		})
+	}
 
 };
 if (document.readyState !== 'loading') {

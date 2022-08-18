@@ -1,4 +1,26 @@
 // start .sMainCatalog
+.sMainCatalog__input-wrap{
+	.choices[data-type*=select-one]:after{
+		right: 10px;
+		background-size: 10px 10px;
+	}
+	.choices[data-type*=select-one] .choices__inner{
+		padding: 6px 15px;
+		padding-right: 40px;	
+		font-size: rem(14);
+		max-height: 40px;
+		min-height: 1px !important;
+		padding-right: 20px !important;
+	}
+	.choices__item{
+
+		font-size: rem(14);
+	}
+	.choices__list--dropdown .choices__item{
+			padding: 8px 15px !important;
+	
+		}
+}
 .sMainCatalog {
 	--sPT: #{rem(15)};
 	--sPB: #{rem(40)};
