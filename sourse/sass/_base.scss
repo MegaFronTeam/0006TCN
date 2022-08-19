@@ -77,12 +77,11 @@ body {
 
 	}
 
-	&.fixed {
-		overflow: hidden;
-	}
-	&.fixed2 {
-		overflow: hidden;
-		position: absolute;
+	&.fixed ,
+	&.fixed2,
+	&.fixed3
+	{
+		overflow: hidden; 
 		width: 100%;
 		left: 0;
 		top: 0;

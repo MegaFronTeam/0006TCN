@@ -1,5 +1,6 @@
-body:not(.fixed).header {
-	z-index: 200;
+body:not(.fixed, .fixed2) .header 
+{
+	// z-index: 200;
 }
 .top-nav {
 	border-bottom: 1px solid #E8E8ED;

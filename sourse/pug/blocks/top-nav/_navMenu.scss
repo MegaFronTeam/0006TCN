@@ -104,7 +104,7 @@
 
 	.menu-mobile {
 		position: fixed !important;
-		z-index: 6;
+		z-index: 900;
 		// max-width: 85%;
 		height: calc((var(--vh) * 100) - var(--header-height));
 		width: 100%;
