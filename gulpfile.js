@@ -135,7 +135,7 @@ function styles() {
         cssnano(),
         gcmq(),
     ];
-    return src(sourse + '/sass/main.scss')
+    return src(sourse + '/sass/*.scss')
         .pipe(sassGlob())
         .pipe(
             sass.sync()
@@ -152,7 +152,7 @@ function styles() {
 function common() {
     return src(
         [
-            sourse + '/js/common.js',
+            sourse + '/js/*.js',
             // sourse + '/pug/**/*.js',
         ])
         // .pipe(babel())
