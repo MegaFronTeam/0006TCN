@@ -166,7 +166,7 @@ mixin sMainCatalog(data)
 								a(href="#").active Передний
 								a(href="#") Задний
 						.col-auto.d-none.d-md-block
-							+input('Сначала дешевле', 'select')
+							+input('Сначала дешевле', 'select').custom-select-js
 					+e.catalog-row.row
 						-for (var x = 0; x < 3; x++)
 							.col-sm-6.col-md-4
@@ -208,7 +208,7 @@ mixin sMainCatalog2(data)
 							//- 	a(href="#").active Передний
 							//- 	a(href="#") Задний
 						.col-auto.d-none.d-md-block
-							+input('Сначала дешевле', 'select')
+							+input('Сначала дешевле', 'select').custom-select-js
 					+e.catalog-row.row
 						-for (var x = 0; x < 3; x++)
 							.col-sm-6.col-md-4
@@ -251,7 +251,7 @@ mixin sMainCatalog3(data)
 							//- 	a(href="#").active Передний
 							//- 	a(href="#") Задний
 						.col-auto.d-none.d-md-block
-							+input('Сначала дешевле', 'select')
+							+input('Сначала дешевле', 'select').custom-select-js
 					+e.catalog-row.row
 						-for (var x = 0; x < 3; x++)
 							.col-sm-6.col-md-4

@@ -31,26 +31,29 @@ mixin top-nav()
 				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+search
-							+mnu()
-							+e.content.d-block.d-lg-none
-								+e.phone-link
-									a(href="tel:+79001234567") 
-										+icon('call')
-										| +7 (900) 123-45-67
-									+soc()
-								+e.mail(href="mailto:info@tcnauto.ru")
-									+icon('mail')
-									| info@tcnauto.ru
-								+e.adress г. Люберцы, ул. Котельническая, д. 23
-								+e.time Ежедневно с 9:00 до 18:00
+							+e.head.d-lg-none
+								.container
+									+search
+							.container
+								+mnu()
+								+e.content.d-block.d-lg-none
+									+e.phone-link
+										a(href="tel:+79001234567") 
+											+icon('call')
+											| +7 (900) 123-45-67
+										+soc()
+									+e.mail(href="mailto:info@tcnauto.ru")
+										+icon('mail')
+										| info@tcnauto.ru
+									+e.adress г. Люберцы, ул. Котельническая, д. 23
+									+e.time Ежедневно с 9:00 до 18:00
 				+b.head-btns-wrap.col-auto
 					+b.head-btns.container
 						+e.btn(href="/").d-lg-none
 							+icon("home")
 						+e.btn(href="#")
-							+icon("login")
-						+e.btn(type="button")
+							+icon("login") 
+						+e.btn(type="button") 
 							+icon("favorites")
 						+e.btn--cart
 							+e.icon-wrap

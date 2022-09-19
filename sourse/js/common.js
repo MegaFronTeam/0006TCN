@@ -447,15 +447,15 @@ function eventHandler() {
 
 	$('.sMainCatalog__button').on("click", function() {
 		$('.sMainCatalog__side-bar').addClass('active');
-		$('body').addClass('fixed2');
+		$('body').addClass('fixed3');
 		document.addEventListener('click', (event) => {
 			let container = event.target.closest(".sMainCatalog__side-bar.active"); // (1)
 			let toggle = event.target.closest('.sMainCatalog__close'); // (1)
 			let fixed = event.target.closest('body.fixed2');
 			let button = event.target.closest('.sMainCatalog__button');
-			if (fixed && !toggle && !container && !button) {
-				$('.sMainCatalog__side-bar').toggleClass('active');
-				$('body').toggleClass('fixed2');
+			if (  !container && !button) {
+				$('.sMainCatalog__side-bar').removeClass('active');
+				$('body').removeClass('fixed3');
 			};
 		}, { passive: true });
 	});
@@ -479,9 +479,9 @@ function eventHandler() {
 			let toggle = event.target.closest('.sMainCatalog__close'); // (1)
 			let fixed = event.target.closest('body.fixed2');
 			let button = event.target.closest('.sMainCatalog__sort');
-			if (fixed && !toggle && !container && !button) {
-				$('.sMainCatalog__mob-sort').toggleClass('active');
-				$('body').toggleClass('fixed2');
+			if (!toggle && !container && !button) {
+				$('.sMainCatalog__mob-sort').removeClass('active');
+				$('body').removeClass('fixed2');
 			};
 		}, { passive: true });
 	});
@@ -518,7 +518,7 @@ function eventHandler() {
 		mobileFirst: true,
 		responsive: {
 			992: {
-				stickTo: $('.sOrder'),
+				stickTo: $('.sOrder .col-lg-4'),
 				top: +pt,
 
 			},
@@ -526,12 +526,15 @@ function eventHandler() {
   });
 
 	let selects = [];
-	selects = $('select.form-wrap__input');
+	selects = $('.custom-select-js');
 	// console.log(selects);
 	for (let i = 0; i < selects.length; i ++) {
 		// console.log(selects[i]);
 		const choices2 = new Choices(selects[i], {
 			searchEnabled: false,
+			noResultsText: '',
+    noChoicesText: '',
+    itemSelectText: '',
 		});
 	}
 
@@ -634,6 +637,26 @@ function eventHandler() {
 		$('.sFilter__dropdown').toggleClass("active");
 
 	})
+
+	let switches = document.querySelectorAll(".filter-search-block .form-check-input");
+	for (const input of switches) {
+		
+		input.addEventListener("click", function(){ 
+			let name = input.name;
+			
+			let tabTrue = document.querySelector(`[data-tab="${name}"][data-accurate="true"]`);
+			let tabFalse = document.querySelector(`[data-tab="${name}"][data-accurate="false"]`);
+			
+			if (input.checked) {
+				tabTrue.classList.remove('active');
+				tabFalse.classList.add('active');
+			}
+			else { 
+				tabTrue.classList.add('active');
+				tabFalse.classList.remove('active');
+			}
+		})
+	}
 
 };
 if (document.readyState !== 'loading') {

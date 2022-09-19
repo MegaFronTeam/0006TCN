@@ -16,9 +16,9 @@
 	@include media-breakpoint-up(lg) {
 
 		margin-top: rem(20);
+		position: relative;
+		z-index: 100;
 	}
-	position: relative;
-	z-index: 200;
 
 	&__head{
 		img{
@@ -106,6 +106,7 @@
 		}
 		@include mt;
 		@include media-breakpoint-down(lg) {
+			z-index: 500;
 			position: fixed;
 			top: 0;
 			height: 100vh;
@@ -172,6 +173,11 @@
 	}
 	}
 	&__footer{
+		@include media-breakpoint-down(xxl) {
+			font-size: 14px;
+		}
+			a.text-secondary{
+		}
 		@include media-breakpoint-up(lg) {
 
 			padding: rem(20) rem(40);
@@ -196,6 +202,13 @@
 
 			display: none;
 		}
+	}
+	.form-check-label{
+		font-size: rem(14);
+	}
+	.form-check-input{
+		margin-left: rem(10);
+		flex: 0 0 auto;
 	}
 	
 	@include media-breakpoint-up(xl) {}
@@ -316,8 +329,11 @@
 		}
 	}
 	&__dropdown{
-		
+		@include mt;
 		// flex-grow: 1;
+		&[data-tab]:not(.active) {
+			display: none;
+		}
 		height: 100%;
 		overflow-y: auto;
 		@include media-breakpoint-up(lg) {
@@ -338,6 +354,9 @@
 .filter-breadcrumb{
 	display: flex;
 	@include roww(15px);
+	@include media-breakpoint-down(xxl) {
+	font-size: rem(14);
+}
 	@include media-breakpoint-down(lg) {
 		font-size: 12px;
 	}
@@ -386,7 +405,7 @@
 	}
 	&__sm{
 		color: #808187;
-		font-size: rem(14);
+		font-size: em(14);
 	}
 }
 
@@ -437,6 +456,7 @@
 		outline: none !important;
 		user-select: none;
 		appearance: none;
+		background-color: transparent;
 		min-width: 140px;
 		font-weight: 600;
 	}

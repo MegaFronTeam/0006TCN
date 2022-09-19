@@ -1,9 +1,9 @@
 // start .s404
 .s404 {
-	// --sPT: #{rem()};
+	--sPT: #{rem(100)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -49,15 +49,20 @@
 			}
 		}
 		img {
-			width: 100%;
+			// width: 100%;
 			max-width: rem(243);
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: rem(20);
+			// max-height: ;
+			display: block;
 			@include media-breakpoint-up(sm) {
-				margin-bottom: rem(40);
+				margin-bottom: 4vh;
+				width: auto;
 				max-width: rem(580);
+				max-height: 45vh;
 			}
+
 		}
 		h1 {
 			margin-bottom: rem(15);
