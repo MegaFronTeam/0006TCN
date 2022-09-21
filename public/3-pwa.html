@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Вход</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="css/main2.min.css" rel="stylesheet"/>
+	</head>
+	<body class="main-page" data-bg="">
+		<div class="pwa-container">
+			<!-- start sPwa-->
+			<div class="sPwa section" id="sPwa"><img class="logo" src="img/svg/logo.svg" alt="" loading="lazy"/>
+				<div class="sPwa__title h4">Добро пожаловать! Пожалуйста, авторизуйтесь
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Email</span><input class="form-wrap__input form-control is-invalid" name="email" type="email" placeholder="Введите email" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-wrap__input-wrap--pass form-group">
+							<label><span class="form-wrap__input-title">Пароль</span><input class="form-wrap__input form-control is-invalid" name="password" type="password" placeholder="Введите пароль" required="required"/>
+							</label>
+							<div class="input-btn--password-toggle">
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>
+							</div>
+						</div>
+						<p class="is-invalid">Неправильный логин или пароль.<br>Если вы забыли данные для входа - обратитесь к&nbsp;администратору.</p>
+						<button class="form-wrap__btn btn btn-primary" type="submit">Войти
+						</button>
+					</form>
+				</div>
+			</div>
+			<!-- end sPwa-->
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common2.js"></script>
+	</body>
+</html>

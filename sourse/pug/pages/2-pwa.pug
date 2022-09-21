@@ -1,0 +1,19 @@
+extends ../layout/main2.pug
+
+include ../blocks/sPwa/_sPwa.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= ''
+
+block title
+	- let  title= "Вход"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	.pwa-container
+		+sPwa2()
+
+
+

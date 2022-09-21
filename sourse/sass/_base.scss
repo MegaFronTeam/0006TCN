@@ -601,3 +601,13 @@ iframe {
 	box-shadow: none !important;
 }
 
+.pwa-container {
+	width: 100%;
+	min-height: 100vh;
+	max-width:  600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 20px 40px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

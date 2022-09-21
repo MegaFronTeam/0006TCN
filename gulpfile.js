@@ -247,7 +247,7 @@ function startwatch() {
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
-    watch([sourse + '/js/common.js'], { usePolling: true }, common);
+    watch([sourse + '/js/*.js'], { usePolling: true }, common);
     watch(sourse + '/img', { usePolling: true }, img);
 }
 

@@ -31,3 +31,12 @@
 4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-3.html>
 4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-4.html>
 4. <https://megafronteam.github.io/0006TCN/public/11-my-profile-5.html>
+
+#### Приложение (24.09.2022)
+4. <https://megafronteam.github.io/0006TCN/public/1-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/2-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/3-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/4-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/5-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/6-pwa.html>
+4. <https://megafronteam.github.io/0006TCN/public/7-pwa.html>

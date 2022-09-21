@@ -1,0 +1,81 @@
+mixin sPwa(data)
+	// start sPwa
+	+b.sPwa.section#sPwa&attributes(attributes)
+		+img('img/svg/logo.svg').logo
+		+img('img/car-1.png').img
+		+e.loading Загрузка
+	// end sPwa
+
+mixin sPwa2(invalid)
+	// start sPwa
+	+b.sPwa.section#sPwa&attributes(attributes)
+		+img('img/svg/logo.svg').logo
+		+e.title.h4 Добро пожаловать! Пожалуйста, авторизуйтесь
+		+form-wrap
+			if invalid
+				+input('Введите email', 'email', 'Email')(required).is-invalid
+			else
+				+input('Введите email', 'email', 'Email')(required)
+			+e.input-wrap--pass.form-group
+				label
+					+e.SPAN.input-title Пароль
+					if invalid
+						+e.INPUT.input.form-control.is-invalid(name="password" type="password" placeholder="Введите пароль" required)
+					else
+						+e.INPUT.input.form-control(name="password" type="password" placeholder="Введите пароль" required)
+				.input-btn--password-toggle
+					+icon('eye')
+			if invalid
+				p.is-invalid Неправильный логин или пароль.<br>Если вы забыли данные для входа - обратитесь к&nbsp;администратору.
+			+e.BUTTON.btn.btn.btn-primary(type="submit") Войти
+	// end sPwa
+
+mixin sPwa3(select, addNew, done, btnText, invalid)
+	// start sPwa
+	+b.sPwa.section#sPwa&attributes(attributes)
+		+b.form-wrap--select
+			+e.selects-wrap 
+				+input('Volkswagen', 'select')
+				+input('Polo', 'select')
+				+input('3 поколение (2020-2022)', 'select')
+			if addNew
+				+e.main-title.h4 Добавление запчасти
+				+e.input-wrap.form-group
+					label
+						+e.SPAN.input-title Артикул
+							span (обязательно)
+						+e.INPUT.input.form-control(name='text' type='text' placeholder="Артикул" value="43534" required)
+				+e.input-wrap.form-group
+					label
+						+e.SPAN.input-title Наименование запчасти
+							span (обязательно)
+						if invalid
+							+e.INPUT.input.form-control.is-invalid(name='text' type='text' placeholder="Например, Фара левая" required)
+						else
+							+e.INPUT.input.form-control(name='text' type='text' placeholder="Например, Фара левая" required)
+				+e.input-wrap.form-group
+					label
+						+e.SPAN.input-title Категория запчасти
+							span (обязательно)
+						if invalid
+							+e.INPUT.input.form-control.is-invalid(name='text' type='text' placeholder="Начните вводить" required)
+						else
+							+e.INPUT.input.form-control(name='text' type='text' placeholder="Начните вводить" required)
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Вид запчасти
+					+in-c('radio', 'БУ')
+					+in-c('radio', 'Новый')
+				+input(`Комментарий к товару`, 'textarea', `Комментарий`)
+				+input(`Цена`, 'text', `Цена, ₽`)
+				p.is-invalid Укажите поколение
+			if done
+				+e.done
+					+img('img/svg/cart.svg')
+					+e.title.h4 Запчасть добавлена!
+					+e.text Фара левая 324234234R для Volkswagen Polo 3 поколение (2020-2022)
+					+e.link(href="#") Открыть в браузере
+			+e.footer-wrap
+				if select
+					p.please-select Укажите модель и поколение
+				+e.BUTTON.btn.btn.btn-primary!= btnText
+	// end sPwa
