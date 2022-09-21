@@ -658,6 +658,39 @@ function eventHandler() {
 	// 	})
 	// }
 
+	try {
+		let imgItems = document.querySelectorAll('.form-wrap__item');
+		for (const imgItem of imgItems) {
+			imgItem.querySelector('input').onchange = function (evt) {
+				var tgt = evt.target || window.event.srcElement,
+				files = tgt.files; 
+				var fr = new FileReader();
+				if (FileReader && files && files.length) {
+				fr.onload = function () {
+					imgItem.querySelector('.form-wrap img').src = fr.result;
+					imgItem.querySelector('.form-wrap__btn-delete').classList.add("active");
+					imgItem.classList.add("active");
+				}
+				fr.readAsDataURL(files[0]); 
+				}
+				
+			}
+		
+			imgItem.addEventListener("click", function(event){
+				let target = event.target.closest(".form-wrap__btn-delete");
+				if(this.classList.contains("active") || target) {
+					event.stopPropagation();
+					this.classList.remove("active")
+					imgItem.querySelector('.form-wrap__btn-delete').classList.remove("active");
+				} 
+
+			})
+
+	}
+	} catch (error) {
+		
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

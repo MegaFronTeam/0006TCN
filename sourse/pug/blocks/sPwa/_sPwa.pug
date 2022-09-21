@@ -40,6 +40,38 @@ mixin sPwa3(select, addNew, done, btnText, invalid)
 				+input('3 поколение (2020-2022)', 'select')
 			if addNew
 				+e.main-title.h4 Добавление запчасти
+				+e.gallery
+					+e.item
+						+e.btn-delete: +icon('delete')
+						+e.block
+							input(type="file" name="")
+							img(class="img-bg" src="#" alt="")
+							+icon('camera')
+							span Загрузить фото
+					+e.item 
+						+e.btn-delete: +icon('delete')
+						+e.block
+							input(type="file" name="")
+							img(class="img-bg" src="#" alt="")
+							+icon('camera')
+					+e.item
+						+e.btn-delete: +icon('delete')
+						+e.block
+							input(type="file" name="")
+							img(class="img-bg" src="#" alt="")
+							+icon('camera')
+					+e.item
+						+e.btn-delete: +icon('delete')
+						+e.block
+							input(type="file" name="")
+							img(class="img-bg" src="#" alt="")
+							+icon('camera')
+					+e.item
+						+e.btn-delete: +icon('delete')
+						+e.block
+							input(type="file" name="")
+							img(class="img-bg" src="#" alt="")
+							+icon('camera')
 				+e.input-wrap.form-group
 					label
 						+e.SPAN.input-title Артикул
