@@ -680,6 +680,7 @@ function eventHandler() {
 				let target = event.target.closest(".form-wrap__btn-delete");
 				if(this.classList.contains("active") || target) {
 					event.stopPropagation();
+					imgItem.querySelector('.form-wrap img').src = '#';
 					this.classList.remove("active")
 					imgItem.querySelector('.form-wrap__btn-delete').classList.remove("active");
 				} 
