@@ -200,6 +200,7 @@
 			position: relative;
 			overflow: hidden;
 			input {
+				cursor: pointer;
 				position: absolute;
 				opacity: 0;
 				width: 100%;
@@ -260,12 +261,14 @@
 			align-items: center;
 			justify-content: center;
 			img {
+				cursor: pointer;
 				z-index: 5;
 				object-position: center;
 				object-fit: contain;
 			}
 		}
 		&__btn-delete {
+			cursor: pointer;
 			position: absolute;
 			@include a-cent();
 			color: #fff;
