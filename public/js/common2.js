@@ -683,6 +683,7 @@ function eventHandler() {
 					imgItem.querySelector('.form-wrap img').src = '#';
 					this.classList.remove("active")
 					imgItem.querySelector('.form-wrap__btn-delete').classList.remove("active");
+					imgItem.src = "";
 				} 
 
 			})
