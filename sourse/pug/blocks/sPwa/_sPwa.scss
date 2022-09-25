@@ -116,7 +116,7 @@
 		&--select {
 			display: flex;
 			flex-direction: column;
-			height: calc((var(--vh) * 100) - 45px);
+			min-height: calc((var(--vh) * 100) - 45px);
 		}
 		&__selects-wrap {
 			margin-bottom: 20px;
