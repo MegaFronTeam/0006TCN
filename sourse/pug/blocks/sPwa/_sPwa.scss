@@ -3,7 +3,8 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
-	min-height: calc(100vh - 45px);
+	// min-height: calc(100vh - 45px);
+	min-height: calc((var(--vh) * 100) - 45px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
