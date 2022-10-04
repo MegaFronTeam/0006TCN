@@ -693,6 +693,13 @@ function eventHandler() {
 		
 	}
 
+	let pwaImg = document.querySelector('.sPwa .img');
+	if(pwaImg) {
+		setTimeout(function() {
+			pwaImg.classList.add('fadeIn');
+		}, 1000);
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

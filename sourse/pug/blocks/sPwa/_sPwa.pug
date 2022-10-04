@@ -42,12 +42,13 @@ mixin sPwa3(select, addNew, done, btnText, invalid)
 				+e.main-title.h4 Добавление запчасти
 				+e.gallery
 					+e.item
-						+e.btn-delete: +icon('delete')
-						+e.block
-							input(type="file" name="file1")
-							img(class="img-bg" src="#" alt="")
-							+icon('camera')
-							span Загрузить фото
+						+e.wrap
+							+e.btn-delete: +icon('delete')
+							+e.block
+								input(type="file" name="file1")
+								img(class="img-bg" src="#" alt="")
+								+icon('camera')
+								span Загрузить фото
 					+e.item 
 						+e.btn-delete: +icon('delete')
 						+e.block
