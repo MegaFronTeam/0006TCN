@@ -95,7 +95,7 @@
 .prod-item{
 	display: flex;
 	// justify-content: start;
-	align-items: flex-start;
+	align-items: center;
 	min-height: 100%;
 	position: relative;
 	&:hover{
@@ -340,6 +340,9 @@
 		}
 		&__input-wrap {
 			margin-bottom: 0;
+		}
+		&__btn {
+			height: 100%;
 		}
 	}
 	&__body{

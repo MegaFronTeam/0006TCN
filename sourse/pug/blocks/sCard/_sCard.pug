@@ -4,6 +4,8 @@ mixin sCard(data)
 		+e.main-row.row
 			+e.col.col-12.col-lg-6
 				+e.slider-wrap
+					+e.like(href="#")
+						+icon('favorites')
 					+e.slider--js.swiper
 						.swiper-wrapper
 							mixin slide2(i)

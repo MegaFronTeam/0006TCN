@@ -2,7 +2,6 @@
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
-
 		Fancybox.bind(link, {
 			arrows: false,
 			// infobar: false,
@@ -23,7 +22,7 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
+		document.querySelectorAll(link, ".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
 			})

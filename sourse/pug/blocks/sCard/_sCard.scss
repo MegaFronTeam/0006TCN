@@ -33,6 +33,7 @@
 		align-items: flex-start;
 		flex-direction: column;
 		margin-bottom: 20px;
+		position: relative;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 		}
@@ -320,6 +321,20 @@
 		@include media-breakpoint-down(lg) {
 			order: 1;
 			margin-bottom: rem(20);
+		}
+	}
+	
+	&__like {
+		position: absolute;
+		top: rem(13.600);
+		right: rem(13.600);
+		color: #fff;
+		z-index: 2;
+		svg {
+			font-size: rem(20);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
