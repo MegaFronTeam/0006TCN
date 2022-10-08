@@ -77,6 +77,9 @@ body:not(.fixed, .fixed2) .header
 		font-size: 14px;
 		color: $secondary;
 	}
+	&__head {
+		padding: 0 rem(18);
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

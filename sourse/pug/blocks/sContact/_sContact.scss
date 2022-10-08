@@ -49,11 +49,15 @@
 			margin-bottom: 0;
 		}
 		a {
-			margin-right: rem(10);
+			// margin-right: rem(10);
 			&:not(:hover) {
 				color: #000;
 			}
 		}
+	}
+	.soc {
+		--bs-gutter-x: 7px;
+		margin-left: rem(10);
 	}
 	&__time {
 		color: $secondary;

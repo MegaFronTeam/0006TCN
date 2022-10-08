@@ -95,7 +95,7 @@
 .prod-item{
 	display: flex;
 	// justify-content: start;
-	align-items: center;
+	// align-items: center;
 	min-height: 100%;
 	position: relative;
 	&:hover{
@@ -110,7 +110,7 @@
 		}
 	}
 	@include media-breakpoint-down(sm){
-		padding-bottom: 15px;
+		padding-bottom: 8px;
 	}
 	@include media-breakpoint-up(sm) {
 
@@ -169,7 +169,11 @@
 			height: 100%;
 		}
 	}
-	&_price{
+	&__price{
+		display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+
 		font-weight: bold;
 	}
 	&__title{
@@ -209,7 +213,7 @@
 			left: 0;
 			margin-left: 0;
 		}
-		margin-left: 5px;
+		margin-left: 10px;
 	}
 
 	&__btn{
@@ -342,6 +346,8 @@
 			margin-bottom: 0;
 		}
 		&__btn {
+			--bs-btn-font-size: #{rem(16)};
+
 			height: 100%;
 		}
 	}

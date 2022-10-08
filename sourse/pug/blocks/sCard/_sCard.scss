@@ -180,7 +180,7 @@
 		@include media-breakpoint-only(lg) {
 		}
 		.row {
-			--bs-gutter-y: #{rem(20)};
+			--bs-gutter-y: #{rem(10)};
 		}
 	}
 	&__btn {
