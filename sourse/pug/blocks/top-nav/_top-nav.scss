@@ -79,6 +79,9 @@ body:not(.fixed, .fixed2) .header
 	}
 	&__head {
 		padding: 0 rem(11.550) 0 rem(18);
+		.container {
+			padding: 0;
+		}
 	}
 	@include media-breakpoint-up(md) {}
 
