@@ -331,10 +331,17 @@
 		color: #fff;
 		z-index: 2;
 		svg {
+			@include mt;
 			font-size: rem(20);
-			fill: none;
+			fill: transparent;
 			stroke: currentColor;
 			stroke-width: 2px;
+		}
+		&:hover, &.active {
+			color: #fff;
+			svg {
+				fill: currentColor;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
