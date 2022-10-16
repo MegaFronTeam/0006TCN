@@ -369,7 +369,7 @@
 		.row{
 			align-items: center;
 			--bs-gutter-y: 16px;
-			justify-content: space-between;
+			// justify-content: space-between;
 			@include media-breakpoint-up(xxl) {
 
 				--bs-gutter-x: 60px;
