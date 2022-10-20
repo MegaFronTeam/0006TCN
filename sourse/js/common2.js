@@ -684,6 +684,7 @@ function eventHandler() {
 					this.classList.remove("active")
 					imgItem.querySelector('.form-wrap__btn-delete').classList.remove("active");
 					imgItem.src = "";
+					imgItem.querySelector('input').value = "";
 				} 
 
 			})
