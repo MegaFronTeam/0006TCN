@@ -701,6 +701,13 @@ function eventHandler() {
 		}, 1000);
 	}
 
+	let pwaAnimation = document.querySelector('.pwaAnimation');
+	if(pwaAnimation) {
+			setTimeout(function(){
+				$('body').removeClass('pwaAnimation');
+			},2000)
+		}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

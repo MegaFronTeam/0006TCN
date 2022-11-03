@@ -24,6 +24,7 @@ html{
 }
 
 body {
+	@include mt;
 	&.fixed,
 	&.fancybox-active{
 		.header{ 
@@ -615,4 +616,8 @@ iframe {
 
 .pwa-page {
 	overflow: hidden;
+}
+
+.pwaAnimation {
+	opacity: 0;
 }

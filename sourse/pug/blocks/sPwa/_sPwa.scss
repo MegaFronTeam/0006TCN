@@ -108,7 +108,7 @@
 			color: $primary;
 		}
 		select {
-			padding: 15px 40px 15px 0;
+			padding: 15px 70px 15px 0;
 			border-radius: 0px;
 			border: none;
 		}
@@ -142,9 +142,26 @@
 						background-color: #E8E8ED; 
 						z-index: 10;
 					}
+					span {
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						font-size: rem(14);
+						pointer-events: none;
+						&.change {
+							color: $secondary;
+						}
+						&.select {
+							color: $primary;
+						}
+					}
 				}
 				&__btn {
 					margin-top: 0;
+				}
+				&__input {
+					background-image: none;
 				}
 			}
 		}

@@ -36,8 +36,11 @@ mixin sPwa3(select, addNew, done, btnText, invalid)
 		+b.form-wrap--select
 			+e.selects-wrap 
 				+input('Volkswagen', 'select')
+					span.change Изменить
 				+input('Polo', 'select')
+					span.select Выбрать
 				+input('3 поколение (2020-2022)', 'select')
+					span.select Выбрать
 			if addNew
 				+e.main-title.h4 Добавление запчасти
 				+e.gallery
