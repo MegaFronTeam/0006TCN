@@ -706,8 +706,11 @@ function eventHandler() {
 			setTimeout(function(){
 				$('body').removeClass('pwaAnimation');
 			},2000)
-		}
-
+		};
+	
+	const choices = new Choices('.js-choice', {
+		
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
