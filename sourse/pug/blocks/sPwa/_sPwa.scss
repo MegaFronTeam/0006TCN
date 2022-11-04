@@ -329,6 +329,17 @@
 				margin-bottom: 0;
 			}
 		}
+		.selectize {
+			&-control {
+				padding: 0;
+				border: 1px solid #e8e8ed;
+			}
+			&-input {
+				border: none;
+				box-shadow: none;
+				padding: 13.5px 13px !important;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

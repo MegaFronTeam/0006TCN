@@ -708,8 +708,9 @@ function eventHandler() {
 			},2000)
 		};
 	
-	const choices = new Choices('.js-choice', {
-		
+	$("#select-beast").selectize({
+		create: true,
+		sortField: "text",
 	});
 };
 if (document.readyState !== 'loading') {

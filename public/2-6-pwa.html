@@ -9,7 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="libs/@selectize/selectize/css/selectize.css" rel="stylesheet"/>
 		<link href="css/main2.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="">
@@ -152,7 +152,7 @@
 						</label>
 					</div>
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__input-title">Категория запчасти<span>(обязательно)</span></span><input class="form-wrap__input form-control is-invalid js-choice" name="text" type="text" placeholder="Начните вводить" required="required"/>
+						<label><span class="form-wrap__input-title">Категория запчасти<span>(обязательно)</span></span><input class="form-wrap__input form-control is-invalid" id="select-beast" name="text" type="text" placeholder="Начните вводить" required="required"/>
 						</label>
 					</div>
 					<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Вид запчасти</span>
@@ -181,7 +181,7 @@
 			<!-- end sPwa-->
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="libs/@selectize/selectize/js/selectize.min.js"> </script>
 		<script src="js/common2.js"></script>
 	</body>
 </html>

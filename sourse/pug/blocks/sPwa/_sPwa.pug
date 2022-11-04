@@ -98,9 +98,9 @@ mixin sPwa3(select, addNew, done, btnText, invalid)
 						+e.SPAN.input-title Категория запчасти
 							span (обязательно)
 						if invalid
-							+e.INPUT.input.form-control.is-invalid.js-choice(name='text' type='text' placeholder="Начните вводить" required)
+							+e.INPUT.input.form-control.is-invalid#select-beast(name='text' type='text' placeholder="Начните вводить" required)
 						else
-							+e.INPUT.input.form-control.js-choice(name='text' type='text' placeholder="Начните вводить" required)
+							+e.INPUT.input.form-control#select-beast(name='text' type='text' placeholder="Начните вводить" required)
 				+e.input-wrap.form-group
 					+e.SPAN.input-title Вид запчасти
 					+in-c('radio', 'БУ')
