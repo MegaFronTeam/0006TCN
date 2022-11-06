@@ -711,6 +711,7 @@ function eventHandler() {
 	$("#select-beast").selectize({
 		create: true,
 		sortField: "text",
+		addPrecedence: true,
 	});
 };
 if (document.readyState !== 'loading') {
