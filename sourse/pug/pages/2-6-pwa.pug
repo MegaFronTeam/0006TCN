@@ -15,5 +15,13 @@ block pagecontent
 	.pwa-container
 		+sPwa3('', 'true', '', 'Отправить', 'true')
 
-
+block map
+	script.
+		$('.select-custom-js').select2({
+			dropdownParent: $('.select-custom-js').parents(".form-wrap__input-wrap"),
+			tags: true,
+			multiple: true,
+			placeholder: 'Начните вводить',
+			tokenSeparators: [',', ' ']
+		});
 

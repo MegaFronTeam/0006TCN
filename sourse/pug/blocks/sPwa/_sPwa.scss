@@ -80,7 +80,7 @@
 				box-shadow: none!important;
 			}
 		}
-		textarea {
+		textarea:not(.select2-search__field) {
 			min-height: 100px;
 		}
 		.input-btn--password-toggle {
@@ -329,6 +329,23 @@
 				margin-bottom: 0;
 			}
 		}
+		.selectize {
+			&-control {
+				padding: 0;
+				border: 1px solid #e8e8ed;
+				border-radius: 8px;
+				min-height: rem(50);
+			}
+			&-input {
+				border: none;
+				border-radius: 8px;
+				box-shadow: none;
+				padding: 16px 13px !important;
+				&.has-items {
+					padding: 12.5px 13px !important;
+				}
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -338,3 +355,12 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sPwa
+
+
+.selectize-control.single .selectize-input:after{
+	display: none !important;
+}
+
+.selectize-dropdown{
+	border-color:  #e8e8ed !important;
+}

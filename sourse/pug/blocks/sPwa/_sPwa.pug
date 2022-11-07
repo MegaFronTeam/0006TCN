@@ -94,10 +94,13 @@ mixin sPwa3(select, addNew, done, btnText, invalid)
 						else
 							+e.INPUT.input.form-control(name='text' type='text' placeholder="Например, Фара левая" required)
 				+e.input-wrap.form-group
-					label
+					div
 						+e.SPAN.input-title Категория запчасти
 							span (обязательно)
-						+e.INPUT.input.form-control.js-choice(name='text' type='text' placeholder="Начните вводить" required class=(invalid ? 'is-invalid' : ""))
+						+e.SELECT.input.form-control(  required class=(invalid ? 'is-invalid' : "")).select-custom-js
+							option(value="12121 ")  12121
+							option(value="6767121 ")  6767121
+							option(value="676712121 ")  676712121
 				+e.input-wrap.form-group
 					+e.SPAN.input-title Вид запчасти
 					+in-c('radio', 'БУ')
