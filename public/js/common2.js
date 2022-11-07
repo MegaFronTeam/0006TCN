@@ -709,7 +709,37 @@ function eventHandler() {
 		};
 	
 	const choices = new Choices('.js-choice', {
-		
+		searchEnabled: false,
+			noResultsText: '',
+    noChoicesText: '',
+    itemSelectText: '',
+		allowHTML: true,
+		// prependValue: 'item-',
+		// appendValue: '-' + Date.now(),
+		items: [{
+			value: 'Value 1',
+			label: 'Label 1',
+			id: 1
+		},
+		{
+			value: 'Value 2',
+			label: 'Label 2',
+			id: 2,
+		}],
+		choices: [{
+			value: 'Value 1',
+			label: 'Label 1',
+			id: 1
+		},
+		{
+			value: 'Value 2',
+			label: 'Label 2',
+			id: 2,
+		}],
+		loadingText: 'Загрузка...',
+		addItemText: (value) => {
+      return `Нажмите, чтобы добавить <b>"${value}"</b>`;
+    },
 	});
 };
 if (document.readyState !== 'loading') {
