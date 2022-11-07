@@ -634,14 +634,16 @@ iframe {
 .select2-container--default .select2-selection--multiple{
 	@extend .form-control;
 	// padding: 0;
+	padding: .8645rem .65rem !important;
 	textarea{
 	}
 }
-
+.select2-container{
+	width: 100% !important;
+}
 .select2-container--default .select2-search--inline .select2-search__field{
 	// margin: 0 !important;
 	// margin-top: 0;
-	// padding: 1.0625rem 1.25rem;
 	// padding: 1.0625rem 1.25rem;
 	// height: rem(50);
 	
