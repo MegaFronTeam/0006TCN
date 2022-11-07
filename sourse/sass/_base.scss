@@ -634,7 +634,8 @@ iframe {
 .select2-container--default .select2-selection--multiple{
 	@extend .form-control;
 	// padding: 0;
-	padding: .8645rem .65rem !important;
+	padding: .8745rem .65rem !important;
+	padding-top: calc(.8745rem - 5px ) !important;
 	textarea{
 	}
 }
